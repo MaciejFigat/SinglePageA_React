@@ -1,5 +1,14 @@
 :root {
-  --main-bg-color: brown;
+  --color1-main: #2c6eff;
+  --color2-main: #ff3ce2;
+  --color3-main: #ff789c;
+  --color4-main: #ffd979;
+  --color5-main: #fffb80;
+  --color1-secondary: #001907;
+  --color2-secondary: #00493f;
+  --color3-secondary: #f63bd1;
+  --color4-secondary: #ff9b84;
+  --color5-secondary: #ffff88;
 }
 
 body {
@@ -9,7 +18,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: var(--main-bg-color);
+  background: var(--color1-main);
 }
 
 code {

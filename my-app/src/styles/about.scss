@@ -10,50 +10,50 @@
 .one {
   grid-column: 2;
   grid-row: 2/-2;
-  background: slateblue;
+  background: var(--color4-main);
 }
 .two {
   grid-row: 2;
   grid-column: 3;
-  background: tomato;
+  background: var(--color5-main);
 }
 .three {
   grid-row: 3 / span 3;
-  background: violet;
+  background: var(--color3-main);
 }
 .four {
   grid-row: 3;
   grid-column: 3;
-  background: violet;
+  background: var(--color1-main);
 }
 .five {
   grid-row: 4;
   grid-column: 3;
-  background: violet;
+  background: var(--color2-main);
 }
 .div_one {
-  background: red;
+  background: var(--color1-secondary);
 
   height: 100px;
   width: 100px;
 }
 .div_two {
-  background: greenyellow;
+  background: var(--color2-secondary);
   height: 100px;
   width: 100px;
 }
 .div_three {
-  background: blue;
+  background: var(--color3-secondary);
   height: 100px;
   width: 100px;
 }
 .div_four {
-  background: blue;
+  background: var(--color4-secondary);
   height: 100px;
   width: 100px;
 }
 .div_five {
-  background: blue;
+  background: var(--color5-secondary);
   height: 100px;
   width: 100px;
 }

@@ -5,8 +5,8 @@ const Hello = () => {
     <div className="helloContainer">
       <svg
         id="logo"
-        width="834"
-        height="81"
+        width="417"
+        height="40.5"
         viewBox="0 0 634 81"
         // fill="transparent"
         xmlns="http://www.w3.org/2000/svg"
@@ -115,9 +115,6 @@ const Hello = () => {
           mask="url(#path-1-outside-1)"
         />
       </svg>
-      <div className="oneDiv"></div>
-      <div className="twoDiv"></div>
-      <div className="threeDiv"></div>
     </div>
   );
 };
