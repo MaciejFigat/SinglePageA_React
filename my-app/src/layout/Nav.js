@@ -1,24 +1,51 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "../styles/nav.scss";
 const Nav = () => {
   return (
-    <nav className="bg-blue-600 text-white p-4 shadow ">
-      <ul className="flex space-x-4 justify-end">
+    <nav className="nav_container">
+      <ul className="nav_list">
         <li>
           {" "}
-          <NavLink to="/home" activeClassName="border-b-2 border-white">
+          <NavLink
+            exact
+            to="/"
+            className="nav_link"
+            activeClassName="nav_link_active"
+          >
             Home
           </NavLink>
         </li>
         <li>
           {" "}
-          <NavLink to="/about" activeClassName="border-b-2 border-white">
+          <NavLink
+            exact
+            to="/login"
+            className="nav_link"
+            activeClassName="nav_link_active"
+          >
+            Login
+          </NavLink>
+        </li>
+        <li>
+          {" "}
+          <NavLink
+            exact
+            to="/about"
+            className="nav_link"
+            activeClassName="nav_link_active"
+          >
             About
           </NavLink>
         </li>
         <li>
           {" "}
-          <NavLink to="/contact" activeClassName="border-b-2 border-white">
+          <NavLink
+            exact
+            to="/contact"
+            className="nav_link"
+            activeClassName="nav_link_active"
+          >
             Contact
           </NavLink>
         </li>

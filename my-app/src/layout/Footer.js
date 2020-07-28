@@ -1,10 +1,8 @@
 import React from "react";
-
+import "../styles/footer.scss";
 const Footer = () => {
   return (
-    <footer className="bg-blue-400 text-center p-5 text-white ">
-      Created with fire and brimstone.
-    </footer>
+    <footer className="footer_styled">Created with fire and brimstone.</footer>
   );
 };
 

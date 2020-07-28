@@ -1,0 +1,30 @@
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.25rem;
+  width: 50%;
+  margin: auto;
+}
+.contact_field {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.contact_field_content {
+  padding: 0.5rem;
+  background: lightskyblue;
+  border-radius: 0.25rem;
+}
+.contact_button {
+  background: transparent;
+  width: 25%;
+  color: black;
+  align-self: center;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  &:hover {
+    background: blue;
+    color: white;
+    transition: 0.4s;
+  }
+}

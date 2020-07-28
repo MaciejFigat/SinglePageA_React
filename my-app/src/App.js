@@ -2,28 +2,32 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.css";
-import { Home, About, Contact } from "./pages";
+import { Home, About, Contact, Login } from "./pages";
 import { Nav, Footer } from "./layout";
 
 function App() {
   return (
-    <div className="flex flex-col h-screen">
+    <div className="app_container">
       <Router>
         <Nav />
 
         <Switch>
-          <Route path="/home">
-            <Home />
+          <Route exact path="/login">
+            <Login />
           </Route>
 
-          <Route path="/about">
+          <Route exact path="/about">
             <About />
           </Route>
 
-          <Route path="/contact">
+          <Route exact path="/contact">
             <Contact />
           </Route>
         </Switch>
+
+        <Route exact path="/">
+          <Home />
+        </Route>
         <Footer />
       </Router>
     </div>

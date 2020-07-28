@@ -1,6 +1,9 @@
-.App {
-  text-align: center;
+.app_container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
+/* flex flex-col h-screen */
 
 .App-logo {
   height: 40vmin;
