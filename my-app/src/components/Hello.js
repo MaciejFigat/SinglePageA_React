@@ -8,7 +8,7 @@ const Hello = () => {
         width="417"
         height="40.5"
         viewBox="0 0 634 81"
-        // fill="transparent"
+        fill="transparent"
         xmlns="http://www.w3.org/2000/svg"
       >
         <mask
@@ -19,7 +19,7 @@ const Hello = () => {
           width="633"
           height="80"
           // fill="#5e0202"
-          fill="grey"
+          fill="transparent"
         >
           <rect fill="white" x="0.391998" y="0.944" width="633" height="80" />
           <path d="M54.944 10.088V77H46.208V46.664H12.128V77H3.392V10.088H12.128V39.464H46.208V10.088H54.944Z" />

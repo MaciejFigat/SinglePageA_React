@@ -14,28 +14,28 @@ const Footer = () => {
   if (style === "one") {
     return (
       <>
-        <button
-          onClick={handleClickCounter}
-          style={{ width: "100px", height: "100px" }}
-        >
-          Style
-        </button>
         <footer className="footer_styled">
-          Created with fire and brimstone.
+          <button
+            onClick={handleClickCounter}
+            style={{ width: "50px", height: "30px", background: "black" }}
+          >
+            Style
+          </button>
+          <p>Created with fire and brimstone.</p>
         </footer>
       </>
     );
   } else if (style === "two") {
     return (
       <>
-        <button
-          onClick={handleClickCounter}
-          style={{ width: "100px", height: "100px" }}
-        >
-          Style
-        </button>
         <footer className="footer_styled_two">
-          Created with fire and brimstone.
+          <button
+            onClick={handleClickCounter}
+            style={{ width: "50px", height: "30px", background: "black" }}
+          >
+            Style
+          </button>
+          <p>Created with fire and brimstone.</p>
         </footer>
       </>
     );

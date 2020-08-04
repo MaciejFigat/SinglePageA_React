@@ -2,11 +2,13 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/nav.scss";
 import Hello from "../components/Hello";
+import Batex from "../components/Batex";
 const Nav = () => {
   return (
     <nav className="nav_container">
       <ul className="nav_list">
         <Hello />
+        <Batex />
         <li>
           {" "}
           <NavLink
