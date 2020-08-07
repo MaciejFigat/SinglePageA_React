@@ -7,7 +7,6 @@ const Nav = () => {
   return (
     <nav className="nav_container">
       <ul className="nav_list">
-        <Hello />
         <Batex />
         <li>
           {" "}
