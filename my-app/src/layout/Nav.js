@@ -3,11 +3,17 @@ import { NavLink } from "react-router-dom";
 import "../styles/nav.scss";
 import Hello from "../components/Hello";
 import Batex from "../components/Batex";
+import Offer from "../components/svg/Offer";
+import Partners from "../components/svg/Partners";
+import Contractors from "../components/svg/Contractors";
+import Contact from "../components/svg/Contact";
+import Tech from "../components/svg/Tech";
+
 const Nav = () => {
   return (
     <nav className="nav_container">
+      <Batex />
       <ul className="nav_list">
-        <Batex />
         <li>
           {" "}
           <NavLink
@@ -16,7 +22,7 @@ const Nav = () => {
             className="nav_link"
             activeClassName="nav_link_active"
           >
-            Home
+            <Offer />
           </NavLink>
         </li>
         <li>
@@ -27,7 +33,7 @@ const Nav = () => {
             className="nav_link"
             activeClassName="nav_link_active"
           >
-            Login
+            <Partners />
           </NavLink>
         </li>
         <li>
@@ -38,7 +44,18 @@ const Nav = () => {
             className="nav_link"
             activeClassName="nav_link_active"
           >
-            About
+            <Contractors />
+          </NavLink>
+        </li>
+        <li>
+          {" "}
+          <NavLink
+            exact
+            to="/technology"
+            className="nav_link"
+            activeClassName="nav_link_active"
+          >
+            <Tech />
           </NavLink>
         </li>
         <li>
@@ -49,7 +66,7 @@ const Nav = () => {
             className="nav_link"
             activeClassName="nav_link_active"
           >
-            Contact
+            <Contact />
           </NavLink>
         </li>
       </ul>

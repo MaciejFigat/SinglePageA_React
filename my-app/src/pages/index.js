@@ -3,5 +3,5 @@ import Home from "./Home";
 import About from "./About";
 import Contact from "./Contact";
 import Login from "./Login";
-
-export { Home, About, Contact, Login };
+import Technology from "./Technology";
+export { Home, About, Contact, Login, Technology };

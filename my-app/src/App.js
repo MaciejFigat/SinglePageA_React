@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./styles/App.css";
-import { Home, About, Contact, Login } from "./pages";
+import { Home, About, Contact, Login, Technology } from "./pages";
 import { Nav, Footer } from "./layout";
 
 function App() {
@@ -19,7 +19,9 @@ function App() {
           <Route exact path="/about">
             <About />
           </Route>
-
+          <Route exact path="/technology">
+            <Technology />
+          </Route>
           <Route exact path="/contact">
             <Contact />
           </Route>

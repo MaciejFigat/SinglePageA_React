@@ -10,9 +10,16 @@
   --color4-secondary: #ff9b84;
   --color5-secondary: #ffff88;
 }
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
 
 body {
-  // height: 100%;
+  // overflow-x: hidden;
+  // overflow-y: hidden;
+
+  height: 100vh;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Noto Sans", "Roboto",
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
