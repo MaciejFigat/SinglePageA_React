@@ -22,7 +22,7 @@ const Nav = () => {
             className="nav_link"
             activeClassName="nav_link_active"
           >
-            <Offer />
+            <Partners />
           </NavLink>
         </li>
         <li>
@@ -33,7 +33,7 @@ const Nav = () => {
             className="nav_link"
             activeClassName="nav_link_active"
           >
-            <Partners />
+            <Offer />
           </NavLink>
         </li>
         <li>

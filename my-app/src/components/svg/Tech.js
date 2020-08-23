@@ -1,5 +1,5 @@
 import React from "react";
-import tech from "../../styles/svg/tech.scss";
+import "../../styles/svg/tech.scss";
 const Tech = () => {
   return (
     <div className="techContainer">

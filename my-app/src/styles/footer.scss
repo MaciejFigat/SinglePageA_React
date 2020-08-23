@@ -1,5 +1,5 @@
 .footer_styled {
-  background: var(--color2-main);
+  background: var(--color1-main);
 }
 
 footer {
@@ -15,4 +15,10 @@ footer {
 }
 p {
   margin: auto;
+}
+.reactLink {
+  // color: #bad6e5 !important;
+  &:hover {
+    color: var(--color1-secondary) !important;
+  }
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./styles/App.css";
@@ -11,7 +11,18 @@ import SvgThemeButton from "./components/SvgThemeButton";
 import { GlobalStyle, lightTheme, darkTheme } from "./styles/GlobalStyles";
 
 function App() {
-  const [currentTheme, setCurrentTheme] = useState("light");
+  const [currentTheme, setCurrentTheme] = useState([]);
+  // added a function in App. js that detects prefers-color-scheme: dark, it sets theme for dark if match is detected
+  const isDark = window.matchMedia("(prefers-color-scheme: dark)");
+  const useDarkMode = isDark.matches;
+  useEffect(() => {
+    if (useDarkMode === true) {
+      console.log(useDarkMode);
+      console.log(currentTheme);
+      setCurrentTheme("dark");
+    }
+  }, []);
+
   const handleClickCounter = () => {
     if (currentTheme === "light") {
       setCurrentTheme("dark");
@@ -31,10 +42,10 @@ function App() {
             onClick={handleClickCounter}
             style={{
               position: "fixed",
-              top: "10",
+              top: "5px",
               right: "0",
-              width: "50px",
-              height: "50px",
+              width: "40px",
+              height: "40px",
               background: "transparent",
               outline: "none",
               border: "none",

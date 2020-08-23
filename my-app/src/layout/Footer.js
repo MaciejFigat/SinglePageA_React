@@ -7,7 +7,9 @@ const Footer = () => {
       <footer className="footer_styled">
         <p>
           MTF © {new Date().getFullYear()}, Built with &#160;
-          <a href="https://reactjs.org/">React</a>
+          <a className="reactLink" href="https://reactjs.org/">
+            React
+          </a>
         </p>
       </footer>
     </>
