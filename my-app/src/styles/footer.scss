@@ -1,20 +1,12 @@
 .footer_styled {
   background: var(--color2-main);
 }
-.footer_styled_two {
-  background: var(--color3-main);
-}
-footer {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  color: white;
 
-  // position: fixed;
-  // left: 0;
-  // bottom: 0;
-  // width: 100%;
+footer {
+  // text-align: center;
+  display: flex;
+
+  justify-content: center;
 
   position: absolute;
   bottom: 0;
@@ -22,5 +14,5 @@ footer {
   height: 2.5rem;
 }
 p {
-  padding-top: 8px;
+  margin: auto;
 }

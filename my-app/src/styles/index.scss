@@ -1,34 +1,3 @@
-:root {
-  --color1-main: #2c6eff;
-  --color2-main: #ff3ce2;
-  --color3-main: #ff789c;
-  --color4-main: #ffd979;
-  --color5-main: #fffb80;
-  --color1-secondary: #001907;
-  --color2-secondary: #00493f;
-  --color3-secondary: #f63bd1;
-  --color4-secondary: #ff9b84;
-  --color5-secondary: #ffff88;
-}
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
-
-body {
-  // overflow-x: hidden;
-  // overflow-y: hidden;
-
-  height: 100vh;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Noto Sans", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: var(--color1-main);
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Roboto Mono",
     "Courier New", monospace;
