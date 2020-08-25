@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 const SvgThemeButton = ({ currentTheme }) => {
   if (currentTheme === "light") {

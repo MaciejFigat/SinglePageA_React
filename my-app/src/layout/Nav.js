@@ -22,7 +22,7 @@ const Nav = () => {
             className="nav_link"
             activeClassName="nav_link_active"
           >
-            <Partners />
+            Partnerzy
           </NavLink>
         </li>
         <li>
@@ -33,7 +33,7 @@ const Nav = () => {
             className="nav_link"
             activeClassName="nav_link_active"
           >
-            <Offer />
+            Oferta
           </NavLink>
         </li>
         <li>
@@ -44,7 +44,7 @@ const Nav = () => {
             className="nav_link"
             activeClassName="nav_link_active"
           >
-            <Contractors />
+            Kontrahenci
           </NavLink>
         </li>
         <li>
@@ -55,7 +55,7 @@ const Nav = () => {
             className="nav_link"
             activeClassName="nav_link_active"
           >
-            <Tech />
+            Technologie
           </NavLink>
         </li>
         <li>
@@ -66,10 +66,15 @@ const Nav = () => {
             className="nav_link"
             activeClassName="nav_link_active"
           >
-            <Contact />
+            Kontakt
           </NavLink>
         </li>
       </ul>
+      <div className="burger">
+        <div className="line1"></div>
+        <div className="line1"></div>
+        <div className="line1"></div>
+      </div>
     </nav>
   );
 };

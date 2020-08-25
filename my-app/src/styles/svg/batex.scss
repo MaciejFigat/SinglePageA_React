@@ -1,12 +1,30 @@
 .batexContainer {
   display: flex;
   justify-content: center;
-  overflow: hidden;
 }
+
+@media screen and (min-width: 960px) {
+  #logo {
+    position: absolute;
+    top: 2.7%;
+    left: 1.5%;
+  }
+}
+@media screen and (min-width: 760px) and (max-width: 960px) {
+  .batexContainer {
+    display: none;
+  }
+}
+@media screen and (max-width: 380px) {
+  .batexContainer {
+    display: none;
+  }
+}
+
 #logo {
-  position: absolute;
-  top: 1.95%;
-  left: 1.5%;
+  // position: absolute;
+  // top: 2.7%;
+  // left: 1.5%;
 
   animation: fill 0.5s ease forwards 2.5s;
 }

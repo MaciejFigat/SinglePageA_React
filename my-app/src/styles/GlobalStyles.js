@@ -1,4 +1,4 @@
-import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 // import square from "../assets/square.png";
 // import squareDark from "../assets/square-dark.png";
 const darkTheme = {
@@ -56,7 +56,7 @@ h5 {font-size: 1.25em;}
   --color4-main: ${(props) => props.theme.color4};
   --color5-main: ${(props) => props.theme.color5};
   --color1-secondary: ${(props) => props.theme.colorHoverLink};
-  --color2-secondary: #102243;
+  --color2-secondary: ${(props) => props.theme.textColorSvg};
   --color3-secondary: #095ca8;
   --color4-secondary: #089eff;
   --color5-secondary: #08ecff;
