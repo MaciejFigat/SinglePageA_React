@@ -6,7 +6,14 @@ const Batex = () => {
 
   return (
     <div className="batexContainer">
-      <svg width="273" id="logo" height="26" viewBox="0 0 273 26" fill="none">
+      <svg
+        className="svgWidthCont"
+        width="273"
+        id="logo"
+        height="26"
+        viewBox="0 0 273 26"
+        fill="none"
+      >
         <mask
           id="path-1-outside-1"
           maskUnits="userSpaceOnUse"

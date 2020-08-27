@@ -1,20 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/nav.scss";
-import Hello from "../components/Hello";
+
 import Batex from "../components/Batex";
-import Offer from "../components/svg/Offer";
-import Partners from "../components/svg/Partners";
-import Contractors from "../components/svg/Contractors";
-import Contact from "../components/svg/Contact";
-import Tech from "../components/svg/Tech";
+
+import Burger from "./Burger";
 
 const Nav = () => {
+  const [showMenu, setShowMenu] = useState("");
+  const handleClick = () => {
+    if (showMenu === "visible") {
+      setShowMenu("hidden");
+    } else {
+      setShowMenu("visible");
+    }
+  };
   return (
     <nav className="nav_container">
       <Batex />
-      <ul className="nav_list">
-        <li>
+      <ul className={`nav_list ${showMenu}`}>
+        <li className="testLi1">
           {" "}
           <NavLink
             exact
@@ -22,10 +27,10 @@ const Nav = () => {
             className="nav_link"
             activeClassName="nav_link_active"
           >
-            Partnerzy
+            Oferta
           </NavLink>
         </li>
-        <li>
+        <li className="testLi2">
           {" "}
           <NavLink
             exact
@@ -33,10 +38,10 @@ const Nav = () => {
             className="nav_link"
             activeClassName="nav_link_active"
           >
-            Oferta
+            Partnerzy
           </NavLink>
         </li>
-        <li>
+        <li className="testLi3">
           {" "}
           <NavLink
             exact
@@ -47,7 +52,7 @@ const Nav = () => {
             Kontrahenci
           </NavLink>
         </li>
-        <li>
+        <li className="testLi4">
           {" "}
           <NavLink
             exact
@@ -58,7 +63,7 @@ const Nav = () => {
             Technologie
           </NavLink>
         </li>
-        <li>
+        <li className="testLi5">
           {" "}
           <NavLink
             exact
@@ -70,13 +75,41 @@ const Nav = () => {
           </NavLink>
         </li>
       </ul>
-      <div className="burger">
-        <div className="line1"></div>
-        <div className="line1"></div>
-        <div className="line1"></div>
+      <div onClick={handleClick}>
+        <Burger />
       </div>
     </nav>
   );
 };
 
 export default Nav;
+
+// const [burgerClicked, setBurgerClicked] = useState("burgerNotToggled");
+//   const handleClickBurger = () => {
+//     if (burgerClicked === "burgerToggled") {
+//       setBurgerClicked("burgerNotToggled");
+//     } else {
+//       setBurgerClicked("burgerToggled");
+//     }
+//     console.log(burgerClicked);
+//   };
+//   const [showMenu, setShowMenu] = useState("");
+//   const handleClick = () => {
+//     if (showMenu === "visible") {
+//       setShowMenu("hidden");
+//     } else {
+//       setShowMenu("visible");
+//     }
+//   };
+
+//  <div
+//         className="burger"
+//         onClick={() => {
+//           handleClick();
+//           handleClickBurger();
+//         }}
+//       >
+//         <div className={`line1 ${burgerClicked}`}></div>
+//         <div className={`line2 ${burgerClicked}`}></div>
+//         <div className={`line3 ${burgerClicked}`}></div>
+//       </div>
