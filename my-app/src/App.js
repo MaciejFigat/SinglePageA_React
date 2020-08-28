@@ -67,19 +67,3 @@ function App() {
 }
 
 export default App;
-
-// <button
-// onClick={handleClickCounter}
-// style={{
-//   position: "fixed",
-//   top: "5px",
-//   right: "0",
-//   width: "40px",
-//   height: "40px",
-//   background: "transparent",
-//   outline: "none",
-//   border: "none",
-// }}
-// >
-// <SvgThemeButton currentTheme={currentTheme} />
-// </button>

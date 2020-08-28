@@ -1,20 +1,10 @@
-import React, { useEffect } from "react";
-import "../styles/svgButton.scss";
+import React from "react";
+import svgButton from "../styles/svgButton.scss";
+
 const SvgThemeButton = ({ currentTheme }) => {
   if (currentTheme === "light") {
     return (
-      <button
-        style={{
-          position: "fixed",
-          top: "5px",
-          right: "0",
-          width: "40px",
-          height: "40px",
-          background: "transparent",
-          outline: "none",
-          border: "none",
-        }}
-      >
+      <button className="buttonThemes">
         <svg viewBox="0 0 20 20">
           <path
             className="svg-icon"
@@ -25,18 +15,7 @@ const SvgThemeButton = ({ currentTheme }) => {
     );
   } else {
     return (
-      <button
-        style={{
-          position: "fixed",
-          top: "5px",
-          right: "0",
-          width: "40px",
-          height: "40px",
-          background: "transparent",
-          outline: "none",
-          border: "none",
-        }}
-      >
+      <button className="buttonThemes">
         <svg viewBox="0 0 20 20">
           <path
             className="svg-icon"
