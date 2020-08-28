@@ -1,9 +1,8 @@
 import { createGlobalStyle } from "styled-components";
-// import square from "../assets/square.png";
-// import squareDark from "../assets/square-dark.png";
+
 const darkTheme = {
   text: "#1E2A2D",
-  // background: `${squareDark}`,
+
   background: "#1A1A1A",
   color1: "#1A5E25",
   color2: "#1A1A1A",
@@ -13,10 +12,10 @@ const darkTheme = {
   colorHoverLink: "#bad6e5",
   textColorSvg: "#1E2A2D !important",
 };
-// #140f07 #091e35 #0D355A
+
 const lightTheme = {
   text: "#000",
-  // background: `${square}`,
+
   background: "#BAD6E5",
   color1: "#FECA1E",
   color2: "#0D355A",

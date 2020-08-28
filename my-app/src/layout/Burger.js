@@ -8,7 +8,6 @@ const Burger = () => {
     } else {
       setBurgerClicked("burgerToggled");
     }
-    // console.log(burgerClicked);
   };
 
   const [showMenu, setShowMenu] = useState("hidden");
@@ -17,10 +16,9 @@ const Burger = () => {
       setShowMenu("hidden");
     } else {
       setShowMenu("visible");
-      //   console.log(showMenu);
     }
   };
-  const menu = `nav_list ${showMenu}`;
+
   return (
     <div
       className="burger"

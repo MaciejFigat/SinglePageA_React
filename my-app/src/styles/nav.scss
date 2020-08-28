@@ -40,7 +40,7 @@
   }
 }
 .nav_link_active {
-  border-bottom-width: 4px;
+  transition: 0.6s;
   color: var(--color2-main) !important;
 }
 

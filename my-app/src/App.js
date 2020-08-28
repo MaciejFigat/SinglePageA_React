@@ -17,8 +17,6 @@ function App() {
   const useDarkMode = isDark.matches;
   useEffect(() => {
     if (useDarkMode === true) {
-      console.log(useDarkMode);
-      console.log(currentTheme);
       setCurrentTheme("dark");
     }
   }, []);
@@ -38,21 +36,10 @@ function App() {
       <div className="app_container">
         <Router>
           <Nav />
-          <button
-            onClick={handleClickCounter}
-            style={{
-              position: "fixed",
-              top: "5px",
-              right: "0",
-              width: "40px",
-              height: "40px",
-              background: "transparent",
-              outline: "none",
-              border: "none",
-            }}
-          >
+          <div onClick={handleClickCounter}>
             <SvgThemeButton currentTheme={currentTheme} />
-          </button>
+          </div>
+
           <Switch>
             <Route exact path="/login">
               <Login />
@@ -80,3 +67,19 @@ function App() {
 }
 
 export default App;
+
+// <button
+// onClick={handleClickCounter}
+// style={{
+//   position: "fixed",
+//   top: "5px",
+//   right: "0",
+//   width: "40px",
+//   height: "40px",
+//   background: "transparent",
+//   outline: "none",
+//   border: "none",
+// }}
+// >
+// <SvgThemeButton currentTheme={currentTheme} />
+// </button>
