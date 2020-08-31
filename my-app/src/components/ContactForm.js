@@ -3,7 +3,7 @@ import "../styles/contactForm.scss";
 
 const ContactForm = () => {
   return (
-    <div>
+    <div className="contact_form_container">
       <form className="contact_form">
         <div className="contact_field">
           <label> Name:</label>

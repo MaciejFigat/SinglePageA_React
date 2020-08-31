@@ -4,7 +4,8 @@ export const LinkAbout = styled.a`
   display: inline-block;
   padding: 25px 30px;
   margin: 40px 0;
-  color: #03e9f4;
+  color: var(--color3-shadow);
+  fill: var(--color2-secondary);
   text-decoration: none;
   text-transform: uppercase;
   transition: 0.5s;
@@ -12,49 +13,92 @@ export const LinkAbout = styled.a`
   overflow: hidden;
   margin-right: 50px;
   &:hover {
-    background: #03e9f4;
+    background: var(--color3-shadow);
     color: #050801;
-    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
-      0 0 200px #03e9f4;
+    box-shadow: 0 0 5px var(--color3-shadow), 0 0 25px var(--color3-shadow),
+      0 0 50px var(--color3-shadow), 0 0 200px var(--color3-shadow);
     -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
   }
 `;
 export const ContainerBoxSecond = styled.div`
+  position: relative;
+  width: 1280px;
+  min-width: 1280px;
+
+  min-height: 860px;
   margin: 0 auto;
-  height: 100%;
-  width: 100vw;
-  overflow: hidden;
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: #555;
-  background: #ecf0f3;
+
+  @media screen and (max-width: 660px) {
+    min-width: 280px;
+
+    min-height: 260px;
+    width: 300px;
+    height: 680px;
+  }
+  @media screen and (min-width: 660px) and (max-width: 1290px) {
+    width: 300px;
+    height: 860px;
+    min-width: 680px;
+
+    min-height: 680px;
+  }
 `;
+export const GridCenter = styled.div`
+  min-width: fit-content;
+  display: grid;
+
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 100px;
+  @media screen and (min-width: 760px) and (max-width: 1290px) {
+    column-gap: 10px;
+  }
+
+  @media screen and (max-width: 760px) {
+    display: grid;
+
+    place-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 10px;
+
+    justify-content: center;
+  }
+`;
+
 export const ContainerBox = styled.div`
+  transform: translateX(-120%);
   margin: 0 auto;
   padding: 0;
-  /* display: flex;
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center; */
-  min-height: 50vh;
-  position: relative;
-  width: 90%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  grid-gap: 0 40px;
-  grid-template-rows: auto;
+`;
+export const ContainerBoxShow = styled.div`
+  transform: translateX(0%);
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1280px;
 `;
 export const Box = styled.div`
-  position: relative;
+  /* position: relative; */
+  flex: 1 1 150px;
+  margin: 20px;
   height: 500px;
   background: #1e2a2d;
+  min-width: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid #000;
-  &:after {
+  transition: 0.8s;
+  /* &:after {
     content: "";
     position: absolute;
     top: -2px;
@@ -64,28 +108,41 @@ export const Box = styled.div`
     background: #babaca;
     transform: skew(-2deg, -2.5deg);
     z-index: -1;
+  } */
+
+  &:hover {
+    transition: 0.8s;
+    transition-delay: 0.2s;
+
+    background: var(--color2-main);
+    color: #050801;
+    box-shadow: 0 0 5px var(--color3-shadow), 0 0 25px var(--color3-shadow),
+      0 0 50px var(--color3-shadow), 0 0 200px var(--color3-shadow);
   }
+  /* box-shadow: 0 0 5px #f5dcdc, 0 0 25px #f5dcdc, 0 0 50px #f5dcdc,
+      0 0 200px #03e9f4; */
 `;
 
 export const ContentBox = styled.div`
   position: absolute;
 
-  margin: 0 10px 0;
+  margin: 0 30px 0;
 `;
 export const ContentH2 = styled.h2`
   position: absolute;
-  top: -60px;
-  right: 20px;
+  top: -40px;
+  right: 25px;
   margin: 0;
   padding: 0;
-
-  font-size: 8em;
-  color: rgba(255, 255, 255, 0.02);
-  transition: 0.4s;
+  fill: var(--color2-secondary);
+  font-size: 1em;
+  color: var(--color2-secondary);
+  transition: 0.7s;
   ${Box}:hover & {
-    top: -90px;
-    right: -15px;
-    color: rgba(255, 255, 255, 0.07);
+    top: -70px;
+    right: 10px;
+    color: var(--color1-secondary);
+    fill: var(--color1-secondary);
   }
 `;
 export const ContentH3 = styled.h2`

@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useLocation,
+  useParams,
+} from "react-router-dom";
 
 import "./styles/App.css";
 import { Home, About, Contact, Login, Technology } from "./pages";
@@ -10,7 +16,10 @@ import SvgThemeButton from "./components/SvgThemeButton";
 
 import { GlobalStyle, lightTheme, darkTheme } from "./styles/GlobalStyles";
 
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+
 function App() {
+  // let location = useLocation();
   const [currentTheme, setCurrentTheme] = useState([]);
   // added a function in App. js that detects prefers-color-scheme: dark, it sets theme for dark if match is detected
   const isDark = window.matchMedia("(prefers-color-scheme: dark)");
@@ -28,7 +37,7 @@ function App() {
       setCurrentTheme("light");
     }
   };
-
+  // location={location}key={location.key}
   return (
     <ThemeProvider theme={currentTheme === "dark" ? darkTheme : lightTheme}>
       <GlobalStyle />
@@ -36,10 +45,10 @@ function App() {
       <div className="app_container">
         <Router>
           <Nav />
+
           <div onClick={handleClickCounter}>
             <SvgThemeButton currentTheme={currentTheme} />
           </div>
-
           <Switch>
             <Route exact path="/login">
               <Login />
@@ -54,11 +63,11 @@ function App() {
             <Route exact path="/contact">
               <Contact />
             </Route>
-          </Switch>
 
-          <Route exact path="/">
-            <Home />
-          </Route>
+            <Route exact path="/">
+              <Home />
+            </Route>
+          </Switch>
           <Footer />
         </Router>
       </div>
@@ -67,3 +76,16 @@ function App() {
 }
 
 export default App;
+
+// {({ match }) => (
+//   <CSSTransition
+//     in={match != null}
+//     timeout={1200}
+//     classNames="page"
+//     unmountOnExit
+//   >
+//     <div className="page">
+//       <Login />
+//     </div>
+//   </CSSTransition>
+// )}

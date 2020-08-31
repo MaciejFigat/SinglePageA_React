@@ -11,6 +11,8 @@ const darkTheme = {
   color5: "#08ecff",
   colorHoverLink: "#bad6e5",
   textColorSvg: "#1E2A2D !important",
+  colorShadow1: "#03e9f4",
+  colorShadow2: "#f5dcdc",
 };
 
 const lightTheme = {
@@ -24,6 +26,8 @@ const lightTheme = {
   color5: "#2bc8c8",
   colorHoverLink: "#62A2ED",
   textColorSvg: "#1A1A1A !important",
+  colorShadow1: "#FECA1E",
+  colorShadow2: "yellow",
 };
 
 const GlobalStyle = createGlobalStyle`
@@ -59,6 +63,10 @@ h5 {font-size: 1.25em;}
   --color3-secondary: #095ca8;
   --color4-secondary: #089eff;
   --color5-secondary: #08ecff;
+  --color1-shadow: #08ecff;
+  --color2-shadow: #08ecff;
+  --color3-shadow: ${(props) => props.theme.colorShadow1};
+  --color4-shadow: ${(props) => props.theme.colorShadow2};
   a, a:link, a:visited{
     text-decoration: none;
     color: ${(props) => props.theme.text};
