@@ -16,7 +16,8 @@ import SvgThemeButton from "./components/SvgThemeButton";
 
 import { GlobalStyle, lightTheme, darkTheme } from "./styles/GlobalStyles";
 
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+// import { TransitionGroup, CSSTransition } from "react-transition-group"; this didnt work out well
+import { AnimatePresence, motion } from "framer-motion";
 
 function App() {
   // let location = useLocation();
@@ -38,18 +39,20 @@ function App() {
     }
   };
   // location={location}key={location.key}
+  const location = useLocation();
+
   return (
     <ThemeProvider theme={currentTheme === "dark" ? darkTheme : lightTheme}>
       <GlobalStyle />
 
       <div className="app_container">
-        <Router>
-          <Nav />
+        <Nav />
 
-          <div onClick={handleClickCounter}>
-            <SvgThemeButton currentTheme={currentTheme} />
-          </div>
-          <Switch>
+        <div onClick={handleClickCounter}>
+          <SvgThemeButton currentTheme={currentTheme} />
+        </div>
+        <AnimatePresence exitBeforeEnter>
+          <Switch location={location} key={location.key}>
             <Route exact path="/login">
               <Login />
             </Route>
@@ -68,8 +71,8 @@ function App() {
               <Home />
             </Route>
           </Switch>
-          <Footer />
-        </Router>
+        </AnimatePresence>
+        <Footer />
       </div>
     </ThemeProvider>
   );

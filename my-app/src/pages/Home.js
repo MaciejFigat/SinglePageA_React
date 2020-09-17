@@ -1,22 +1,43 @@
 import React, { useState } from "react";
 import { Layout } from "../layout";
-import Air from "../components/svg/Air";
-import Vent from "../components/svg/Vent";
-import { CSSTransition } from "react-transition-group";
-import { gsap } from "gsap";
+import { AnimatePresence, motion } from "framer-motion";
+import { OfferOne, OfferTwo } from "../components/Offer";
 import {
-  ContainerBox,
-  Box,
-  ContentBox,
-  ContentH3,
-  Paragraph,
-  Link,
-  ContentH2,
-  LinkAbout,
   ContainerBoxSecond,
-  ContainerBoxShow,
   GridCenter,
+  LinkAboutSubtle,
 } from "../styles/boxColorStyles";
+//this one is for Framer Motion variables
+// const pageVariants = {
+//   in: {
+//     opacity: 1,
+//     x: 0,
+//   },
+//   out: {
+//     opacity: 0,
+//     x: "-100vw",
+//   },
+// };
+// const pageTransition = {
+//   type: "tween",
+//   ease: "anticipate",
+//   duration: 1,
+// };
+const pageVariants = {
+  in: {
+    opacity: 1,
+    // x: 0,
+  },
+  out: {
+    opacity: 0,
+    // x: "-100vw",
+  },
+};
+const pageTransition = {
+  type: "tween",
+  ease: "anticipate",
+  duration: 0.5,
+};
 const Home = () => {
   const [showHomeEl, setShowHomeEl] = useState("showNone");
 
@@ -44,71 +65,49 @@ const Home = () => {
   if (showHomeEl === "showNone") {
     return (
       <Layout>
-        <ContainerBoxSecond>
-          <GridCenter>
-            <LinkAbout onClick={handleClickOne}>Wentylacja</LinkAbout>
-            <LinkAbout onClick={handleClickTwo}>Klimatyzacja</LinkAbout>
-          </GridCenter>
-        </ContainerBoxSecond>
+        <motion.div
+          initial="out"
+          animate="in"
+          exit="out"
+          variants={pageVariants}
+          transition={pageTransition}
+        >
+          <ContainerBoxSecond>
+            <GridCenter>
+              <LinkAboutSubtle onClick={handleClickOne}>
+                <h3>Wentylacja</h3>
+              </LinkAboutSubtle>
+              <LinkAboutSubtle onClick={handleClickTwo}>
+                <h3>Klimatyzacja</h3>
+              </LinkAboutSubtle>
+            </GridCenter>
+          </ContainerBoxSecond>
+        </motion.div>
       </Layout>
     );
   } else if (showHomeEl === "showFirst") {
     return (
-      <Layout>
-        <LinkAbout onClick={handleClickOne}>
-          <Vent />
-        </LinkAbout>
-        <LinkAbout onClick={handleClickTwo}>
-          <Air />
-        </LinkAbout>
-        <ContainerBoxShow>
-          <Box>
-            <ContentBox>
-              <ContentH2 onClick={handleClickOne}>
-                <Vent />
-              </ContentH2>
-              <ContentH3>Wentylacja</ContentH3>
-              <Paragraph>Common Merganser</Paragraph> <br />
-              <Paragraph>
-                The common merganser or goosander is a large seaduck of rivers
-                and lakes in forested areas of Europe, the northern and central
-                Palearctic, and North America. The common merganser eats fish
-                and nests in holes in trees.
-              </Paragraph>
-              <Link href="#">More information</Link>
-            </ContentBox>
-          </Box>
-        </ContainerBoxShow>
-      </Layout>
+      <motion.div
+        initial="out"
+        animate="in"
+        exit="out"
+        variants={pageVariants}
+        transition={pageTransition}
+      >
+        <OfferOne handleClickOne={handleClickOne} />
+      </motion.div>
     );
   } else {
     return (
-      <Layout>
-        <LinkAbout onClick={handleClickOne}>
-          <Vent />
-        </LinkAbout>
-        <LinkAbout onClick={handleClickTwo}>
-          <Air />
-        </LinkAbout>
-        <ContainerBoxShow>
-          <Box>
-            <ContentBox>
-              <ContentH2 onClick={handleClickTwo}>
-                <Air />
-              </ContentH2>
-              <ContentH3>Klimatyzacja</ContentH3>
-              <Paragraph>Common Merganser</Paragraph> <br />
-              <Paragraph>
-                The common merganser or goosander is a large seaduck of rivers
-                and lakes in forested areas of Europe, the northern and central
-                Palearctic, and North America. The common merganser eats fish
-                and nests in holes in trees.
-              </Paragraph>
-              <Link href="#">More information</Link>
-            </ContentBox>
-          </Box>
-        </ContainerBoxShow>
-      </Layout>
+      <motion.div
+        initial="out"
+        animate="in"
+        exit="out"
+        variants={pageVariants}
+        transition={pageTransition}
+      >
+        <OfferTwo handleClickTwo={handleClickTwo} />
+      </motion.div>
     );
   }
 };

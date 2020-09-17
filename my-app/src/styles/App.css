@@ -1,11 +1,17 @@
 .app_container {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  position: relative;
-  min-height: 100vh;
+  box-sizing: border-box;
+  /* height: 100vh; */
+  /* min-height: 100vh; */
+  /* display: grid;
+  grid-template-areas:
+    "head"
+    "main"
+    "aside"
+    "foot"; */
+  /* overflow: scroll; */
+  /* padding-bottom: 2.5rem; */
 }
-.page-enter {
+/* .page-enter {
   opacity: 0;
 }
 .page-enter-active {
@@ -19,4 +25,4 @@
 .page-exit-active {
   opacity: 0;
   transition: opacity 400ms;
-}
+} */

@@ -6,10 +6,10 @@ const Footer = () => {
     <>
       <footer className="footer_styled">
         <p>
-          MTF © {new Date().getFullYear()}, Built with &#160;
-          <a className="reactLink" href="https://reactjs.org/">
-            React
+          <a className="reactLink" href="https://goo.gl/maps/GeaRu9p6TVLuPsZ66">
+            Biuro projektowo wykonawcze Batex Instalprojekt,{" "}
           </a>
+          NIP:113-02-65-654
         </p>
       </footer>
     </>
@@ -17,3 +17,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+// {new Date().getFullYear()},&#160; {" "}

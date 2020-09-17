@@ -1,5 +1,9 @@
 .svg-icon {
   fill: var(--color2-secondary);
+  &:hover {
+    fill: var(--color1-secondary) !important;
+    transition: 0.3s;
+  }
 }
 .buttonThemes {
   position: fixed;

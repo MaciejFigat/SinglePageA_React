@@ -1,6 +1,6 @@
 .contact_form_container {
   display: flex;
-  min-height: 860px;
+  min-height: 60vh;
   justify-content: center;
   align-items: center;
 }
@@ -18,19 +18,26 @@
 }
 .contact_field_content {
   padding: 0.5rem;
-  background: var(--color3-main);
+  background: var(--color1-main);
   border-radius: 0.25rem;
+  color: var(--color2-secondary);
+}
+.messageField {
+  min-height: 10vh;
 }
 .contact_button {
+  margin-top: 20px;
   background: transparent;
   width: 25%;
-  color: black;
+  box-shadow: 3px 3px 8px var(--color4-main), -3px -3px 8px var(--color4-main);
   align-self: center;
   border-radius: 0.25rem;
   padding: 0.5rem;
+  color: var(--color2-secondary);
+  transition: 0.4s;
   &:hover {
-    background: blue;
-    color: white;
+    background: var(--color1-main);
+
     transition: 0.4s;
   }
 }
