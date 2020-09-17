@@ -37,7 +37,7 @@ const About = () => {
         exit="out"
         variants={pageTransition}
       >
-        <div className="div_wrapper_about">
+        <Box>
           <div className="header">
             Vom Rechte, das mit Recht; denn alles, was ihr Sünde, Zerstörung,
             kurz das Böse will und stets das Gute schafft. Es irrt der Mensch,
@@ -132,7 +132,7 @@ const About = () => {
             durch die Welt zur Hölle. Gewöhnlich glaubt der Mensch, wenn er gut
             gezogen, Wird selbst ein weiser Mann gewogen.
           </div>
-        </div>
+        </Box>
       </motion.div>
     </Layout>
   );

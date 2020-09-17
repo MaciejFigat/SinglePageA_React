@@ -1,20 +1,11 @@
 import React, { useState } from "react";
 import {
-  ContainerBox,
   Box,
   ContentBox,
-  ContentH3,
   Paragraph,
   Link,
-  Link2,
-  ContentH2,
-  LinkAbout,
   ContainerBoxSecond,
-  ContainerBoxShow,
   GridCenter,
-  LinkAboutSecondary,
-  BoxSecondary,
-  LinkAboutSubtle,
   LinkPartners,
   LinkLogo,
 } from "../styles/boxColorStyles";
@@ -220,4 +211,3 @@ const AllTech = () => {
 };
 
 export { AllTech };
-//
