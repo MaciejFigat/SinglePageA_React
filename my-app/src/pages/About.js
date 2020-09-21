@@ -2,23 +2,8 @@ import React from "react";
 import { Layout } from "../layout";
 import "../styles/about.scss";
 import { AnimatePresence, motion } from "framer-motion";
-import {
-  ContainerBox,
-  Box,
-  ContentBox,
-  ContentH3,
-  Paragraph,
-  Link,
-  Link2,
-  ContentH2,
-  LinkAbout,
-  ContainerBoxSecond,
-  ContainerBoxShow,
-  GridCenter,
-  LinkAboutSecondary,
-  BoxSecondary,
-  LinkAboutSubtle,
-} from "../styles/boxColorStyles";
+
+import { ResponsiveDiv, BigContainerDiv } from "../styles/responsiveContainer";
 const pageTransition = {
   in: {
     opacity: 1,
@@ -37,8 +22,8 @@ const About = () => {
         exit="out"
         variants={pageTransition}
       >
-        <Box>
-          <div className="header">
+        <BigContainerDiv>
+          <ResponsiveDiv>
             Vom Rechte, das mit Recht; denn alles, was ihr Sünde, Zerstörung,
             kurz das Böse will und stets das Gute schafft. Es irrt der Mensch,
             wenn er sie beim Kragen hätte. Vernunft fängt wieder an zu sprechen
@@ -57,8 +42,8 @@ const About = () => {
             an zu sprechen Und Hoffnung wieder an zu blühn; Man sehnt sich nach
             des Lebens Quelle hin. Es irrt der Mensch, wenn er nur Worte hört,
             Es müsse sich dabei doch auch was denken lassen.
-          </div>
-          <div className="aside">
+          </ResponsiveDiv>
+          <ResponsiveDiv>
             Vernunft fängt wieder an zu sprechen Und Hoffnung wieder an zu
             blühn; Man sehnt sich nach des Lebens Quelle hin. Vernunft fängt
             wieder an zu sprechen Und Hoffnung wieder an zu sprechen Und
@@ -79,8 +64,8 @@ const About = () => {
             wenn er sie beim Kragen hätte. Vom Rechte, das mit Recht; denn
             alles, was ihr Sünde, Zerstörung, kurz das Böse will und stets das
             Gute schafft.
-          </div>
-          <div className="main">
+          </ResponsiveDiv>
+          <ResponsiveDiv>
             Das erste Ziel besteht in der Stressphase weiterhin Kapital als
             Grundlage für das laufende Geschäft der Banken zur Verfügung steht.
             Die Einheit muss ferner darauf achten, ob Konzentrationen auf
@@ -110,8 +95,8 @@ const About = () => {
             innerhalb von höchstens zwei Tagen mehrere Preisquotierungen erhält,
             die den Aufbau zusätzlicher Eigenkapitalpolster über das Minimum
             hinaus betreffen.
-          </div>
-          <div className="footer">
+          </ResponsiveDiv>
+          <ResponsiveDiv>
             Vernunft fängt wieder an zu sprechen Und Hoffnung wieder an zu
             sprechen Und Hoffnung wieder an zu sprechen Und Hoffnung wieder an
             zu sprechen Und Hoffnung wieder an zu sprechen Und Hoffnung wieder
@@ -131,8 +116,8 @@ const About = () => {
             der Schöpfung aus, Und wandelt mit bedächt'ger Schnelle Vom Himmel
             durch die Welt zur Hölle. Gewöhnlich glaubt der Mensch, wenn er gut
             gezogen, Wird selbst ein weiser Mann gewogen.
-          </div>
-        </Box>
+          </ResponsiveDiv>
+        </BigContainerDiv>
       </motion.div>
     </Layout>
   );

@@ -76,6 +76,7 @@ h4 {font-size: 1.563em;}
 
 h5 {font-size: 1.25em;}
 :root {
+      
   --color1-main: ${(props) => props.theme.color1};
   --color2-main: ${(props) => props.theme.color2};
   --color3-main: ${(props) => props.theme.color3};
