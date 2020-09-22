@@ -9,6 +9,11 @@ import {
   LinkPartners,
   LinkLogo,
 } from "../styles/boxColorStyles";
+import {
+  ResponsiveDiv,
+  BigContainerDiv,
+  ContainerLogos,
+} from "../styles/responsiveContainer";
 import FujiElectric from "./svg/FujiElectric";
 import Daikin from "./svg/Daikin";
 import Fujitsu from "./svg/Fujitsu";
@@ -163,8 +168,8 @@ const AllTech = () => {
 
   if (partnersShow === "showNone") {
     return (
-      <ContainerBoxSecond>
-        <GridCenter>
+      <BigContainerDiv>
+        <ContainerLogos>
           <LinkPartners onClick={handleClickFuji}>
             <FujiElectric />
           </LinkPartners>
@@ -189,25 +194,31 @@ const AllTech = () => {
           <LinkPartners onClick={handleClickGree}>
             <Gree />
           </LinkPartners>
-        </GridCenter>
-      </ContainerBoxSecond>
+        </ContainerLogos>
+      </BigContainerDiv>
     );
   } else {
     return (
-      <ContainerBoxSecond>
-        <Box>
-          <ContentBox>
-            <LinkLogo href={partnerName.link}>{partnerName.logo}</LinkLogo>
-            <Paragraph>{partnerName.motto}</Paragraph> <br />
-            <Paragraph>{partnerName.description}</Paragraph>
-            <Link href="#" onClick={() => setPartnersShow("showNone")}>
-              Powrót
-            </Link>
-          </ContentBox>
-        </Box>
-      </ContainerBoxSecond>
+      <ResponsiveDiv>
+        <LinkLogo href={partnerName.link}>{partnerName.logo}</LinkLogo>
+        <Paragraph>{partnerName.motto}</Paragraph> <br />
+        <Paragraph>{partnerName.description}</Paragraph>
+        <Link href="#" onClick={() => setPartnersShow("showNone")}>
+          Powrót
+        </Link>
+      </ResponsiveDiv>
     );
   }
 };
 
 export { AllTech };
+
+// <ContainerBoxSecond>
+//
+//         <GridCenter></GridCenter>
+//         <ContainerBoxSecond>
+//         <Box>
+//           <ContentBox>
+// </ContentBox>
+//         </Box>
+//       </ContainerBoxSecond>
