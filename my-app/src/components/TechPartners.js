@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   Box,
   ContentBox,
@@ -13,6 +14,7 @@ import {
   ResponsiveDiv,
   BigContainerDiv,
   ContainerLogos,
+  LinkOne,
 } from "../styles/responsiveContainer";
 import FujiElectric from "./svg/FujiElectric";
 import Daikin from "./svg/Daikin";
@@ -22,6 +24,21 @@ import Lg from "./svg/Lg";
 import Mitsubishi from "./svg/Mitsubishi";
 import Panasonic from "./svg/Panasonic";
 import Samsung from "./svg/Samsung";
+const pageVariants = {
+  in: {
+    opacity: 1,
+    x: 0,
+  },
+  out: {
+    opacity: 0,
+    // x: "-100vw",
+  },
+};
+const pageTransition = {
+  type: "tween",
+  ease: "anticipate",
+  duration: 0.5,
+};
 const AllTech = () => {
   const [partnersShow, setPartnersShow] = useState("showNone");
 
@@ -168,7 +185,7 @@ const AllTech = () => {
 
   if (partnersShow === "showNone") {
     return (
-      <BigContainerDiv>
+      <>
         <ContainerLogos>
           <LinkPartners onClick={handleClickFuji}>
             <FujiElectric />
@@ -195,30 +212,34 @@ const AllTech = () => {
             <Gree />
           </LinkPartners>
         </ContainerLogos>
-      </BigContainerDiv>
+      </>
     );
   } else {
     return (
-      <ResponsiveDiv>
-        <LinkLogo href={partnerName.link}>{partnerName.logo}</LinkLogo>
-        <Paragraph>{partnerName.motto}</Paragraph> <br />
-        <Paragraph>{partnerName.description}</Paragraph>
-        <Link href="#" onClick={() => setPartnersShow("showNone")}>
-          Powrót
-        </Link>
-      </ResponsiveDiv>
+      <motion.div
+        initial="out"
+        animate="in"
+        exit="out"
+        // variants={pageTransition}
+        variants={pageVariants}
+        transition={pageTransition}
+      >
+        <BigContainerDiv>
+          <ResponsiveDiv>
+            <LinkLogo href={partnerName.link}>{partnerName.logo}</LinkLogo>
+            <h4>
+              <Paragraph>{partnerName.motto}</Paragraph>
+            </h4>{" "}
+            <br />
+            <Paragraph>{partnerName.description}</Paragraph>
+            <LinkOne href="#" onClick={() => setPartnersShow("showNone")}>
+              Powrót
+            </LinkOne>
+          </ResponsiveDiv>
+        </BigContainerDiv>
+      </motion.div>
     );
   }
 };
 
 export { AllTech };
-
-// <ContainerBoxSecond>
-//
-//         <GridCenter></GridCenter>
-//         <ContainerBoxSecond>
-//         <Box>
-//           <ContentBox>
-// </ContentBox>
-//         </Box>
-//       </ContainerBoxSecond>

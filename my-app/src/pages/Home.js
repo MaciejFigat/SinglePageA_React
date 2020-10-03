@@ -7,6 +7,13 @@ import {
   GridCenter,
   LinkAboutSubtle,
 } from "../styles/boxColorStyles";
+import {
+  ResponsiveDiv,
+  BigContainerDiv,
+  ContainerLogos,
+  LinkOne,
+  H2,
+} from "../styles/responsiveContainer";
 //this one is for Framer Motion variables
 // const pageVariants = {
 //   in: {
@@ -72,7 +79,7 @@ const Home = () => {
           variants={pageVariants}
           transition={pageTransition}
         >
-          <ContainerBoxSecond>
+          <BigContainerDiv>
             <GridCenter>
               <LinkAboutSubtle onClick={handleClickOne}>
                 <h3>Wentylacja</h3>
@@ -81,7 +88,7 @@ const Home = () => {
                 <h3>Klimatyzacja</h3>
               </LinkAboutSubtle>
             </GridCenter>
-          </ContainerBoxSecond>
+          </BigContainerDiv>
         </motion.div>
       </Layout>
     );

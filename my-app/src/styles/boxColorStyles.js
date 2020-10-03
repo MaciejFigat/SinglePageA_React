@@ -83,8 +83,9 @@ export const LinkPartners = styled.a`
   overflow: hidden;
 
   &:hover {
-    color: var(--color3-shadow);
-    opacity: 0.7;
+    color: var(--color1-secondary);
+    fill: var(--color1-secondary);
+    opacity: 0.9;
   }
 `;
 export const ContainerBoxSecond = styled.div`
@@ -115,7 +116,7 @@ export const ContainerBoxSecond = styled.div`
 export const GridCenter = styled.div`
   min-width: fit-content;
   display: grid;
-
+  min-height: 80vh;
   place-items: center;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 100px;
@@ -129,8 +130,6 @@ export const GridCenter = styled.div`
     place-items: center;
     grid-template-columns: repeat(1, 1fr);
     column-gap: 10px;
-
-    justify-content: center;
   }
 `;
 
@@ -157,33 +156,13 @@ export const ContainerBoxShow = styled.div`
   height: 80vh;
 
   @media screen and (max-width: 400px) {
-    /* min-width: 280px;
-
-    min-height: 260px;
-    width: 500px;
-    height: 780px; */
-    /* width: 100vw; */
-    /* height: 120vh; */
-    /* overflow: scroll; */
-    /* min-height: fit-content; */
   }
   @media screen and (min-width: 400px) and (max-width: 660px) {
-    /* min-width: 280px;
-
-    min-height: 260px;
-    width: 500px;
-    height: 780px; */
     width: 100vw;
     height: 80vh;
-
-    /* overflow: hidden; */
   }
   @media screen and (min-width: 660px) and (max-width: 1290px) {
     width: 100vw;
-    /* height: 80vh; */
-    /* min-width: 680px;
-
-    min-height: 680px; */
   }
 `;
 export const Box = styled.div`
@@ -241,11 +220,9 @@ export const Box = styled.div`
   @media screen and (max-width: 400px) {
     width: 100vw;
     height: 180vh;
-    /* overflow-block: scroll; */
   }
 `;
 export const BoxSecondary = styled.div`
-  /* position: relative; */
   flex: 1 1 150px;
   margin: 20px;
   height: 500px;
@@ -276,8 +253,8 @@ export const ContentBox = styled.div`
 export const ContentH2 = styled.h2`
   position: absolute;
   cursor: pointer;
-  top: -5px;
-  right: 25px;
+  /* top: 10px; */
+  right: 10%;
   margin: 0;
   padding: 0;
   fill: var(--color2-secondary);
@@ -299,8 +276,8 @@ export const ContentH2 = styled.h2`
   } */
   @media screen and (max-width: 400px) {
     /* display: none; */
-    top: -50px;
-    right: 15px;
+    /* top: -50px;
+    right: 15px; */
   }
 `;
 export const ContentH3 = styled.h2`
@@ -309,14 +286,6 @@ export const ContentH3 = styled.h2`
 
   @media screen and (max-width: 400px) {
     overflow: hidden;
-
-    /* position: absolute;
-
-    top: 55px;
-    left: 25px; */
-    /* position: fixed; */
-    /* top: 5px;
-    left: 0; */
   }
 `;
 export const Paragraph = styled.p`
@@ -324,10 +293,12 @@ export const Paragraph = styled.p`
   padding: 0;
 `;
 export const Link = styled.a`
-  position: relative;
   margin: 20px 0 0;
   padding: 10px 20px;
   border-radius: 5px;
+
+  max-width: fit-content;
+
   text-decoration: none;
   border: 1px solid var(--color2-secondary);
   display: inline-block;
@@ -366,16 +337,18 @@ export const LinkLogo = styled.a`
   display: inline-block;
   cursor: pointer;
   margin: 0;
-  padding: 0;
+  padding: 10px;
   text-decoration: none;
   text-transform: uppercase;
   transition: 0.5s;
-  color: var(--color4-shadow);
+  /* color: var(--color4-shadow); */
   fill: var(--color2-secondary);
   overflow: hidden;
-
+  max-width: fit-content;
   &:hover {
-    color: var(--color3-shadow);
+    /* color: var(--color1-secondary); */
+    fill: var(--color1-secondary);
     opacity: 0.7;
   }
 `;
+// var(--color1-secondary) !important;
