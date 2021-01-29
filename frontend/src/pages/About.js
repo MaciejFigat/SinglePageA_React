@@ -1,9 +1,9 @@
-import React from "react";
-import { Layout } from "../layout";
-import "../styles/about.scss";
-import { AnimatePresence, motion } from "framer-motion";
+import React from 'react'
+import { Layout } from '../layout'
+import '../styles/about.scss'
+import { motion } from 'framer-motion'
 
-import { ResponsiveDiv, BigContainerDiv } from "../styles/responsiveContainer";
+import { ResponsiveDiv, BigContainerDiv } from '../styles/responsiveContainer'
 const pageTransition = {
   in: {
     opacity: 1,
@@ -12,14 +12,14 @@ const pageTransition = {
   out: {
     opacity: 0,
   },
-};
+}
 const About = () => {
   return (
     <Layout>
       <motion.div
-        initial="out"
-        animate="in"
-        exit="out"
+        initial='out'
+        animate='in'
+        exit='out'
         variants={pageTransition}
       >
         <BigContainerDiv>
@@ -120,10 +120,10 @@ const About = () => {
         </BigContainerDiv>
       </motion.div>
     </Layout>
-  );
-};
+  )
+}
 
-export default About;
+export default About
 // <div className="div_container one">
 // <div className="div_one"></div>
 // </div>

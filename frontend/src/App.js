@@ -1,51 +1,43 @@
-import React, { useState, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useLocation,
-  useParams,
-} from "react-router-dom";
+import React, { useState, useEffect } from 'react'
+import { Switch, Route, useLocation } from 'react-router-dom'
 
-import "./styles/App.css";
-import { Home, About, Contact, Login, Technology } from "./pages";
-import { Nav, Footer } from "./layout";
-import { ThemeProvider } from "styled-components";
+import './styles/App.css'
+import { Home, About, Contact, Login, Technology } from './pages'
+import { Nav, Footer } from './layout'
+import { ThemeProvider } from 'styled-components'
 
-import SvgThemeButton from "./components/SvgThemeButton";
+import SvgThemeButton from './components/SvgThemeButton'
 
-import { GlobalStyle, lightTheme, darkTheme } from "./styles/GlobalStyles";
+import { GlobalStyle, lightTheme, darkTheme } from './styles/GlobalStyles'
 
-// import { TransitionGroup, CSSTransition } from "react-transition-group"; this didnt work out well
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from 'framer-motion'
 
 function App() {
-  // let location = useLocation();
-  const [currentTheme, setCurrentTheme] = useState([]);
+  const [currentTheme, setCurrentTheme] = useState([])
   // added a function in App. js that detects prefers-color-scheme: dark, it sets theme for dark if match is detected
-  const isDark = window.matchMedia("(prefers-color-scheme: dark)");
-  const useDarkMode = isDark.matches;
+  const isDark = window.matchMedia('(prefers-color-scheme: dark)')
+  const useDarkMode = isDark.matches
   useEffect(() => {
     if (useDarkMode === true) {
-      setCurrentTheme("dark");
+      setCurrentTheme('dark')
     }
-  }, []);
+  }, [useDarkMode])
 
   const handleClickCounter = () => {
-    if (currentTheme === "light") {
-      setCurrentTheme("dark");
+    if (currentTheme === 'light') {
+      setCurrentTheme('dark')
     } else {
-      setCurrentTheme("light");
+      setCurrentTheme('light')
     }
-  };
-  // location={location}key={location.key}
-  const location = useLocation();
+  }
+
+  const location = useLocation()
 
   return (
-    <ThemeProvider theme={currentTheme === "dark" ? darkTheme : lightTheme}>
+    <ThemeProvider theme={currentTheme === 'dark' ? darkTheme : lightTheme}>
       <GlobalStyle />
 
-      <div className="app_container">
+      <div className='app_container'>
         <Nav />
 
         <div onClick={handleClickCounter}>
@@ -53,21 +45,21 @@ function App() {
         </div>
         <AnimatePresence exitBeforeEnter>
           <Switch location={location} key={location.key}>
-            <Route exact path="/login">
+            <Route exact path='/login'>
               <Login />
             </Route>
 
-            <Route exact path="/about">
+            <Route exact path='/about'>
               <About />
             </Route>
-            <Route exact path="/technology">
+            <Route exact path='/technology'>
               <Technology />
             </Route>
-            <Route exact path="/contact">
+            <Route exact path='/contact'>
               <Contact />
             </Route>
 
-            <Route exact path="/">
+            <Route exact path='/'>
               <Home />
             </Route>
           </Switch>
@@ -75,20 +67,7 @@ function App() {
         <Footer />
       </div>
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
-
-// {({ match }) => (
-//   <CSSTransition
-//     in={match != null}
-//     timeout={1200}
-//     classNames="page"
-//     unmountOnExit
-//   >
-//     <div className="page">
-//       <Login />
-//     </div>
-//   </CSSTransition>
-// )}
+export default App

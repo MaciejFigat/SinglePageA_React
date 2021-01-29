@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Layout } from '../layout'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { AllTech } from '../components/TechPartners'
 
 const pageTransition = {
@@ -15,15 +15,15 @@ const pageTransition = {
 const Technology = () => {
   const [showHomeEl, setShowHomeEl] = useState('showAll')
 
-  const handleClickOne = () => {
-    if (showHomeEl === 'showAll') {
-      setShowHomeEl('showFirst')
-    } else if (showHomeEl === 'showSecond') {
-      setShowHomeEl('showFirst')
-    } else {
-      setShowHomeEl('showNone')
-    }
-  }
+  // const handleClickOne = () => {
+  //   if (showHomeEl === 'showAll') {
+  //     setShowHomeEl('showFirst')
+  //   } else if (showHomeEl === 'showSecond') {
+  //     setShowHomeEl('showFirst')
+  //   } else {
+  //     setShowHomeEl('showNone')
+  //   }
+  // }
 
   return (
     <Layout>

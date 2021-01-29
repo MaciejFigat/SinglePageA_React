@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import { Layout } from "../layout";
-// import LoginComponent from "../components/LoginComponent";
-import { AnimatePresence, motion } from "framer-motion";
-import { AllTech } from "../components/TechPartners";
+import { Layout } from '../layout'
+
+import { motion } from 'framer-motion'
+import { AllTech } from '../components/TechPartners'
 const pageVariants = {
   in: {
     opacity: 1,
@@ -10,21 +9,21 @@ const pageVariants = {
   },
   out: {
     opacity: 0,
-    x: "-100vw",
+    x: '-100vw',
   },
-};
+}
 const pageTransition = {
-  type: "tween",
-  ease: "anticipate",
+  type: 'tween',
+  ease: 'anticipate',
   duration: 0.5,
-};
+}
 const Login = () => {
   return (
     <Layout>
       <motion.div
-        initial="out"
-        animate="in"
-        exit="out"
+        initial='out'
+        animate='in'
+        exit='out'
         // variants={pageTransition}
         variants={pageVariants}
         transition={pageTransition}
@@ -32,6 +31,6 @@ const Login = () => {
         <AllTech />
       </motion.div>
     </Layout>
-  );
-};
-export default Login;
+  )
+}
+export default Login
