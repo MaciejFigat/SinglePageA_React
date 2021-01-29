@@ -1,0 +1,122 @@
+import React, { useState } from "react";
+import { Layout } from "../layout";
+import { AnimatePresence, motion } from "framer-motion";
+import { OfferOne, OfferTwo } from "../components/Offer";
+import {
+  ContainerBoxSecond,
+  GridCenter,
+  LinkAboutSubtle,
+} from "../styles/boxColorStyles";
+import {
+  ResponsiveDiv,
+  BigContainerDiv,
+  ContainerLogos,
+  LinkOne,
+  H2,
+} from "../styles/responsiveContainer";
+//this one is for Framer Motion variables
+// const pageVariants = {
+//   in: {
+//     opacity: 1,
+//     x: 0,
+//   },
+//   out: {
+//     opacity: 0,
+//     x: "-100vw",
+//   },
+// };
+// const pageTransition = {
+//   type: "tween",
+//   ease: "anticipate",
+//   duration: 1,
+// };
+const pageVariants = {
+  in: {
+    opacity: 1,
+    // x: 0,
+  },
+  out: {
+    opacity: 0,
+    // x: "-100vw",
+  },
+};
+const pageTransition = {
+  type: "tween",
+  ease: "anticipate",
+  duration: 0.5,
+};
+const Home = () => {
+  const [showHomeEl, setShowHomeEl] = useState("showNone");
+
+  const handleClickOne = () => {
+    if (showHomeEl === "showNone") {
+      setShowHomeEl("showFirst");
+    } else if (showHomeEl === "showSecond") {
+      setShowHomeEl("showFirst");
+    } else {
+      setShowHomeEl("showNone");
+    }
+    console.log(showHomeEl);
+  };
+  const handleClickTwo = () => {
+    if (showHomeEl === "showNone") {
+      setShowHomeEl("showSecond");
+    } else if (showHomeEl === "showFirst") {
+      setShowHomeEl("showSecond");
+    } else {
+      setShowHomeEl("showNone");
+    }
+    console.log(showHomeEl);
+  };
+
+  if (showHomeEl === "showNone") {
+    return (
+      <Layout>
+        <motion.div
+          initial="out"
+          animate="in"
+          exit="out"
+          variants={pageVariants}
+          transition={pageTransition}
+        >
+          <BigContainerDiv>
+            <GridCenter>
+              <LinkAboutSubtle onClick={handleClickOne}>
+                <h3>Wentylacja</h3>
+              </LinkAboutSubtle>
+              <LinkAboutSubtle onClick={handleClickTwo}>
+                <h3>Klimatyzacja</h3>
+              </LinkAboutSubtle>
+            </GridCenter>
+          </BigContainerDiv>
+        </motion.div>
+      </Layout>
+    );
+  } else if (showHomeEl === "showFirst") {
+    return (
+      <motion.div
+        initial="out"
+        animate="in"
+        exit="out"
+        variants={pageVariants}
+        transition={pageTransition}
+      >
+        <OfferOne handleClickOne={handleClickOne} />
+      </motion.div>
+    );
+  } else {
+    return (
+      <motion.div
+        initial="out"
+        animate="in"
+        exit="out"
+        variants={pageVariants}
+        transition={pageTransition}
+      >
+        <OfferTwo handleClickTwo={handleClickTwo} />
+      </motion.div>
+    );
+  }
+};
+
+export default Home;
