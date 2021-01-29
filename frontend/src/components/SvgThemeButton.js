@@ -1,5 +1,5 @@
 import React from 'react'
-import svgButton from '../styles/svgButton.scss'
+import '../styles/svgButton.scss'
 
 const SvgThemeButton = ({ currentTheme }) => {
   if (currentTheme === 'light') {
