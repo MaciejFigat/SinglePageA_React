@@ -3,7 +3,7 @@ import { Layout } from '../layout'
 import { motion } from 'framer-motion'
 import { OfferOne, OfferTwo } from '../components/Offer'
 import { GridCenter, LinkAboutSubtle } from '../styles/boxColorStyles'
-import { BigContainerDiv, H2 } from '../styles/responsiveContainer'
+import { BigContainerDiv } from '../styles/responsiveContainer'
 
 const pageVariants = {
   in: {

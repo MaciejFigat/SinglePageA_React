@@ -13,7 +13,7 @@ const pageTransition = {
   },
 }
 const Technology = () => {
-  const [showHomeEl, setShowHomeEl] = useState('showAll')
+  // const [showHomeEl, setShowHomeEl] = useState('showAll')
 
   // const handleClickOne = () => {
   //   if (showHomeEl === 'showAll') {
