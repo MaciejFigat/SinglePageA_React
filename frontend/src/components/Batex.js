@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/svg/batex.scss'
-import textColorSvg from '../App'
+// import textColorSvg from '../App'
 const Batex = () => {
   return (
     <div className='batexContainer'>
