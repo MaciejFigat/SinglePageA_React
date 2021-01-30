@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import px2vw from "../utilities/px2vw";
+import styled from 'styled-components'
+import px2vw from '../utilities/px2vw'
 export const BigContainerDiv = styled.div`
   display: grid;
   place-items: center;
   margin-bottom: 60px;
-`;
+`
 export const ResponsiveDiv = styled.div`
   display: grid;
   place-items: left;
@@ -30,7 +30,7 @@ export const ResponsiveDiv = styled.div`
     width: 85%;
     padding: 10px 10px 10px;
   }
-`;
+`
 export const ContainerLogos = styled.div`
   display: grid;
   place-items: center;
@@ -46,7 +46,7 @@ export const ContainerLogos = styled.div`
     grid-template-columns: repeat(1, 1fr);
     row-gap: 10px;
   }
-`;
+`
 export const LinkOne = styled.a`
   margin: 20px 0px 20px;
   padding: 10px 20px;
@@ -67,12 +67,11 @@ export const LinkOne = styled.a`
   &:hover {
     background: var(--color1-main);
   }
-`;
+`
 export const H2 = styled.h2`
   position: absolute;
   cursor: pointer;
-  /* max-height: 0.5rem;
-  max-width: 0.5rem; */
+
   right: 10%;
   margin: 0;
   padding: 0;
@@ -91,4 +90,4 @@ export const H2 = styled.h2`
     height: 22px important!;
     width: 22px important!;
   }
-`;
+`

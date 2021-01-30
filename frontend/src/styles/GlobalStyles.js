@@ -1,43 +1,37 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 const darkTheme = {
-  text: "#CFD8DC",
-  // "#1E2A2D"#1A1A1A"
-  background: "#334e68",
-  // color1: "#1A5E25",
-  // color2: "#1A1A1A",
-  // color3: "#095ca8",
-  // color4: "#089eff",
-  // color5: "#08ecff",
-  color1: "#102a43",
-  color2: "#243b53",
-  color3: "#334e68",
-  color4: "#486581",
-  color5: "#627d98",
-  colorHoverLink: "#486581",
-  textColorSvg: "#CFD8DC !important",
-  colorShadow1: "#03e9f4",
-  colorShadow2: "#486581",
-};
+  text: '#CFD8DC',
+  background: '#334e68',
+  color1: '#102a43',
+  color2: '#243b53',
+  color3: '#334e68',
+  color4: '#486581',
+  color5: '#627d98',
+  colorHoverLink: '#486581',
+  textColorSvg: '#CFD8DC !important',
+  colorShadow1: '#03e9f4',
+  colorShadow2: '#486581',
+}
 
 const lightTheme = {
-  text: "#000",
+  text: '#000',
 
-  background: "#ECEFF1",
+  background: '#ECEFF1',
 
   // .color3 {color: #123f75;}
   // .color4 {color: #126a79;}
   // .color5 {color: #17a090;}
-  color1: "#CFD8DC",
-  color2: "#B0BEC5",
-  color3: "#90A4AE",
-  color4: "#90A4AE",
-  color5: "#90A4AE",
-  colorHoverLink: "#62A2ED",
-  textColorSvg: "#1A1A1A !important",
-  colorShadow1: "#1d6b8e",
-  colorShadow2: "#1d6b8e",
-};
+  color1: '#CFD8DC',
+  color2: '#B0BEC5',
+  color3: '#90A4AE',
+  color4: '#90A4AE',
+  color5: '#90A4AE',
+  colorHoverLink: '#62A2ED',
+  textColorSvg: '#1A1A1A !important',
+  colorShadow1: '#1d6b8e',
+  colorShadow2: '#1d6b8e',
+}
 // color1: "#efce6e",
 //   color2: "#e8cd7f",
 //   color3: "#1d5886",
@@ -127,6 +121,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   
   background:  ${(props) => props.theme.background};
-}`;
+}`
 // background-image: url( ${(props) => props.theme.background});
-export { GlobalStyle, darkTheme, lightTheme };
+export { GlobalStyle, darkTheme, lightTheme }
