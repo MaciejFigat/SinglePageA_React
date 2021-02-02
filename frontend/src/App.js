@@ -64,8 +64,8 @@ function App() {
             </Route>
           </Switch>
         </AnimatePresence>
-        <Footer />
       </div>
+      <Footer />
     </ThemeProvider>
   )
 }

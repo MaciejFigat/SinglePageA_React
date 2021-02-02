@@ -5,12 +5,12 @@ const Footer = () => {
   return (
     <>
       <footer className='footer_styled'>
-        <p>
+        <div className='divFooter'>
           <a className='reactLink' href='https://goo.gl/maps/GeaRu9p6TVLuPsZ66'>
-            Biuro projektowo wykonawcze Batex Instalprojekt,{' '}
+            Batex Instalprojekt,{' '}
           </a>
-          NIP:113-02-65-654
-        </p>
+          NIP: 113-02-65-654
+        </div>
       </footer>
     </>
   )

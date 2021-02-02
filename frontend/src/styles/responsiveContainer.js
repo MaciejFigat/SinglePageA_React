@@ -5,6 +5,10 @@ export const BigContainerDiv = styled.div`
   place-items: center;
   margin-bottom: 60px;
 `
+export const ContainerDiv = styled.div`
+  display: grid;
+  place-items: center;
+`
 export const ResponsiveDiv = styled.div`
   display: grid;
   place-items: left;

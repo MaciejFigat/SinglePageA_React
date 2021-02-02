@@ -48,7 +48,13 @@ const lightTheme = {
 // grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 const GlobalStyle = createGlobalStyle`
 html {font-size: 100%;
+   
   } 
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
 
 h1, h2, h3, h4, h5 {
   margin: 2.75rem 0 1.05rem;
@@ -70,7 +76,7 @@ h4 {font-size: 1.563em;}
 
 h5 {font-size: 1.25em;}
 :root {
-      
+  
   --color1-main: ${(props) => props.theme.color1};
   --color2-main: ${(props) => props.theme.color2};
   --color3-main: ${(props) => props.theme.color3};
