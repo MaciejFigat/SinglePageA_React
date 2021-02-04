@@ -8,15 +8,18 @@ const ContactForm = () => {
       {' '}
       <ContainerDiv>
         <ResponsiveDiv>
-          <h3 className='hcenter'>
-            Dane kontaktowe: <br />
-            Batex Instalprojekt <br />
+          <div className='hcenter'>
+            <h2>
+              {' '}
+              Batex Instalprojekt <br />
+              Tadeusz Figat <br />
+            </h2>
             ul. Grenadierów 21 <br />
-            lok.31 04-052
+            lok. 31 04-052
             <br />
             Warszawa <br />
             Tel. 22-810-95-59
-          </h3>
+          </div>
         </ResponsiveDiv>
       </ContainerDiv>
       <div className='contact_form_container'>

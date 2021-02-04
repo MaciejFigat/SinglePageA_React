@@ -15,7 +15,7 @@ const pageVariants = {
 }
 const pageTransition = {
   type: 'tween',
-  ease: 'anticipate',
+  // ease: 'anticipate',
   duration: 0.5,
 }
 const Login = () => {
@@ -25,7 +25,6 @@ const Login = () => {
         initial='out'
         animate='in'
         exit='out'
-        // variants={pageTransition}
         variants={pageVariants}
         transition={pageTransition}
       >

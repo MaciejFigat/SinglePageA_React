@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 export const LinkAbout = styled.a`
   position: relative;
   display: grid;
@@ -24,7 +24,7 @@ export const LinkAbout = styled.a`
       0 0 50px var(--color3-shadow), 0 0 200px var(--color3-shadow);
     -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
   }
-`;
+`
 export const LinkAboutSecondary = styled.a`
   position: relative;
   display: inline-block;
@@ -45,15 +45,15 @@ export const LinkAboutSecondary = styled.a`
       0 0 50px var(--color4-shadow), 0 0 200px var(--color4-shadow);
     -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
   }
-`;
+`
 export const LinkAboutSubtle = styled.a`
   /* position: relative; */
   display: inline-block;
   /* display: grid;
 
   place-items: center; */
-  padding: 25px 30px;
-  margin: 40px 0;
+  padding: 0px 0px;
+  margin: 20px 20px 0;
   color: var(--color4-shadow);
   fill: var(--color2-secondary);
   text-decoration: none;
@@ -61,7 +61,7 @@ export const LinkAboutSubtle = styled.a`
   transition: 0.5s;
   letter-spacing: 4px;
   overflow: hidden;
-  margin-right: 50px;
+
   &:hover {
     /* background: var(--color4-shadow); */
     color: var(--color3-shadow);
@@ -69,7 +69,7 @@ export const LinkAboutSubtle = styled.a`
     /* text-shadow: 0 0 5px var(--color2-secondary); */
     /* -webkit-box-reflect: below 1px linear-gradient(transparent, #0005); */
   }
-`;
+`
 export const LinkPartners = styled.a`
   display: inline-block;
 
@@ -87,7 +87,7 @@ export const LinkPartners = styled.a`
     fill: var(--color1-secondary);
     opacity: 0.9;
   }
-`;
+`
 export const ContainerBoxSecond = styled.div`
   position: relative;
   width: 1280px;
@@ -112,7 +112,7 @@ export const ContainerBoxSecond = styled.div`
 
     min-height: 680px;
   }
-`;
+`
 export const GridCenter = styled.div`
   min-width: fit-content;
   display: grid;
@@ -131,7 +131,7 @@ export const GridCenter = styled.div`
     grid-template-columns: repeat(1, 1fr);
     column-gap: 10px;
   }
-`;
+`
 
 export const ContainerBox = styled.div`
   overflow: hidden;
@@ -142,7 +142,7 @@ export const ContainerBox = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-`;
+`
 export const ContainerBoxShow = styled.div`
   transform: translateX(0%);
   margin: 0 auto;
@@ -164,7 +164,7 @@ export const ContainerBoxShow = styled.div`
   @media screen and (min-width: 660px) and (max-width: 1290px) {
     width: 100vw;
   }
-`;
+`
 export const Box = styled.div`
   overflow: hidden;
   position: relative;
@@ -221,7 +221,7 @@ export const Box = styled.div`
     width: 100vw;
     height: 180vh;
   }
-`;
+`
 export const BoxSecondary = styled.div`
   flex: 1 1 150px;
   margin: 20px;
@@ -243,13 +243,13 @@ export const BoxSecondary = styled.div`
     box-shadow: 0 0 5px var(--color4-shadow), 0 0 25px var(--color4-shadow),
       0 0 50px var(--color4-shadow), 0 0 200px var(--color4-shadow);
   }
-`;
+`
 
 export const ContentBox = styled.div`
   position: absolute;
 
   margin: 0 30px 0;
-`;
+`
 export const ContentH2 = styled.h2`
   position: absolute;
   cursor: pointer;
@@ -279,7 +279,7 @@ export const ContentH2 = styled.h2`
     /* top: -50px;
     right: 15px; */
   }
-`;
+`
 export const ContentH3 = styled.h2`
   margin: 0 0 10px;
   padding: 0;
@@ -287,11 +287,11 @@ export const ContentH3 = styled.h2`
   @media screen and (max-width: 400px) {
     overflow: hidden;
   }
-`;
+`
 export const Paragraph = styled.p`
   margin: 0;
   padding: 0;
-`;
+`
 export const Link = styled.a`
   margin: 20px 0 0;
   padding: 10px 20px;
@@ -315,7 +315,7 @@ export const Link = styled.a`
   &:hover {
     background: var(--color1-main);
   }
-`;
+`
 export const Link2 = styled.a`
   outline: none;
   border: none;
@@ -331,7 +331,7 @@ export const Link2 = styled.a`
   background: var(--color2-main);
   box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
   transition: 0.5s;
-`;
+`
 
 export const LinkLogo = styled.a`
   display: inline-block;
@@ -350,5 +350,5 @@ export const LinkLogo = styled.a`
     fill: var(--color1-secondary);
     opacity: 0.7;
   }
-`;
+`
 // var(--color1-secondary) !important;
