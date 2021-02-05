@@ -1,24 +1,29 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import '../styles/nav.scss'
-
+import { useDispatch, useSelector } from 'react-redux'
 import Batex from '../components/Batex'
-
+import { openMenu, closeMenu } from '../actions/menuActions'
 import Burger from './Burger'
 
 const Nav = () => {
-  const [showMenu, setShowMenu] = useState('hidden')
+  const dispatch = useDispatch()
+
+  const menuState = useSelector((state) => state.menuState)
+  const { menuOpen } = menuState
+
   const handleClick = () => {
-    if (showMenu === 'visible') {
-      setShowMenu('hidden')
-    } else {
-      setShowMenu('visible')
+    if (menuOpen === true) {
+      dispatch(closeMenu())
+    } else if (menuOpen === false) {
+      dispatch(openMenu())
     }
   }
+
   return (
     <nav className='nav_container'>
       <Batex />
-      <ul className={`nav_list ${showMenu}`}>
+      <ul className={`nav_list ${menuOpen}`}>
         <li className='testLi1'>
           {' '}
           <NavLink
@@ -75,6 +80,7 @@ const Nav = () => {
           </NavLink>
         </li>
       </ul>
+
       <div onClick={handleClick}>
         <Burger />
       </div>

@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import { Switch, Route, useLocation } from 'react-router-dom'
-
 import './styles/App.css'
 import { Home, About, Contact, Login, Technology } from './pages'
 import { Nav, Footer } from './layout'
 import { ThemeProvider } from 'styled-components'
-
 import SvgThemeButton from './components/SvgThemeButton'
-
 import { GlobalStyle, lightTheme, darkTheme } from './styles/GlobalStyles'
-
 import { AnimatePresence } from 'framer-motion'
+import { useDispatch, useSelector } from 'react-redux'
+import { closeMenu } from './actions/menuActions'
 
-function App() {
+const App = () => {
+  const dispatch = useDispatch()
+  const menuState = useSelector((state) => state.menuState)
+  const { menuOpen } = menuState
   const [currentTheme, setCurrentTheme] = useState([])
   // added a function in App. js that detects prefers-color-scheme: dark, it sets theme for dark if match is detected
   const isDark = window.matchMedia('(prefers-color-scheme: dark)')
@@ -31,13 +32,19 @@ function App() {
     }
   }
 
+  const handleClickMenu = () => {
+    if (menuOpen === true) {
+      dispatch(closeMenu())
+    }
+  }
+
   const location = useLocation()
 
   return (
     <ThemeProvider theme={currentTheme === 'dark' ? darkTheme : lightTheme}>
       <GlobalStyle />
 
-      <div className='app_container'>
+      <div className='app_container' onClick={handleClickMenu}>
         <Nav />
 
         <div onClick={handleClickCounter}>
