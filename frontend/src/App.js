@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Switch, Route, useLocation } from 'react-router-dom'
 import './styles/App.css'
 import { Home, About, Contact, Login, Technology } from './pages'
@@ -14,23 +14,8 @@ const App = () => {
   const dispatch = useDispatch()
   const menuState = useSelector((state) => state.menuState)
   const { menuOpen } = menuState
-  const [currentTheme, setCurrentTheme] = useState([])
-  // added a function in App. js that detects prefers-color-scheme: dark, it sets theme for dark if match is detected
-  const isDark = window.matchMedia('(prefers-color-scheme: dark)')
-  const useDarkMode = isDark.matches
-  useEffect(() => {
-    if (useDarkMode === true) {
-      setCurrentTheme('dark')
-    }
-  }, [useDarkMode])
-
-  const handleClickCounter = () => {
-    if (currentTheme === 'light') {
-      setCurrentTheme('dark')
-    } else {
-      setCurrentTheme('light')
-    }
-  }
+  const colorMode = useSelector((state) => state.colorMode)
+  const { colorScheme } = colorMode
 
   const handleClickMenu = () => {
     if (menuOpen === true) {
@@ -41,15 +26,12 @@ const App = () => {
   const location = useLocation()
 
   return (
-    <ThemeProvider theme={currentTheme === 'dark' ? darkTheme : lightTheme}>
+    <ThemeProvider theme={colorScheme === 'dark' ? darkTheme : lightTheme}>
       <GlobalStyle />
 
       <div className='app_container' onClick={handleClickMenu}>
         <Nav />
-
-        <div onClick={handleClickCounter}>
-          <SvgThemeButton currentTheme={currentTheme} />
-        </div>
+        <SvgThemeButton />
         <AnimatePresence exitBeforeEnter>
           <Switch location={location} key={location.key}>
             <Route exact path='/login'>

@@ -1,10 +1,36 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../styles/svgButton.scss'
+import { useDispatch, useSelector } from 'react-redux'
+import {
+  setColorModeDark,
+  setColorModeLight,
+} from '../actions/colorModeActions'
 
-const SvgThemeButton = ({ currentTheme }) => {
-  if (currentTheme === 'light') {
+const SvgThemeButton = () => {
+  const dispatch = useDispatch()
+
+  const colorMode = useSelector((state) => state.colorMode)
+  const { colorScheme } = colorMode
+
+  const handleClickColor = () => {
+    if (colorScheme === 'dark') {
+      dispatch(setColorModeLight())
+    } else {
+      dispatch(setColorModeDark())
+    }
+  }
+
+  const isDark = window.matchMedia('(prefers-color-scheme: dark)')
+  const useDarkMode = isDark.matches
+  useEffect(() => {
+    if (useDarkMode === true) {
+      dispatch(setColorModeDark())
+    }
+  }, [useDarkMode, dispatch])
+
+  if (colorScheme === 'light') {
     return (
-      <button className='buttonThemes'>
+      <button className='buttonThemes' onClick={handleClickColor}>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           height='24'
@@ -21,7 +47,7 @@ const SvgThemeButton = ({ currentTheme }) => {
     )
   } else {
     return (
-      <button className='buttonThemes'>
+      <button className='buttonThemes' onClick={handleClickColor}>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           height='24'

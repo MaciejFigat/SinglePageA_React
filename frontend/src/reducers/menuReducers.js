@@ -11,7 +11,3 @@ export const menuStateReducer = (state = { menuOpen: false }, action) => {
       return state
   }
 }
-
-export const testingOneReducer = (state = { testing: false }) => {
-  return state
-}
