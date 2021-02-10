@@ -49,4 +49,4 @@ I refactored the code to include Redux in order to simplify the code in particul
 3. reducers based on the action type dispatched:
   * ``return { colorScheme: 'dark' }``
   * ``return { colorScheme: 'light' }``
-4. styled-components, which are written in JS, through useSelector, have access to colorScheme value and can use it as a variable and adjust accordingly
+4. styled-components, which are written in JS, through useSelector, have access to colorScheme value from store.js and can use it as a variable and adjust accordingly
