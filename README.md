@@ -5,8 +5,8 @@ styles/GlobalStyles.js contains GlobalStyle, darkTheme, lightTheme. Those are us
 These in turn are imported into App.js that also imports and utilizes ThemeProvider which acts as a wrapper for the app. Depending on the colorScheme - useSelector hook used to bring it from the store, there is an appropriate scheme passed into the <ThemeProvider > wrapper. 
 
 ```<ThemeProvider theme={colorScheme === 'dark' ? darkTheme : lightTheme}>
-
-``` I also bring <GlobalStyles /> into app as a component.
+``` 
+I also bring <GlobalStyles /> into app as a component.
 
 
 
@@ -19,6 +19,7 @@ SvgThemeButton component watches prefered color scheme - window.matchMedia('(pre
       dispatch(setColorModeDark())
     }
   }, [useDarkMode, dispatch])
+```  
 Also, the same component has onClick capability. Both are done by sending appropriate dispatch to the store. 
 
 ``` const handleClickColor = () => {
@@ -28,4 +29,5 @@ Also, the same component has onClick capability. Both are done by sending approp
       dispatch(setColorModeDark())
     }
   }
+```  
 I refactored the code to include Redux in order to simplify the code in particular components.
