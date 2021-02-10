@@ -2,11 +2,11 @@
 
 ## Dark & Light themes 
 styles/GlobalStyles.js contains GlobalStyle, darkTheme, lightTheme. Those are used in the whole application depending on which theme is chosen. Dark or lightTheme contain a distinct set of colors etc.
-These in turn are imported into App.js that also imports and utilizes ThemeProvider which acts as a wrapper for the app. Depending on the colorScheme - useSelector hook used to bring it from the store, there is an appropriate scheme passed into the <ThemeProvider > wrapper. 
+These in turn are imported into App.js that also imports and utilizes ThemeProvider which acts as a wrapper for the app. Depending on the colorScheme - useSelector hook used to bring it from the store, there is an appropriate scheme passed into the `<ThemeProvider >` wrapper. 
 
-```<ThemeProvider theme={colorScheme === 'dark' ? darkTheme : lightTheme}>
-``` 
-I also bring <GlobalStyles /> into app as a component.
+`<ThemeProvider theme={colorScheme === 'dark' ? darkTheme : lightTheme}>`
+
+I also bring `<GlobalStyles />` into app as a component.
 
 
 
