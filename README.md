@@ -7,15 +7,14 @@ It is a lightweight SPA meant to feature basic data about the company. It all st
 <img alt="React Router" src="https://img.shields.io/badge/React Router-CA4245?logo=React-router&logoColor=white&style=flat" />
 <img alt="Redux" src="https://img.shields.io/badge/Redux-764ABC?logo=Redux&logoColor=white&style=flat" />
 </p>
-## Dark & Light themes 
+
+### Dark & Light themes 
 styles/GlobalStyles.js contains GlobalStyle, darkTheme, lightTheme. Those are used in the whole application depending on which theme is chosen. Dark or lightTheme contain a distinct set of colors etc.
 These in turn are imported into App.js that also imports and utilizes ThemeProvider which acts as a wrapper for the app. Depending on the colorScheme - useSelector hook used to bring it from the store, there is an appropriate scheme passed into the `<ThemeProvider >` wrapper. 
 
 `<ThemeProvider theme={colorScheme === 'dark' ? darkTheme : lightTheme}>`
 
 I also bring `<GlobalStyles />` into app as a component.
-
-
 
 SvgThemeButton component watches prefered color scheme - window.matchMedia('(prefers-color-scheme: dark)'). If it matches then useEffect changes the preffered theme to the one user has chosen.
 
