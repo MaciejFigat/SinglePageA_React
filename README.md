@@ -1,5 +1,10 @@
 ## SPA - presentational page for a company
 It is a lightweight SPA meant to feature basic data about the company. It all started because I wanted to have NIP (tax identyfication number) at hand during relevant activities. So I made an app.
+## Installation
+1. cd frontend
+2. npm install
+3. npm start
+
 ### Relevant features
 <p>
 <img alt="React" src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white&style=flat" />
