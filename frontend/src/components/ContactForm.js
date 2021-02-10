@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/contactForm.scss'
 import { ResponsiveDiv, ContainerDiv } from '../styles/responsiveContainer'
+import { StyledImage } from '../styles/imageStyles'
 
 const ContactForm = () => {
   return (
@@ -12,13 +13,8 @@ const ContactForm = () => {
             <h2>
               {' '}
               Batex Instalprojekt <br />
-              Tadeusz Figat <br />
             </h2>
-            ul. Grenadierów 21 <br />
-            lok. 31 04-052
-            <br />
-            Warszawa <br />
-            Tel. 22-810-95-59
+            <StyledImage src='https://s3-us-west-1.amazonaws.com/welcome_apples/posts/1_card/apple.jpg' />
           </div>
         </ResponsiveDiv>
       </ContainerDiv>
@@ -88,3 +84,16 @@ export default ContactForm
 // }
 
 // export default ContactForm
+
+// <div className='hcenter'>
+// <h2>
+//   {' '}
+//   Batex Instalprojekt <br />
+//   Tadeusz Figat <br />
+// </h2>
+// ul. Grenadierów 21 <br />
+// lok. 31 04-052
+// <br />
+// Warszawa <br />
+// Tel. 22-810-95-59
+// </div>

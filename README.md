@@ -37,3 +37,16 @@ Also, the same component has onClick capability. Both are done by sending approp
   }
 ```  
 I refactored the code to include Redux in order to simplify the code in particular components.
+
+### Redux for menu in mobile view and for global theme
+
+* constants used in action types: 
+ * SET_CURRENT_THEME_DARK,
+ * SET_CURRENT_THEME_LIGHT 
+* actions dispatched from a component
+ * setColorModeDark
+ * setColorModeLight
+* reducers based on the action type dispatched:
+  * ``return { colorScheme: 'dark' }``
+  * ``return { colorScheme: 'light' }``
+* styled-components, which are written in JS, through useSelector, have access to colorScheme value and can use it as a variable and adjust accordingly
