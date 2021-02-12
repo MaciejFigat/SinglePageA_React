@@ -5,6 +5,36 @@ It is a lightweight SPA meant to feature basic data about the company. It all st
 2. npm install
 3. npm start
 
+## Structure
+├── frontend
+|   ├── build
+|   ├── node_modules
+|   ├── public
+│   │   ├── favicon.ico
+│   │   ├── index.html
+│   ├── src
+│   │   ├── actions (Redux)
+│   │   ├── assets (photos, graphics etc.)
+│   │   ├── components (some reusable components)
+|   |   |  ├──svg (svg logos)
+│   │   ├── **/*.css
+|   │   ├── constants (for action types in Redux)
+|   │   ├── layout (Burger, Footer, Nav) 
+|   │   ├── pages (I import the layout and have it as a wrapper for each of the pages)
+|   │   ├── reducers (Redux)
+|   │   ├── styles
+|   │   │   ├── svg (styles for svg components)
+|   │   │   ├── styles for everything (including App.css, sass files, and styled-components)
+|   │   ├── utilities (script for resizing fonts etc.)
+|   │   ├── App.js
+|   │   ├── index.js
+|   │   ├── store.js (Redux)
+│   ├── .gitignore
+│   ├── package-lock.json
+│   ├── package.json
+├── README.md
+
+
 ### Relevant features
 <p>
 <img alt="React" src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white&style=flat" />
