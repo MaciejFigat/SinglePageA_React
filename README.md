@@ -6,7 +6,7 @@ It is a lightweight SPA meant to feature basic data about the company. It all st
 3. npm start
 
 ## Structure
-<p>
+```bash
 ├── frontend
 |   ├── build
 |   ├── node_modules
@@ -34,7 +34,7 @@ It is a lightweight SPA meant to feature basic data about the company. It all st
 │   ├── package-lock.json
 │   ├── package.json
 ├── README.md
-</p>
+```
 
 ### Relevant features
 <p>
