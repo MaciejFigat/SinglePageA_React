@@ -2,7 +2,10 @@ import React from 'react'
 import '../styles/contactForm.scss'
 import { ResponsiveDiv, ContainerDiv } from '../styles/responsiveContainer'
 import { StyledImage } from '../styles/imageStyles'
-
+import sunset1 from '../assets/sunset1.jpg'
+import sunset2 from '../assets/sunset2.jpg'
+import mountain1 from '../assets/mountain1.jpg'
+import mountain2 from '../assets/mountain2.jpg'
 const ContactForm = () => {
   return (
     <>
@@ -10,11 +13,14 @@ const ContactForm = () => {
       <ContainerDiv>
         <ResponsiveDiv>
           <div className='hcenter'>
-            <h2>
+            <h3>
               {' '}
               Batex Instalprojekt <br />
-            </h2>
-            <StyledImage src='https://s3-us-west-1.amazonaws.com/welcome_apples/posts/1_card/apple.jpg' />
+            </h3>
+            <StyledImage src={sunset1} width='30%' height='30%' />
+            <StyledImage src={mountain1} width='30%' height='30%' />
+            <StyledImage src={sunset2} width='30%' height='30%' />
+            <StyledImage src={mountain2} width='30%' height='30%' />
           </div>
         </ResponsiveDiv>
       </ContainerDiv>

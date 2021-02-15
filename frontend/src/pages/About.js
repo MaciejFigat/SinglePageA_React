@@ -4,6 +4,12 @@ import '../styles/about.scss'
 import { motion } from 'framer-motion'
 
 import { ResponsiveDiv, BigContainerDiv } from '../styles/responsiveContainer'
+
+import { StyledImage } from '../styles/imageStyles'
+import sunset1 from '../assets/sunset1.jpg'
+import sunset2 from '../assets/sunset2.jpg'
+import mountain1 from '../assets/mountain1.jpg'
+import mountain2 from '../assets/mountain2.jpg'
 const pageTransition = {
   in: {
     opacity: 1,
@@ -24,6 +30,7 @@ const About = () => {
       >
         <BigContainerDiv>
           <ResponsiveDiv>
+            <StyledImage src={sunset2} />
             Vom Rechte, das mit Recht; denn alles, was ihr Sünde, Zerstörung,
             kurz das Böse will und stets das Gute schafft. Es irrt der Mensch,
             wenn er sie beim Kragen hätte. Vernunft fängt wieder an zu sprechen
@@ -44,6 +51,7 @@ const About = () => {
             Es müsse sich dabei doch auch was denken lassen.
           </ResponsiveDiv>
           <ResponsiveDiv>
+            <StyledImage src={mountain2} />
             Vernunft fängt wieder an zu sprechen Und Hoffnung wieder an zu
             blühn; Man sehnt sich nach des Lebens Quelle hin. Vernunft fängt
             wieder an zu sprechen Und Hoffnung wieder an zu sprechen Und
@@ -66,6 +74,7 @@ const About = () => {
             Gute schafft.
           </ResponsiveDiv>
           <ResponsiveDiv>
+            <StyledImage src={sunset1} />
             Das erste Ziel besteht in der Stressphase weiterhin Kapital als
             Grundlage für das laufende Geschäft der Banken zur Verfügung steht.
             Die Einheit muss ferner darauf achten, ob Konzentrationen auf
@@ -97,6 +106,7 @@ const About = () => {
             hinaus betreffen.
           </ResponsiveDiv>
           <ResponsiveDiv>
+            <StyledImage src={mountain1} />
             Vernunft fängt wieder an zu sprechen Und Hoffnung wieder an zu
             sprechen Und Hoffnung wieder an zu sprechen Und Hoffnung wieder an
             zu sprechen Und Hoffnung wieder an zu sprechen Und Hoffnung wieder
@@ -124,22 +134,3 @@ const About = () => {
 }
 
 export default About
-// <div className="div_container one">
-// <div className="div_one"></div>
-// </div>
-// <div className="div_container two">
-//   <div className="div_one"></div>
-//   <div className="div_two"></div>
-// </div>
-// <div className="div_container three">
-//   <div className="div_one"></div>
-//   <div className="div_two"></div>
-//   <div className="div_three"></div>
-// </div>
-// <div className="div_container four">
-//   <div className="div_three"></div>
-// </div>
-// <div className="div_container five">
-//   <div className="div_two"></div>
-//   <div className="div_three"></div>
-// </div>
