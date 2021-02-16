@@ -17,10 +17,9 @@ const ContactForm = () => {
               {' '}
               Batex Instalprojekt <br />
             </h3>
-            <StyledImage src={sunset1} width='30%' height='30%' />
-            <StyledImage src={mountain1} width='30%' height='30%' />
-            <StyledImage src={sunset2} width='30%' height='30%' />
-            <StyledImage src={mountain2} width='30%' height='30%' />
+            <StyledImage src={sunset1} width='33%' height='53%' />
+            <StyledImage src={mountain1} width='33%' height='53%' />
+            <StyledImage src={sunset2} width='33%' height='53%' />
           </div>
         </ResponsiveDiv>
       </ContainerDiv>

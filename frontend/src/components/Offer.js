@@ -8,20 +8,11 @@ import {
   LinkOne,
   H2,
 } from '../styles/responsiveContainer'
-
-// const pageVariants = {
-//   in: {
-//     opacity: 1,
-//   },
-//   out: {
-//     opacity: 0,
-//   },
-// }
-// const pageTransition = {
-//   type: 'tween',
-//   ease: 'anticipate',
-//   duration: 0.5,
-// }
+import { StyledImage } from '../styles/imageStyles'
+import saw1 from '../assets/saw1.jpg'
+import saw2 from '../assets/saw2.jpg'
+import saw3 from '../assets/saw3.jpg'
+import saw4 from '../assets/saw4.jpg'
 
 const OfferOne = ({ handleClickOne }) => {
   return (
@@ -54,7 +45,7 @@ const OfferOne = ({ handleClickOne }) => {
           nowotworów.
         </Paragraph>
         <LinkOne href='#' onClick={handleClickOne}>
-          Więcej informacji
+          Powrót
         </LinkOne>
       </ResponsiveDiv>
     </BigContainerDiv>
@@ -68,6 +59,9 @@ const OfferTwo = ({ handleClickTwo }) => {
           <Air />
         </H2>
         <h3>Klimatyzacja</h3>
+        <StyledImage src={saw1} width='66%' height='66%' />
+        <StyledImage src={saw2} width='66%' height='66%' />
+        <StyledImage src={saw3} width='66%' height='66%' />
         <Paragraph>Common Merganser</Paragraph> <br />
         <Paragraph>
           The common merganser or goosander is a large seaduck of rivers and
@@ -76,7 +70,7 @@ const OfferTwo = ({ handleClickTwo }) => {
           nests in holes in trees.
         </Paragraph>
         <LinkOne href='#' onClick={handleClickTwo}>
-          More information
+          Powrót
         </LinkOne>
       </ResponsiveDiv>
     </BigContainerDiv>
