@@ -12,8 +12,7 @@ import { StyledImage } from '../styles/imageStyles'
 import saw1 from '../assets/saw1.jpg'
 import saw2 from '../assets/saw2.jpg'
 import saw3 from '../assets/saw3.jpg'
-import saw4 from '../assets/saw4.jpg'
-
+import mountain2 from '../assets/mountain2.jpg'
 const OfferOne = ({ handleClickOne }) => {
   return (
     <BigContainerDiv>
@@ -22,6 +21,7 @@ const OfferOne = ({ handleClickOne }) => {
           <Vent />
         </H2>
         <h3>Wentylacja</h3>
+        <StyledImage src={mountain2} width='33%' height='53%' />
         <h4>Znaczenie dla zdrowia</h4> <br />
         <Paragraph>
           Zbyt wysokie stężenie CO2 w powietrzu bezpośrednio wpływa na

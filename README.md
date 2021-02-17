@@ -88,3 +88,8 @@ I refactored the code to include Redux in order to simplify the code in particul
  ``<ThemeProvider theme={colorScheme === 'dark' ? darkTheme : lightTheme}>``
  ``<> Everything else goes here </>  ``
  ``</ThemeProvider>``
+
+### Styles 
+styled components example - quick and easy way to reuse StyledImage component that allows me to pass custom properties like width or height
+In parent component ```<StyledImage width='30%'/>```
+In StyledImage component ```width: ${(props) => (props.width ? props.width : '80%')};```

@@ -47,7 +47,6 @@ export const LinkAboutSecondary = styled.a`
   }
 `
 export const LinkAboutSubtle = styled.a`
-  /* position: relative; */
   display: inline-block;
   /* display: grid;
 

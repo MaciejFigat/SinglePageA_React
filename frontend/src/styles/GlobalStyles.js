@@ -8,7 +8,7 @@ const darkTheme = {
   color3: '#334e68',
   color4: '#486581',
   color5: '#627d98',
-  colorHoverLink: '#486581',
+  colorHoverLink: '#06acf1',
   textColorSvg: '#CFD8DC !important',
   colorShadow1: '#03e9f4',
   colorShadow2: '#486581',

@@ -5,7 +5,7 @@ import { StyledImage } from '../styles/imageStyles'
 import sunset1 from '../assets/sunset1.jpg'
 import sunset2 from '../assets/sunset2.jpg'
 import mountain1 from '../assets/mountain1.jpg'
-import mountain2 from '../assets/mountain2.jpg'
+
 const ContactForm = () => {
   return (
     <>
