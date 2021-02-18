@@ -39,7 +39,6 @@ const Home = () => {
     } else {
       setShowHomeEl('showNone')
     }
-    console.log(showHomeEl)
   }
 
   if (showHomeEl === 'showNone') {
@@ -55,10 +54,10 @@ const Home = () => {
           <BigContainerDiv>
             <GridCenter>
               <LinkAboutSubtle onClick={handleClickOne}>
-                <h3>Wentylacja</h3>
+                <h3>Wykonawstwo | Projekty</h3>
               </LinkAboutSubtle>
               <LinkAboutSubtle onClick={handleClickTwo}>
-                <h3>Klimatyzacja</h3>
+                <h3>Pomiary | Regulacje</h3>
               </LinkAboutSubtle>
             </GridCenter>
           </BigContainerDiv>

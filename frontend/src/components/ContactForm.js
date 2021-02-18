@@ -13,13 +13,9 @@ const ContactForm = () => {
       <ContainerDiv>
         <ResponsiveDiv>
           <div className='hcenter'>
-            <h3>
-              {' '}
-              Batex Instalprojekt <br />
-            </h3>
-            <StyledImage src={sunset1} width='33%' height='53%' />
-            <StyledImage src={mountain1} width='33%' height='53%' />
-            <StyledImage src={sunset2} width='33%' height='53%' />
+            <StyledImage src={sunset1} width='33%' height='88%' />
+            <StyledImage src={mountain1} width='33%' height='88%' />
+            <StyledImage src={sunset2} width='33%' height='88%' />
           </div>
         </ResponsiveDiv>
       </ContainerDiv>

@@ -54,7 +54,7 @@ const Nav = () => {
             className='nav_link'
             activeClassName='nav_link_active'
           >
-            Kontrahenci
+            Pomiary
           </NavLink>
         </li>
         <li className='testLi4'>

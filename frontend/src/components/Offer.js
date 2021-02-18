@@ -20,8 +20,7 @@ const OfferOne = ({ handleClickOne }) => {
         <H2 onClick={handleClickOne}>
           <Vent />
         </H2>
-        <h3>Wentylacja</h3>
-        <StyledImage src={mountain2} width='33%' height='53%' />
+        <StyledImage src={mountain2} width='80%' height='80%' />
         <h4>Znaczenie dla zdrowia</h4> <br />
         <Paragraph>
           Zbyt wysokie stężenie CO2 w powietrzu bezpośrednio wpływa na
@@ -58,7 +57,6 @@ const OfferTwo = ({ handleClickTwo }) => {
         <H2 onClick={handleClickTwo}>
           <Air />
         </H2>
-        <h3>Klimatyzacja</h3>
         <StyledImage src={saw1} width='66%' height='66%' />
         <StyledImage src={saw2} width='66%' height='66%' />
         <StyledImage src={saw3} width='66%' height='66%' />
