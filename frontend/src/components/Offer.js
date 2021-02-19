@@ -16,7 +16,7 @@ const OfferOne = ({ handleClickOne }) => {
     <BigContainerDiv>
       <ResponsiveDiv>
         <H2 onClick={handleClickOne}>
-          <i className='fas fa-angle-left'></i>
+          <i className='fas fa-chevron-circle-left'></i>
         </H2>
         <StyledImage src={mountain2} width='80%' height='80%' />
         <h4>Znaczenie dla zdrowia</h4> <br />
@@ -53,7 +53,7 @@ const OfferTwo = ({ handleClickTwo }) => {
     <BigContainerDiv>
       <ResponsiveDiv>
         <H2 onClick={handleClickTwo}>
-          <i className='fas fa-angle-left'></i>
+          <i className='fas fa-chevron-circle-left'></i>
         </H2>
         <StyledImage src={saw1} width='66%' height='66%' />
         <StyledImage src={saw2} width='66%' height='66%' />

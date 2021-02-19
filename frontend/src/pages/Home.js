@@ -54,12 +54,13 @@ const Home = () => {
           <BigContainerDiv>
             <GridCenter>
               <LinkAboutSubtle onClick={handleClickOne}>
-                <h3>Wykonawstwo | Projekty</h3>
+                <h3>
+                  Realizacje <i className='fas fa-gavel'></i>
+                </h3>
               </LinkAboutSubtle>
               <LinkAboutSubtle onClick={handleClickTwo}>
                 <h3>
-                  dd
-                  <i className='fas fa-drafting-compass'></i>
+                  Projekty <i className='fas fa-drafting-compass'></i>
                 </h3>
               </LinkAboutSubtle>
             </GridCenter>

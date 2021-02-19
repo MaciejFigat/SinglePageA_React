@@ -85,7 +85,11 @@ export const H2 = styled.h2`
   transition: 0.7s;
   &:hover {
     fill: var(--color1-secondary);
+    color: var(--color3-shadow);
+    opacity: 0.7;
+    transition: 0.7s;
   }
+
   @media (max-width: 1024px) {
     height: 33px important!;
     width: 33px important!;
