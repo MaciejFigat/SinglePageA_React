@@ -57,7 +57,10 @@ const Home = () => {
                 <h3>Wykonawstwo | Projekty</h3>
               </LinkAboutSubtle>
               <LinkAboutSubtle onClick={handleClickTwo}>
-                <h3>Pomiary | Regulacje</h3>
+                <h3>
+                  dd
+                  <i className='fas fa-drafting-compass'></i>
+                </h3>
               </LinkAboutSubtle>
             </GridCenter>
           </BigContainerDiv>
