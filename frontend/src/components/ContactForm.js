@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/contactForm.scss'
 import { ResponsiveDiv, ContainerDiv } from '../styles/responsiveContainer'
 import { StyledImage } from '../styles/imageStyles'
@@ -7,6 +7,10 @@ import sunset2 from '../assets/sunset2.jpg'
 import mountain1 from '../assets/mountain1.jpg'
 
 const ContactForm = () => {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+
   return (
     <>
       {' '}
@@ -23,15 +27,29 @@ const ContactForm = () => {
         <form className='contact_form'>
           <div className='contact_field'>
             <label> Imię lub nazwa firmy:</label>
-            <input className='contact_field_content' type='text' />
+            <input
+              className='contact_field_content'
+              type='text'
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
           </div>
           <div className='contact_field'>
             <label> Email:</label>
-            <input className='contact_field_content' type='email' />
+            <input
+              className='contact_field_content'
+              type='email'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
           <div className='contact_field'>
-            <label> Zapytanie:</label>
-            <textarea className='contact_field_content messageField'></textarea>
+            <label> Wiadomość:</label>
+            <textarea
+              className='contact_field_content messageField'
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            ></textarea>
           </div>
           <button className='contact_button'>Wyślij wiadomość</button>
         </form>
