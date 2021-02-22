@@ -1,12 +1,12 @@
 import { MESSAGE_CHANGE, MESSAGE_RESET } from '../constants/messageConstants'
 
-export const messageReducer = (state = {}, action) => {
+export const userMessageReducer = (state = {}, action) => {
   switch (action.type) {
     case MESSAGE_CHANGE:
-      return { loading: false, success: true, message: action.payload }
+      return { userMessageSent: action.payload }
 
     case MESSAGE_RESET:
-      return {}
+      return { userMessageSent: { name: '', email: '', message: '' } }
     default:
       return state
   }
