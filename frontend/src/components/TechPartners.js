@@ -6,6 +6,7 @@ import {
   BigContainerDiv,
   ContainerLogos,
   LinkOne,
+  H2,
 } from '../styles/responsiveContainer'
 import FujiElectric from './svg/FujiElectric'
 import Daikin from './svg/Daikin'
@@ -166,6 +167,10 @@ const AllTech = () => {
     }
   }
 
+  const clickBackHandler = () => {
+    setPartnersShow('showNone')
+  }
+
   const [partnerName, setPartnerName] = useState({
     name: 'none',
     logo: '',
@@ -217,13 +222,16 @@ const AllTech = () => {
       >
         <BigContainerDiv>
           <ResponsiveDiv>
+            <H2 onClick={clickBackHandler}>
+              <i className='fas fa-chevron-circle-left'></i>
+            </H2>
             <LinkLogo href={partnerName.link}>{partnerName.logo}</LinkLogo>
             <h4>
               <Paragraph>{partnerName.motto}</Paragraph>
             </h4>{' '}
             <br />
             <Paragraph>{partnerName.description}</Paragraph>
-            <LinkOne href='#' onClick={() => setPartnersShow('showNone')}>
+            <LinkOne href='#' onClick={clickBackHandler}>
               Powrót
             </LinkOne>
           </ResponsiveDiv>

@@ -42,7 +42,7 @@ const ContactForm = () => {
       setEmail(userEmail)
       setUserMessage(userMessageContent)
     }
-  }, [userMessage])
+  }, [userMessage, userEmail, userMessageContent, userName])
 
   return (
     <>

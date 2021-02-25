@@ -43,7 +43,7 @@ const Nav = () => {
             className='nav_link'
             activeClassName='nav_link_active'
           >
-            Realizacje
+            Instalacje
           </NavLink>
         </li>
         <li className='testLi3'>

@@ -5,7 +5,15 @@ import { motion } from 'framer-motion'
 
 import { ResponsiveDiv, BigContainerDiv } from '../styles/responsiveContainer'
 
-import { StyledImage } from '../styles/imageStyles'
+import {
+  StyledImage,
+  CardWrapper,
+  CardProper,
+  CardImage,
+  CardH3,
+  CardP,
+} from '../styles/imageStyles'
+
 import sunset1 from '../assets/sunset1.jpg'
 import sunset2 from '../assets/sunset2.jpg'
 import mountain1 from '../assets/mountain1.jpg'
@@ -28,6 +36,28 @@ const About = () => {
         exit='out'
         variants={pageTransition}
       >
+        <CardWrapper>
+          <CardProper>
+            <CardImage src={mountain2} alt='mountain' />
+            <CardH3>A Super Wonderful Headline</CardH3>
+            <CardP>Lorem ipsum sit dolor amit</CardP>
+          </CardProper>
+          <CardProper>
+            <CardImage src={sunset2} alt='mountain' />
+            <CardH3>A Super Wonderful Headline</CardH3>
+            <CardP>Lorem ipsum sit dolor amit</CardP>
+          </CardProper>
+          <CardProper>
+            <CardImage src={mountain1} alt='mountain' />
+            <CardH3>A Super Wonderful Headline</CardH3>
+            <CardP>Lorem ipsum sit dolor amit</CardP>
+          </CardProper>
+          <CardProper>
+            <CardImage src={sunset1} alt='mountain' />
+            <CardH3>A Super Wonderful Headline</CardH3>
+            <CardP>Lorem ipsum sit dolor amit</CardP>
+          </CardProper>
+        </CardWrapper>
         <BigContainerDiv>
           <ResponsiveDiv>
             <StyledImage src={sunset2} />
