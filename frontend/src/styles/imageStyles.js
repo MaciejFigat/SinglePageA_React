@@ -28,7 +28,7 @@ export const CardWrapper = styled.ul`
 export const CardProper = styled.li`
   background-color: #fff;
   border-radius: 0.5rem;
-  box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
+  box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem var(--color4-shadow);
   padding-bottom: 1rem;
   &:last-child {
     margin-bottom: 0;
