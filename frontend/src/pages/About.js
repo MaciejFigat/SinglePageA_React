@@ -18,6 +18,7 @@ import sunset1 from '../assets/sunset1.jpg'
 import sunset2 from '../assets/sunset2.jpg'
 import mountain1 from '../assets/mountain1.jpg'
 import mountain2 from '../assets/mountain2.jpg'
+import girlRoving from '../assets/video/girlRoving.mp4'
 const pageTransition = {
   in: {
     opacity: 1,
@@ -38,6 +39,7 @@ const About = () => {
       >
         <CardWrapper>
           <CardProper>
+            <video src={girlRoving} muted loop autoPlay></video>
             <CardImage src={mountain2} alt='mountain' />
             <CardH3>A Super Wonderful Headline</CardH3>
             <CardP>Lorem ipsum sit dolor amit</CardP>
