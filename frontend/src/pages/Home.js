@@ -29,7 +29,6 @@ const Home = () => {
     } else {
       setShowHomeEl('showNone')
     }
-    console.log(showHomeEl)
   }
   const handleClickTwo = () => {
     if (showHomeEl === 'showNone') {
