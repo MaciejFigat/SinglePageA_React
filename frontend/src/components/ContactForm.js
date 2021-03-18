@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import '../styles/contactForm.scss'
-import { ResponsiveDiv, ContainerDiv } from '../styles/responsiveContainer'
-import { StyledImage } from '../styles/imageStyles'
-import sunset1 from '../assets/sunset1.jpg'
-import sunset2 from '../assets/sunset2.jpg'
-import mountain1 from '../assets/mountain1.jpg'
+
 import { useDispatch, useSelector } from 'react-redux'
 import { messageChange, messageReset } from '../actions/messageActions'
 import emailjs from 'emailjs-com'
