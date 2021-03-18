@@ -12,6 +12,9 @@ const darkTheme = {
   textColorSvg: '#CFD8DC !important',
   colorShadow1: '#03e9f4',
   colorShadow2: '#486581',
+  colorShadow3: '#236677',
+  colorShadow4: '#1bb9ac',
+  colorShadow5: '#88b4b4',
 }
 
 const lightTheme = {
@@ -31,6 +34,9 @@ const lightTheme = {
   textColorSvg: '#1A1A1A !important',
   colorShadow1: '#1d6b8e',
   colorShadow2: '#1d6b8e',
+  colorShadow3: '#236677',
+  colorShadow4: '#1bb9ac',
+  colorShadow5: '#88b4b4',
 }
 // color1: "#efce6e",
 //   color2: "#e8cd7f",
@@ -87,10 +93,11 @@ h5 {font-size: 1.25em;}
   --color3-secondary: #095ca8;
   --color4-secondary: #089eff;
   --color5-secondary: #08ecff;
-  --color1-shadow: #08ecff;
-  --color2-shadow: #08ecff;
+  --color1-shadow: ${(props) => props.theme.colorShadow3};
+  --color2-shadow: ${(props) => props.theme.colorShadow4};
   --color3-shadow: ${(props) => props.theme.colorShadow1};
   --color4-shadow: ${(props) => props.theme.colorShadow2};
+  --color5-shadow: ${(props) => props.theme.colorShadow5};
   a, a:link, a:visited{
     text-decoration: none;
     color: ${(props) => props.theme.text};

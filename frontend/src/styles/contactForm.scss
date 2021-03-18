@@ -1,43 +1,88 @@
 .contact_form_container {
-  display: flex;
-  min-height: 60vh;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
+  z-index: 4;
 }
-.contact_form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1.25rem;
+.contact_form {  
   width: 60%;
-  margin: 0 auto;
+  margin-top: 2rem;
+  @media (min-width: 640px) and (max-width: 798px) {
+      margin-top: 40px;
+  }
 }
 .contact_field {
   display: flex;
   flex-direction: column;
   text-align: left;
-}
-.contact_field_content {
-  padding: 0.5rem;
-  background: var(--color1-main);
-  border-radius: 0.25rem;
-  color: var(--color2-secondary);
-}
-.messageField {
-  min-height: 10vh;
-}
-.contact_button {
-  margin-top: 20px;
-  background: transparent;
-  max-width: 45%;
-  box-shadow: 3px 3px 8px var(--color4-main), -3px -3px 8px var(--color4-main);
-  align-self: center;
-  border-radius: 0.25rem;
-  padding: 0.5rem;
-  color: var(--color2-secondary);
-  transition: 0.4s;
-  &:hover {
-    background: var(--color1-main);
-
-    transition: 0.4s;
+   label {
+      color:rgb(40, 179, 179);
   }
+  &:after{
+      content: "";
+      display: block;
+      position: relative;
+      bottom: 24px;
+      z-index: 10;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      // transition: 0.7s;
+      
+      --angle: 0deg;
+      border-bottom: 2px solid;
+      border-image: linear-gradient(45deg, var(--color1-shadow), var(--color5-shadow), var(--color2-shadow)) 1;
+      animation: 10s rotate linear infinite;
+  
+  }
+}
+
+ 
+.contact_field_content {
+  outline: none;
+  border: none;   
+  color: rgba(245, 245, 245, 0.712);
+  background: none;
+  line-height: 1.2;
+  cursor: text;
+  height: 45px;
+  font-size: 15px;
+  line-height: 1.2;
+  // border-bottom: 2px solid #adadad;
+  padding: 0.8rem 1.2rem;
+  min-width: 60vw;
+  min-height: 100px;
+  margin-bottom: 20px;
+  transition: 0.9s;   
+  &.true {
+      min-width: 50vw;
+  } 
+  &:focus {
+      --angle: 0deg;
+      border-left: 2px solid ;
+      border-image-slice: 1;
+      border-image: linear-gradient(var(--angle),  #07c5c5, #504638, #3abed5) 1;
+      transition: 1.9s;    
+      animation: 10s rotate linear infinite;    
+  }
+}
+
+
+.messageField {
+  min-height: 25vh;
+  resize: none;
+  overflow-y: auto;
+}
+
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
 }

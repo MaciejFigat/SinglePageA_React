@@ -7,6 +7,8 @@ import sunset2 from '../assets/sunset2.jpg'
 import mountain1 from '../assets/mountain1.jpg'
 import { useDispatch, useSelector } from 'react-redux'
 import { messageChange, messageReset } from '../actions/messageActions'
+import emailjs from 'emailjs-com'
+import '../styles/button.scss'
 
 const ContactForm = () => {
   const dispatch = useDispatch()
@@ -20,42 +22,59 @@ const ContactForm = () => {
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
-  const [message, setUserMessage] = useState('')
+  const [formMessage, setFormMessage] = useState('')
 
   const messageSendHandler = (e) => {
     e.preventDefault()
-    dispatch(messageChange({ name, email, message }))
+    dispatch(messageChange({ name, email, formMessage }))
   }
   const messageResetHandler = (e) => {
     e.preventDefault()
     dispatch(messageReset())
   }
 
-  // const submitExerciseDurationHandler = (e) => {
-  //   e.preventDefault()
-  //   setExerciseDuration(e.target.value)
-  // }
+  // EmailJS
+  const EMAILJS_ID = process.env.REACT_APP_MY_EMAILJS_ID
+  const SERVICE_ID = process.env.REACT_APP_MY_SERVICE_ID
+  const TEMPLATE_ID = process.env.REACT_APP_MY_TEMPLATE_ID
+
+  const templateParams = {
+    from_name: name,
+    to_name: 'Maciej',
+    message: formMessage,
+    reply_to: email,
+  }
+
+  const emailJSSendHandler = (e) => {
+    e.preventDefault()
+    dispatch(messageChange({ name, email, message: formMessage }))
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, EMAILJS_ID).then(
+      function (response) {
+        console.log('SUCCESS!', response.status, response.text)
+        // setToastVersion('success')
+        // setToastMessage('Message sent!')
+      },
+      function (error) {
+        console.log('FAILED...', error)
+        // setToastVersion('failure')
+        // setToastMessage('Message was lost ;-(')
+      }
+    )
+  }
+
+  //
 
   useEffect(() => {
     if (userMessage) {
       setName(userName)
       setEmail(userEmail)
-      setUserMessage(userMessageContent)
+      setFormMessage(userMessageContent)
     }
-  }, [userMessage, userEmail, userMessageContent, userName])
+  }, [userEmail, userMessageContent, userName, userMessage])
 
   return (
     <>
       {' '}
-      <ContainerDiv>
-        <ResponsiveDiv>
-          <div className='hcenter'>
-            <StyledImage src={sunset1} width='33%' height='88%' />
-            <StyledImage src={mountain1} width='33%' height='88%' />
-            <StyledImage src={sunset2} width='33%' height='88%' />
-          </div>
-        </ResponsiveDiv>
-      </ContainerDiv>
       <div className='contact_form_container'>
         <form className='contact_form'>
           <div className='contact_field'>
@@ -82,18 +101,24 @@ const ContactForm = () => {
             <label> Wiadomość:</label>
             <textarea
               className='contact_field_content messageField'
-              value={message}
+              value={formMessage}
               placeholder='Wpisz wiadomość'
-              onChange={(e) => setUserMessage(e.target.value)}
+              onChange={(e) => setFormMessage(e.target.value)}
             ></textarea>
           </div>
-          <button className='contact_button' onClick={messageSendHandler}>
-            Wyślij wiadomość
-          </button>
-          <button className='contact_button' onClick={messageResetHandler}>
-            Zresetuj wiadomość
-          </button>
-        </form>
+          <div className='send_button_wrapper'>
+            <button className='send_button' onClick={emailJSSendHandler}>
+              Wyślij
+            </button>
+
+            <button className='send_button' onClick={messageSendHandler}>
+              Zapisz
+            </button>
+            <button className='send_button' onClick={messageResetHandler}>
+              Zresetuj
+            </button>
+          </div>
+        </form>{' '}
       </div>
     </>
   )

@@ -1,0 +1,36 @@
+.send_button_wrapper {
+    display: flex;
+    justify-content: flex-end;  
+    width: 100%;
+    
+}
+
+.send_button {
+    outline: none;
+    border: none;
+    padding: 10px 20px 30px; 
+    margin: 5px 0px 5px 10px;  
+    cursor: pointer;
+    max-width: 20%;
+    min-width: fit-content; 
+    height: 3vh;
+    min-height: 25px;
+    border-radius: 3px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
+    color: whitesmoke;
+    text-align: center;
+    background: #2e67bd;
+    // box-shadow: 3px 3px 8px #817cb9, -3px -3px 8px #1e2f64;
+    transition: 0.5s;
+    &:hover {
+      background: rgb(182, 179, 197);
+      transition: 0.5s;
+      color:rgb(37, 36, 36);
+      box-shadow: 3px 3px 8px #7de0f8;
+    } 
+    &:active {
+      background: rgb(148, 16, 86);
+    }
+  }
