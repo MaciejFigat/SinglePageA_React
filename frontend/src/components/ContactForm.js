@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { messageChange, messageReset } from '../actions/messageActions'
 import emailjs from 'emailjs-com'
 import '../styles/button.scss'
+import Loader from 'react-loader-spinner'
 
 const ContactForm = () => {
   const dispatch = useDispatch()
@@ -22,6 +23,7 @@ const ContactForm = () => {
   const [formMessage, setFormMessage] = useState('')
   const [toastVersion, setToastVersion] = useState('none')
   const [toastMessage, setToastMessage] = useState('')
+  const [spinnerVisible, setSpinnerVisible] = useState(false)
 
   const messageSaveHandler = (e) => {
     e.preventDefault()
@@ -51,15 +53,18 @@ const ContactForm = () => {
   const emailJSSendHandler = (e) => {
     e.preventDefault()
     dispatch(messageChange({ name, email, message: formMessage }))
+    setSpinnerVisible(true)
     emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, EMAILJS_ID).then(
       function (response) {
         console.log('SUCCESS!', response.status, response.text)
         setToastVersion('success')
+        setSpinnerVisible(false)
         setToastMessage('Wiadomość wysłana!')
       },
       function (error) {
         console.log('FAILED...', error)
         setToastVersion('failure')
+        setSpinnerVisible(false)
         setToastMessage('Nie udało się wysłać wiadomości')
       }
     )
@@ -92,6 +97,14 @@ const ContactForm = () => {
       <ResponsiveDiv>
         {' '}
         <div className='contact_form_container'>
+          <Loader
+            type='ThreeDots'
+            color='var(--color2-secondary)'
+            height={20}
+            width={60}
+            visible={spinnerVisible}
+            // visible={true}
+          />
           <form className='contact_form'>
             <div className='contact_field'>
               <label> Imię lub nazwa firmy:</label>
