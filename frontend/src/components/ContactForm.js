@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import '../styles/contactForm.scss'
-
+import Toast from '../components/Toast'
+import { ResponsiveDiv, BigContainerDiv } from '../styles/responsiveContainer'
 import { useDispatch, useSelector } from 'react-redux'
 import { messageChange, messageReset } from '../actions/messageActions'
 import emailjs from 'emailjs-com'
@@ -19,14 +20,20 @@ const ContactForm = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [formMessage, setFormMessage] = useState('')
+  const [toastVersion, setToastVersion] = useState('none')
+  const [toastMessage, setToastMessage] = useState('')
 
-  const messageSendHandler = (e) => {
+  const messageSaveHandler = (e) => {
     e.preventDefault()
     dispatch(messageChange({ name, email, formMessage }))
+    setToastVersion('saved')
+    setToastMessage('Dane zapisane tymczasowo w aplikacji')
   }
   const messageResetHandler = (e) => {
     e.preventDefault()
     dispatch(messageReset())
+    setToastVersion('reset')
+    setToastMessage('Formularz zresetowany')
   }
 
   // EmailJS
@@ -47,17 +54,22 @@ const ContactForm = () => {
     emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, EMAILJS_ID).then(
       function (response) {
         console.log('SUCCESS!', response.status, response.text)
-        // setToastVersion('success')
-        // setToastMessage('Message sent!')
+        setToastVersion('success')
+        setToastMessage('Wiadomość wysłana!')
       },
       function (error) {
         console.log('FAILED...', error)
-        // setToastVersion('failure')
-        // setToastMessage('Message was lost ;-(')
+        setToastVersion('failure')
+        setToastMessage('Nie udało się wysłać wiadomości')
       }
     )
   }
 
+  //toast
+  const toastNone = (e) => {
+    e.preventDefault()
+    setToastVersion('none')
+  }
   //
 
   useEffect(() => {
@@ -66,57 +78,66 @@ const ContactForm = () => {
       setEmail(userEmail)
       setFormMessage(userMessageContent)
     }
-  }, [userEmail, userMessageContent, userName, userMessage])
+    const timer = setTimeout(() => {
+      setToastVersion('none')
+    }, 3000)
+    return () => clearTimeout(timer)
+  }, [toastVersion, userEmail, userMessageContent, userName, userMessage])
 
   return (
-    <>
-      {' '}
-      <div className='contact_form_container'>
-        <form className='contact_form'>
-          <div className='contact_field'>
-            <label> Imię lub nazwa firmy:</label>
-            <input
-              className='contact_field_content'
-              type='text'
-              value={name}
-              placeholder='Wpisz swoje imię/nazwę podmiotu'
-              onChange={(e) => setName(e.target.value)}
-            />
-          </div>
-          <div className='contact_field'>
-            <label> Email:</label>
-            <input
-              className='contact_field_content'
-              type='email'
-              value={email}
-              placeholder='Wpisz email kontaktowy'
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className='contact_field'>
-            <label> Wiadomość:</label>
-            <textarea
-              className='contact_field_content messageField'
-              value={formMessage}
-              placeholder='Wpisz wiadomość'
-              onChange={(e) => setFormMessage(e.target.value)}
-            ></textarea>
-          </div>
-          <div className='send_button_wrapper'>
-            <button className='send_button' onClick={emailJSSendHandler}>
-              Wyślij
-            </button>
-
-            <button className='send_button' onClick={messageSendHandler}>
-              Zapisz
-            </button>
-            <button className='send_button' onClick={messageResetHandler}>
-              Zresetuj
-            </button>
-          </div>
-        </form>{' '}
+    <BigContainerDiv>
+      <div onClick={toastNone}>
+        <Toast toastMessage={toastMessage} toastVersion={toastVersion} />
       </div>
-    </>
+      <ResponsiveDiv>
+        {' '}
+        <div className='contact_form_container'>
+          <form className='contact_form'>
+            <div className='contact_field'>
+              <label> Imię lub nazwa firmy:</label>
+              <input
+                className='contact_field_content'
+                type='text'
+                value={name}
+                placeholder='Wpisz swoje imię/nazwę podmiotu'
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
+            <div className='contact_field'>
+              <label> Email:</label>
+              <input
+                className='contact_field_content'
+                type='email'
+                value={email}
+                placeholder='Wpisz email kontaktowy'
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className='contact_field'>
+              <label> Wiadomość:</label>
+              <textarea
+                className='contact_field_content messageField'
+                value={formMessage}
+                placeholder='Wpisz wiadomość'
+                onChange={(e) => setFormMessage(e.target.value)}
+              ></textarea>
+            </div>
+            <div className='send_button_wrapper'>
+              <button className='send_button' onClick={emailJSSendHandler}>
+                Wyślij
+              </button>
+
+              <button className='send_button' onClick={messageSaveHandler}>
+                <i className='fas fa-save'></i>
+              </button>
+              <button className='send_button' onClick={messageResetHandler}>
+                <i className='fas fa-trash-alt'></i>
+              </button>
+            </div>
+          </form>{' '}
+        </div>
+      </ResponsiveDiv>
+    </BigContainerDiv>
   )
 }
 export default ContactForm

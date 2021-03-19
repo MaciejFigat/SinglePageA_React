@@ -1,0 +1,43 @@
+
+.toasts {
+    position: absolute;
+    top: 100px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto Slab', serif;
+    align-items: flex-end;
+    transition: 0.7s;
+    
+}
+
+.toast {
+    position: relative;
+    right: 0px;
+    color:rgb(15, 13, 10); 
+    border-radius: 5px;
+    padding: 1rem 1rem; 
+    margin: 0.5rem;
+    min-width: fit-content;
+    z-index: 12;
+    transition: ease-out 0.7s;
+    &.none{
+        opacity: 0;
+        // top: -200;
+        // display: none;
+        transition: 0.4s;
+    }
+    &.success{
+        background-color: rgb(57, 214, 84);
+    }
+    &.saved{
+        background-color: rgb(42, 115, 211);
+    }
+    &.failure{
+        background-color: rgb(214, 29, 29);
+    }
+    &.reset{
+        background-color: rgb(196, 110, 39);
+    }
+  
+}

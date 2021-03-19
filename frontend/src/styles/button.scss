@@ -9,7 +9,7 @@
 .send_button {
     outline: none;
     border: none;
-    padding: 10px 20px 30px; 
+    padding: 10px 20px 35px;    
     margin: 5px 0px 5px 10px;  
     cursor: pointer;
     max-width: 20%;
@@ -19,9 +19,9 @@
     border-radius: 3px;
     font-size: 20px;
     font-weight: 700;
-    font-family: "Lato", sans-serif;
+    font-family: 'Roboto Slab', serif;
     color: var(--color2-secondary);
-    text-align: center;
+    text-align: center;  
     background: var(--color6-main);
     transition: 0.5s;
     &:hover {
@@ -34,10 +34,11 @@
       background: rgb(148, 16, 86);
     }
     @media (max-width: 798px) {
-      padding: 5px 10px 20px;
+      padding: 5px 10px 25px;
       height: 2vh;
       min-height: 20px; 
       font-size: 15px;
       font-weight: 400;
+      margin-left: 3px;
   }
   }

@@ -55,8 +55,9 @@ const lightTheme = {
 // display: grid;
 // grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 const GlobalStyle = createGlobalStyle`
-html {font-size: 100%;
-   
+html {
+  font-size: 100%;
+  font-family: 'Roboto Slab', serif;
   } 
 body {
     margin: 0;
