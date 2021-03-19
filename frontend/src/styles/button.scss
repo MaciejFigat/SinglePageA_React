@@ -21,7 +21,9 @@
     font-family: "Lato", sans-serif;
     color: whitesmoke;
     text-align: center;
-    background: #2e67bd;
+    background: var(--color6-main);
+    // background: #2e67bd;
+    
     // box-shadow: 3px 3px 8px #817cb9, -3px -3px 8px #1e2f64;
     transition: 0.5s;
     &:hover {

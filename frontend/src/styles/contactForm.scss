@@ -15,7 +15,8 @@
   flex-direction: column;
   text-align: left;
    label {
-      color:rgb(40, 179, 179);
+      color:var(--color2-secondary);
+      // color:rgb(40, 179, 179);
   }
   &:after{
       content: "";
@@ -40,17 +41,18 @@
 .contact_field_content {
   outline: none;
   border: none;   
-  color: rgba(245, 245, 245, 0.712);
+  color: var(--color2-secondary);
   background: none;
   line-height: 1.2;
   cursor: text;
-  height: 45px;
+  min-height: fit-content;
+  max-height: 45px;
   font-size: 15px;
   line-height: 1.2;
   // border-bottom: 2px solid #adadad;
   padding: 0.8rem 1.2rem;
   min-width: 60vw;
-  min-height: 100px;
+  //  
   margin-bottom: 20px;
   transition: 0.9s;   
   &.true {
