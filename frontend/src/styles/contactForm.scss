@@ -8,7 +8,11 @@
   margin-top: 2rem;
   @media (min-width: 640px) and (max-width: 798px) {
       margin-top: 40px;
+      min-width: fit-content;
   }
+  @media (max-width: 639px) {
+    min-width: fit-content;
+}
 }
 .contact_field {
   display: flex;
@@ -16,7 +20,12 @@
   text-align: left;
    label {
       color:var(--color2-secondary);
-      
+      font-family: 'Roboto Slab', serif;
+      @media (max-width: 798px) {
+        
+        font-size: 15px;
+        
+    }
   }
   &:after{
       content: "";
@@ -40,6 +49,7 @@
   outline: none;
   border: none;   
   color: var(--color2-secondary);
+  font-family: 'Roboto Slab', serif;
   background: none;
   line-height: 1.2;
   cursor: text;
@@ -53,9 +63,7 @@
   //  
   margin-bottom: 20px;
   transition: 1.9s;   
-  &.true {
-      min-width: 50vw;
-  } 
+  
   &:focus {
       // --angle: 0deg;
       // border-left: 2px solid ;
@@ -65,6 +73,10 @@
       // transition: 1.9s;    
       // animation: 5s rotate linear infinite;    
   }
+  @media (max-width: 798px) {
+    font-size: 15px;
+    font-weight: 400;
+    }
 }
 
 
