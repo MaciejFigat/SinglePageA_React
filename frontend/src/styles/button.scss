@@ -1,7 +1,8 @@
 .send_button_wrapper {
     display: flex;
     justify-content: flex-end;  
-    width: 100%;
+    max-width: 100%;
+    margin-bottom: 2.5rem;
     
 }
 
@@ -19,20 +20,24 @@
     font-size: 20px;
     font-weight: 700;
     font-family: "Lato", sans-serif;
-    color: whitesmoke;
+    color: var(--color2-secondary);
     text-align: center;
     background: var(--color6-main);
-    // background: #2e67bd;
-    
-    // box-shadow: 3px 3px 8px #817cb9, -3px -3px 8px #1e2f64;
     transition: 0.5s;
     &:hover {
-      background: rgb(182, 179, 197);
+      background: var(--color3-main);
       transition: 0.5s;
-      color:rgb(37, 36, 36);
+      color:var(--color1-secondary);
       box-shadow: 3px 3px 8px #7de0f8;
     } 
     &:active {
       background: rgb(148, 16, 86);
     }
+    @media (max-width: 798px) {
+      padding: 5px 10px 20px;
+      height: 2vh;
+      min-height: 20px; 
+      font-size: 15px;
+      font-weight: 400;
+  }
   }

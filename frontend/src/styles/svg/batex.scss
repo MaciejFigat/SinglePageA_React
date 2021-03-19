@@ -1,35 +1,26 @@
 .batexContainer {
   display: grid;
   justify-content: center;
-}
-
-@media screen and (min-width: 960px) {
-  #logo {
-    position: absolute;
-    top: 2.7%;
-    left: 1.5%;
-  }
-}
-@media screen and (min-width: 760px) and (max-width: 960px) {
-  .batexContainer {
+  @media screen and (min-width: 760px) and (max-width: 960px) {
     display: none;
   }
 }
+
+
+
 @media screen and (max-width: 360px) {
   .batexContainer {
     display: none;
   }
-  // .svgWidthCont {
-  //   width: "73px";
-  // }
+
 }
 
 #logo {
-  // position: absolute;
-  // top: 2.7%;
-  // left: 1.5%;
-
-  // animation: fill 0.5s ease forwards 2.5s;
+@media screen and (min-width: 960px) {
+    position: absolute;
+    top: 2.7%;
+    left: 1.5%;
+  }
 }
 #logo path:nth-child(2) {
   stroke-dasharray: 75.14px;
@@ -131,11 +122,4 @@
     fill: var(--color2-main);
   }
 }
-// @keyframes fill {
-//   from {
-//     fill: transparent;
-//   }
-//   to {
-//     fill: black;
-//   }
-// }
+
