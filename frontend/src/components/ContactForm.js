@@ -27,7 +27,7 @@ const ContactForm = () => {
 
   const messageSaveHandler = (e) => {
     e.preventDefault()
-    dispatch(messageChange({ name, email, formMessage }))
+    dispatch(messageChange({ name, email, message: formMessage }))
     setToastVersion('saved')
     setToastMessage('Dane zapisane tymczasowo w aplikacji')
   }

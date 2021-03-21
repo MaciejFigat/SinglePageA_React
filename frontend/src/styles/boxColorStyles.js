@@ -72,7 +72,9 @@ export const LinkAboutSubtle = styled.a`
   }
 `
 export const LinkPartners = styled.a`
-  display: inline-block;
+  /* display: inline-block; */
+  display: grid;
+  place-items: center;
 
   margin: 0 auto;
   color: var(--color4-shadow);

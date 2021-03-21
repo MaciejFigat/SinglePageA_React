@@ -20,13 +20,16 @@ export const StyledImage = styled.img`
 export const CardWrapper = styled.ul`
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 1.5rem 1.5rem 0rem 1.5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
   grid-gap: 1.5rem;
 `
 export const CardProper = styled.li`
-  background-color: #fff;
+  display: grid;
+  place-items: center;
+
+  background-color: var(--color4-shadow);
   border-radius: 0.5rem;
   box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem var(--color4-shadow);
   padding-bottom: 1rem;

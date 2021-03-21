@@ -8,6 +8,14 @@ import {
   LinkOne,
   H2,
 } from '../styles/responsiveContainer'
+import {
+  CardWrapper,
+  CardProper,
+  CardImage,
+  CardH3,
+  CardP,
+} from '../styles/imageStyles'
+import sunset1 from '../assets/sunset1.jpg'
 import FujiElectric from './svg/FujiElectric'
 import Daikin from './svg/Daikin'
 import Fujitsu from './svg/Fujitsu'
@@ -182,32 +190,48 @@ const AllTech = () => {
   if (partnersShow === 'showNone') {
     return (
       <>
-        <ContainerLogos>
-          <LinkPartners onClick={handleClickFuji}>
-            <FujiElectric />
-          </LinkPartners>
-          <LinkPartners onClick={handleClickFujitsu}>
-            <Fujitsu />
-          </LinkPartners>
-          <LinkPartners onClick={handleClickMitsubishi}>
-            <Mitsubishi Electric />
-          </LinkPartners>
-          <LinkPartners onClick={handleClickSamsung}>
-            <Samsung />
-          </LinkPartners>
-          <LinkPartners onClick={handleClickDaikin}>
-            <Daikin />
-          </LinkPartners>
-          <LinkPartners onClick={handleClickLg}>
-            <Lg />
-          </LinkPartners>
-          <LinkPartners onClick={handleClickPanasonic}>
-            <Panasonic />
-          </LinkPartners>
-          <LinkPartners onClick={handleClickGree}>
-            <Gree />
-          </LinkPartners>
-        </ContainerLogos>
+        <CardWrapper>
+          <CardProper>
+            <LinkPartners onClick={handleClickFuji}>
+              <FujiElectric />
+            </LinkPartners>
+          </CardProper>
+          <CardProper>
+            <LinkPartners onClick={handleClickFuji}>
+              <Panasonic />
+            </LinkPartners>
+          </CardProper>
+          <CardProper>
+            <LinkPartners onClick={handleClickFuji}>
+              <Mitsubishi />
+            </LinkPartners>
+          </CardProper>
+          <CardProper>
+            <LinkPartners onClick={handleClickFuji}>
+              <Samsung />
+            </LinkPartners>
+          </CardProper>
+          <CardProper>
+            <LinkPartners onClick={handleClickFuji}>
+              <Daikin />
+            </LinkPartners>
+          </CardProper>
+          <CardProper>
+            <LinkPartners onClick={handleClickFuji}>
+              <Lg />
+            </LinkPartners>
+          </CardProper>
+          <CardProper>
+            <LinkPartners onClick={handleClickFuji}>
+              <Fujitsu />
+            </LinkPartners>
+          </CardProper>
+          <CardProper>
+            <LinkPartners onClick={handleClickFuji}>
+              <Gree />
+            </LinkPartners>
+          </CardProper>
+        </CardWrapper>
       </>
     )
   } else {
