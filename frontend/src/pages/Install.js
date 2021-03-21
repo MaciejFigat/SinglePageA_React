@@ -18,7 +18,7 @@ const pageTransition = {
   // ease: 'anticipate',
   duration: 0.5,
 }
-const Login = () => {
+const Install = () => {
   return (
     <Layout>
       <motion.div
@@ -28,9 +28,9 @@ const Login = () => {
         variants={pageVariants}
         transition={pageTransition}
       >
-        <AllTech />
+        <h1>Instalacje </h1>
       </motion.div>
     </Layout>
   )
 }
-export default Login
+export default Install

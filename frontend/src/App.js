@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route, useLocation } from 'react-router-dom'
 import './styles/App.css'
-import { Home, About, Contact, Login, Technology } from './pages'
+import { Home, About, Contact, Install, Technology } from './pages'
 import { Nav, Footer } from './layout'
 import { ThemeProvider } from 'styled-components'
 import SvgThemeButton from './components/SvgThemeButton'
@@ -34,8 +34,8 @@ const App = () => {
         <SvgThemeButton />
         <AnimatePresence exitBeforeEnter>
           <Switch location={location} key={location.key}>
-            <Route exact path='/login'>
-              <Login />
+            <Route exact path='/install'>
+              <Install />
             </Route>
 
             <Route exact path='/about'>

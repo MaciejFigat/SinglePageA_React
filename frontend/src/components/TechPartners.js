@@ -4,7 +4,6 @@ import { Paragraph, LinkPartners, LinkLogo } from '../styles/boxColorStyles'
 import {
   ResponsiveDiv,
   BigContainerDiv,
-  ContainerLogos,
   LinkOne,
   H2,
 } from '../styles/responsiveContainer'
@@ -13,9 +12,8 @@ import {
   CardProper,
   CardImage,
   CardH3,
-  CardP,
 } from '../styles/imageStyles'
-import sunset1 from '../assets/sunset1.jpg'
+import mountain2 from '../assets/sunset1.jpg'
 import FujiElectric from './svg/FujiElectric'
 import Daikin from './svg/Daikin'
 import Fujitsu from './svg/Fujitsu'
@@ -192,42 +190,58 @@ const AllTech = () => {
       <>
         <CardWrapper>
           <CardProper>
+            <CardImage src={mountain2} alt='mountain' />
+            <CardH3>A Super Wonderful Headline</CardH3>
             <LinkPartners onClick={handleClickFuji}>
               <FujiElectric />
             </LinkPartners>
           </CardProper>
           <CardProper>
-            <LinkPartners onClick={handleClickFuji}>
+            <CardImage src={mountain2} alt='mountain' />
+            <CardH3>A Super Wonderful Headline</CardH3>
+            <LinkPartners onClick={handleClickPanasonic}>
               <Panasonic />
             </LinkPartners>
           </CardProper>
           <CardProper>
-            <LinkPartners onClick={handleClickFuji}>
+            <CardImage src={mountain2} alt='mountain' />
+            <CardH3>A Super Wonderful Headline</CardH3>
+            <LinkPartners onClick={handleClickMitsubishi}>
               <Mitsubishi />
             </LinkPartners>
           </CardProper>
           <CardProper>
-            <LinkPartners onClick={handleClickFuji}>
+            <CardImage src={mountain2} alt='mountain' />
+            <CardH3>A Super Wonderful Headline</CardH3>
+            <LinkPartners onClick={handleClickSamsung}>
               <Samsung />
             </LinkPartners>
           </CardProper>
           <CardProper>
-            <LinkPartners onClick={handleClickFuji}>
+            <CardImage src={mountain2} alt='mountain' />
+            <CardH3>A Super Wonderful Headline</CardH3>
+            <LinkPartners onClick={handleClickDaikin}>
               <Daikin />
             </LinkPartners>
           </CardProper>
           <CardProper>
-            <LinkPartners onClick={handleClickFuji}>
+            <CardImage src={mountain2} alt='mountain' />
+            <CardH3>A Super Wonderful Headline</CardH3>
+            <LinkPartners onClick={handleClickLg}>
               <Lg />
             </LinkPartners>
           </CardProper>
           <CardProper>
-            <LinkPartners onClick={handleClickFuji}>
+            <CardImage src={mountain2} alt='mountain' />
+            <CardH3>A Super Wonderful Headline</CardH3>
+            <LinkPartners onClick={handleClickFujitsu}>
               <Fujitsu />
             </LinkPartners>
           </CardProper>
           <CardProper>
-            <LinkPartners onClick={handleClickFuji}>
+            <CardImage src={mountain2} alt='mountain' />
+            <CardH3>A Super Wonderful Headline</CardH3>
+            <LinkPartners onClick={handleClickGree}>
               <Gree />
             </LinkPartners>
           </CardProper>

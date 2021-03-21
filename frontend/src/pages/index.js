@@ -2,6 +2,6 @@
 import Home from './Home'
 import About from './About'
 import Contact from './Contact'
-import Login from './Login'
+import Install from './Install'
 import Technology from './Technology'
-export { Home, About, Contact, Login, Technology }
+export { Home, About, Contact, Install, Technology }

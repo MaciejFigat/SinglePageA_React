@@ -39,7 +39,7 @@ const Nav = () => {
           {' '}
           <NavLink
             exact
-            to='/login'
+            to='/install'
             className='nav_link'
             activeClassName='nav_link_active'
           >
