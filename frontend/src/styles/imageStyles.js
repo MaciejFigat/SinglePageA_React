@@ -43,6 +43,7 @@ export const CardH3 = styled.h3`
 `
 export const CardImage = styled.img`
   border-radius: 0.5rem 0.5rem 0 0;
+
   width: 100%;
   & ~ * {
     margin-left: 1rem;
