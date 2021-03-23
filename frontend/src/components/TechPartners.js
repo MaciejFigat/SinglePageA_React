@@ -22,6 +22,7 @@ import Lg from './svg/Lg'
 import Mitsubishi from './svg/Mitsubishi'
 import Panasonic from './svg/Panasonic'
 import Samsung from './svg/Samsung'
+import techPartnersFunction from './techPartnersFunction'
 const pageVariants = {
   in: {
     opacity: 1,
@@ -38,24 +39,33 @@ const pageTransition = {
   duration: 0.5,
 }
 const AllTech = () => {
-  const [partnersShow, setPartnersShow] = useState('showNone')
-
+  // const [partnersShow, setPartnersShow] = useState('showNone')
+  // const [partnerName, setPartnerName] = useState({
+  //   name: 'none',
+  //   logo: '',
+  //   motto: 'money is not the only thing',
+  //   description: 'its everything',
+  //   link: '#',
+  // })
   const handleClickFuji = () => {
-    if (partnersShow === 'showNone') {
-      setPartnersShow('showFuji')
-      setPartnerName({
-        ...partnerName,
-        name: 'Fuji Electric',
-        logo: <FujiElectric />,
-        motto: 'Innovating Energy Technology',
-        description:
-          'Fuji Electric uses its core competence in electric and thermal energy technology in order to contribute to responsible and sustainable societies.',
-        link: 'https://www.fujielectric-europe.com/',
-      })
-    } else {
-      setPartnersShow('showNone')
-    }
+    techPartnersFunction
   }
+  // const handleClickFuji = () => {
+  //   if (partnersShow === 'showNone') {
+  //     setPartnersShow('showFuji')
+  //     setPartnerName({
+  //       ...partnerName,
+  //       name: 'Fuji Electric',
+  //       logo: <FujiElectric />,
+  //       motto: 'Innovating Energy Technology',
+  //       description:
+  //         'Fuji Electric uses its core competence in electric and thermal energy technology in order to contribute to responsible and sustainable societies.',
+  //       link: 'https://www.fujielectric-europe.com/',
+  //     })
+  //   } else {
+  //     setPartnersShow('showNone')
+  //   }
+  // }
   const handleClickFujitsu = () => {
     if (partnersShow === 'showNone') {
       setPartnersShow('showFujitsu')
@@ -177,14 +187,6 @@ const AllTech = () => {
     setPartnersShow('showNone')
   }
 
-  const [partnerName, setPartnerName] = useState({
-    name: 'none',
-    logo: '',
-    motto: 'money is not the only thing',
-    description: 'its everything',
-    link: '#',
-  })
-
   if (partnersShow === 'showNone') {
     return (
       <>
@@ -244,6 +246,18 @@ const AllTech = () => {
             <LinkPartners onClick={handleClickGree}>
               <Gree />
             </LinkPartners>
+          </CardProper>
+          <CardProper>
+            <CardImage src={mountain2} alt='mountain' />
+            <CardH3>A Super Wonderful Headline</CardH3>
+            <techPartnersFunction
+              name={Mitsubishi}
+              logo={11}
+              motto={ww}
+              description={www}
+              link={111}
+              show={111}
+            />
           </CardProper>
         </CardWrapper>
       </>
