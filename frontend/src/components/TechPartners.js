@@ -8,7 +8,6 @@ import {
 } from '../styles/responsiveContainer'
 import { CardWrapper, CardProper, CardImage } from '../styles/imageStyles'
 import mountain2 from '../assets/sunset2.jpg'
-import sunset1 from '../assets/sunset1.jpg'
 
 import { techData } from '../data/techPartnersData'
 
@@ -39,7 +38,7 @@ const AllTech = () => {
   const clickBackHandler = () => {
     setPartnerName({
       name: 'none',
-      logo: '',
+      logo: null,
       motto: '',
       description: '',
       link: '#',
@@ -68,7 +67,7 @@ const AllTech = () => {
                       name: partner.name,
                       motto: partner.motto,
                       description: partner.description,
-                      logo: partner.name,
+                      logo: partner.logo,
                       link: partner.link,
                     })
                   }

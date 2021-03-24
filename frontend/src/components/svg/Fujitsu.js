@@ -5,7 +5,7 @@ const Fujitsu = () => {
     <div>
       <svg
         xmlns='http://www.w3.org/2000/svg'
-        width='250'
+        width='150'
         height='200'
         viewBox='0 0 41.1 19.979'
       >

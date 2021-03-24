@@ -6,7 +6,7 @@ const Gree = () => {
       <svg
         height='200'
         viewBox='0 0 194.881 38.054'
-        width='200'
+        width='150'
         xmlns='http://www.w3.org/2000/svg'
       >
         <g fillRule='evenodd'>
