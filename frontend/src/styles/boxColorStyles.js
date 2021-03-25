@@ -186,26 +186,10 @@ export const Box = styled.div`
   border: 1px solid var(--color3-main);
   transition: 0.8s;
   box-shadow: 13px 13px 20px var(--color2-main);
-  /* &:after {
-    content: "";
-    position: absolute;
-    top: -2px;
-    right: -2px;
-    left: -2px;
-    bottom: -2px;
-    background: #babaca;
-    transform: skew(-2deg, -2.5deg);
-    z-index: -1;
-  } */
 
   &:hover {
     transition: 0.8s;
     transition-delay: 0.2s;
-    /* box-shadow: 13px 13px 20px var(--color2-main); */
-    /* background: var(--color3-main); */
-    /* color: var(--color); */
-    /* box-shadow: 0 0 5px var(--color3-shadow), 0 0 25px var(--color3-shadow),
-      0 0 50px var(--color3-shadow), 0 0 200px var(--color3-shadow); */
   }
 
   @media screen and (min-width: 710px) and (max-width: 1290px) {
@@ -240,9 +224,6 @@ export const BoxSecondary = styled.div`
   &:hover {
     transition: 0.8s;
     transition-delay: 0.2s;
-
-    /* background: var(--color3-main); */
-
     box-shadow: 0 0 5px var(--color4-shadow), 0 0 25px var(--color4-shadow),
       0 0 50px var(--color4-shadow), 0 0 200px var(--color4-shadow);
   }
@@ -262,25 +243,10 @@ export const ContentH2 = styled.h2`
   padding: 0;
   fill: var(--color2-secondary);
   font-size: 2em;
-  /* color: var(--color2-secondary); */
+
   transition: 0.7s;
   &:hover {
     fill: var(--color1-secondary);
-  }
-  /* ${Box}:hover & {
-    
-    color: var(--color1-secondary);
-    fill: var(--color2-secondary);
-  }
-  ${BoxSecondary}:hover & {
-   
-    color: var(--color2-secondary);
-    fill: var(--color2-secondary);
-  } */
-  @media screen and (max-width: 400px) {
-    /* display: none; */
-    /* top: -50px;
-    right: 15px; */
   }
 `
 export const ContentH3 = styled.h2`

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { LinkPartners } from '../styles/boxColorStyles'
-import { H2 } from '../styles/responsiveContainer'
+import { H2Bottom } from '../styles/responsiveContainer'
 import {
   CardH3,
   CardP,
@@ -86,9 +86,9 @@ const AllTech = () => {
               transitions={pageTransitions}
             >
               <CardProperActive>
-                <H2 onClick={showDetailsHandler}>
+                <H2Bottom onClick={showDetailsHandler}>
                   <i className='fas fa-times'></i>
-                </H2>
+                </H2Bottom>
                 <CardImage src={mountain2} alt='mountain' />
 
                 <CardH3>{motto}</CardH3>

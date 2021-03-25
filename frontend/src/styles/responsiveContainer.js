@@ -73,11 +73,13 @@ export const LinkOne = styled.a`
   }
 `
 export const H2 = styled.h2`
-  position: absolute;
+  position: relative;
   cursor: pointer;
-  bottom: 1rem;
-  right: 1rem;
+  /* top: 10rem; */
+  right: 0;
+  /* left: 0; */
   margin: 0;
+  margin-bottom: 0.5rem;
   padding: 0;
   fill: var(--color2-secondary);
   font-size: 2em;
@@ -98,4 +100,10 @@ export const H2 = styled.h2`
     height: 22px important!;
     width: 22px important!;
   }
+`
+export const H2Bottom = styled(H2)`
+  position: absolute;
+  /* top: none; */
+  bottom: 1rem;
+  right: 1rem;
 `
