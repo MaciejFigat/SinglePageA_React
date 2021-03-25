@@ -7,6 +7,7 @@ import { ResponsiveDiv, BigContainerDiv } from '../styles/responsiveContainer'
 
 import {
   StyledImage,
+  WrapperCentringDiv,
   CardWrapper,
   CardProper,
   CardImage,
@@ -37,28 +38,32 @@ const About = () => {
         exit='out'
         variants={pageTransition}
       >
-        <CardWrapper>
-          <CardProper>
-            <CardImage src={mountain2} alt='mountain' />
-            <CardH3>A Super Wonderful Headline</CardH3>
-            <CardP>Lorem ipsum sit dolor amit</CardP>
-          </CardProper>
-          <CardProper>
-            <CardImage src={sunset2} alt='mountain' />
-            <CardH3>A Super Wonderful Headline</CardH3>
-            <CardP>Lorem ipsum sit dolor amit</CardP>
-          </CardProper>
-          <CardProper>
-            <CardImage src={mountain1} alt='mountain' />
-            <CardH3>A Super Wonderful Headline</CardH3>
-            <CardP>Lorem ipsum sit dolor amit</CardP>
-          </CardProper>
-          <CardProper>
-            <CardImage src={sunset1} alt='mountain' />
-            <CardH3>A Super Wonderful Headline</CardH3>
-            <CardP>Lorem ipsum sit dolor amit</CardP>
-          </CardProper>
-        </CardWrapper>
+        <WrapperCentringDiv>
+          <CardWrapper>
+            <CardProper>
+              <CardImage src={mountain2} alt='mountain' />
+              <CardH3>A Super Wonderful Headline</CardH3>
+              <CardP>
+                Lorem ipsum sit dolor amitLorem ipsum sit dolor amit
+              </CardP>
+            </CardProper>
+            <CardProper>
+              <CardImage src={sunset2} alt='mountain' />
+              <CardH3>A Super Wonderful Headline</CardH3>
+              <CardP>Lorem ipsum sit dolor amit</CardP>
+            </CardProper>
+            <CardProper>
+              <CardImage src={mountain1} alt='mountain' />
+              <CardH3>A Super Wonderful Headline</CardH3>
+              <CardP>Lorem ipsum sit dolor amit</CardP>
+            </CardProper>
+            <CardProper>
+              <CardImage src={sunset1} alt='mountain' />
+              <CardH3>A Super Wonderful Headline</CardH3>
+              <CardP>Lorem ipsum sit dolor amit</CardP>
+            </CardProper>
+          </CardWrapper>
+        </WrapperCentringDiv>
         <BigContainerDiv>
           <ResponsiveDiv>
             <StyledImage src={sunset2} />

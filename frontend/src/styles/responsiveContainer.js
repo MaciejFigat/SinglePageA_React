@@ -75,8 +75,8 @@ export const LinkOne = styled.a`
 export const H2 = styled.h2`
   position: absolute;
   cursor: pointer;
-
-  right: 10%;
+  bottom: 1rem;
+  right: 1rem;
   margin: 0;
   padding: 0;
   fill: var(--color2-secondary);

@@ -62,8 +62,7 @@ const techData = [
   {
     name: 'Gree',
     logo: <Gree />,
-    motto:
-      'Marka GREE to 30 lat doświadczenia w produkcji i dystrybucji klimatyzatorów na całym świecie',
+    motto: '30 lat doświadczenia',
     description:
       'Gree stale realizuje misję od „made in China” do „create in China”. Dzięki doskonałej jakości i niezawodności, nowoczesnym technologiom oraz dbałości o środowisko, Gree zapracowała na miano marki godnej zaufania. Klimatyzatory Gree są znane i cenione na całym świecie. Sprzedawane są w ponad 160 krajach, a liczba użytkowników przekracza 300 milionów osób. W Polsce obecne są od ponad 14 lat dzięki Free Polska – wyłącznemu importerowi klimatyzatorów marki Gree w Polsce.',
     link: 'https://gree.pl/',

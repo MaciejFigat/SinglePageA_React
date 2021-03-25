@@ -86,7 +86,7 @@ export const LinkPartners = styled.a`
   overflow: hidden;
 
   &:hover {
-    color: var(--color1-secondary);
+    color: var(--color1-secondary) !important;
     fill: var(--color1-secondary);
     opacity: 0.9;
   }
@@ -349,7 +349,7 @@ export const LinkLogo = styled.a`
   overflow: hidden;
   max-width: fit-content;
   &:hover {
-    /* color: var(--color1-secondary); */
+    color: var(--color1-secondary) !important;
     fill: var(--color1-secondary);
     opacity: 0.7;
   }
