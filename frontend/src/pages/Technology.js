@@ -2,7 +2,7 @@ import React from 'react'
 import { Layout } from '../layout'
 import { motion } from 'framer-motion'
 import { AllTech } from '../components/TechPartners'
-import mountain1 from '../assets/mountain1.jpg'
+
 const pageTransition = {
   in: {
     opacity: 1,

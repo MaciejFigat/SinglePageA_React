@@ -86,9 +86,11 @@ const AllTech = () => {
               transitions={pageTransitions}
             >
               <CardProperActive>
-                <H2Bottom onClick={showDetailsHandler}>
-                  <i className='fas fa-times'></i>
-                </H2Bottom>
+                <CardH3>
+                  <H2Bottom onClick={showDetailsHandler}>
+                    <i className='fas fa-times'></i>
+                  </H2Bottom>
+                </CardH3>
                 <CardImage src={mountain2} alt='mountain' />
 
                 <CardH3>{motto}</CardH3>

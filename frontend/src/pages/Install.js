@@ -2,7 +2,7 @@ import React from 'react'
 import { Layout } from '../layout'
 
 import { motion } from 'framer-motion'
-import { AllTech } from '../components/TechPartners'
+// import { AllTech } from '../components/TechPartners'
 const pageVariants = {
   in: {
     opacity: 1,
