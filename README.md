@@ -96,8 +96,16 @@ In StyledImage component ```width: ${(props) => (props.width ? props.width : '80
 
 
 ### Miscellaneous
-ACUnitsBottomView.jpg - Image by Peggy und Marco Lachmann-Anke from Pixabay (Free for commercial use)
 
-ACHouseFacade.jpg - Image by MICHOFF from Pixabay
-ACFacade.jpg - Image by Free-Photos from Pixabay 
-ACBuildingFacade.jpg - Image by Sławomir Kowalewski from Pixabay 
+
+
+ACHouseFacade.jpg - [Image by MICHOFF from Pixabay] (https://pixabay.com/users/michoff-10798847/)
+ACFacade.jpg - [Image by Free-Photos from Pixabay] (https://pixabay.com/photos/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1209311) 
+
+
+ACBuildingFacade.jpg - [Image by Sławomir Kowalewski from Pixabay](https://pixabay.com/users/skowalewski-454517/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=455239)
+
+PipesVent.jpg - [Image by Peter H from Pixabay] (https://pixabay.com/users/tama66-1032521/)
+VentClose.jpg - [Image by PublicDomainArchive from Pixabay] (https://pixabay.com/users/publicdomainarchive-262011/)
+VentRoof.jpg - [Image by Erich Westendarp from Pixabay] (https://pixabay.com/users/hpgruesen-2204343/)
+ACUnitsBottomView, VentCeiling.jpg - Images by [Peggy und Marco Lachmann-Anke] (https://pixabay.com/users/peggy_marco-1553824/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4749210)
