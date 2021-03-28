@@ -93,3 +93,11 @@ I refactored the code to include Redux in order to simplify the code in particul
 styled components example - quick and easy way to reuse StyledImage component that allows me to pass custom properties like width or height
 In parent component ```<StyledImage width='30%'/>```
 In StyledImage component ```width: ${(props) => (props.width ? props.width : '80%')};```
+
+
+### Miscellaneous
+ACUnitsBottomView.jpg - Image by Peggy und Marco Lachmann-Anke from Pixabay (Free for commercial use)
+
+ACHouseFacade.jpg - Image by MICHOFF from Pixabay
+ACFacade.jpg - Image by Free-Photos from Pixabay 
+ACBuildingFacade.jpg - Image by Sławomir Kowalewski from Pixabay 
