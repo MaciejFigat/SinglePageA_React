@@ -1,8 +1,11 @@
 import { createGlobalStyle } from 'styled-components'
-
+import ACFacade from '../assets/AC/ACFacade.jpg'
+import ACBuildingFacade from '../assets/AC/ACBuildingFacade.jpg'
+import VentClose from '../assets/AC/VentClose.jpg'
 const darkTheme = {
   text: '#CFD8DC',
-  background: '#334e68',
+  // background: '#334e68',
+  background: VentClose,
   color1: '#102a43',
   color2: '#243b53',
   color3: '#334e68',
@@ -17,15 +20,14 @@ const darkTheme = {
   colorShadow4: '#1bb9ac',
   colorShadow5: '#88b4b4',
 }
+// dark blue theme
 
 const lightTheme = {
   text: '#000',
 
-  background: '#ECEFF1',
+  // background: '#ECEFF1',
+  background: ACBuildingFacade,
 
-  // .color3 {color: #123f75;}
-  // .color4 {color: #126a79;}
-  // .color5 {color: #17a090;}
   color1: '#CFD8DC',
   color2: '#B0BEC5',
   color3: '#90A4AE',
@@ -40,20 +42,7 @@ const lightTheme = {
   colorShadow4: '#1bb9ac',
   colorShadow5: '#88b4b4',
 }
-// color1: "#efce6e",
-//   color2: "#e8cd7f",
-//   color3: "#1d5886",
-//   color4: "126a79",
-//   color5: "#17a090",
-//   colorHoverLink: "#62A2ED",
-//   textColorSvg: "#1A1A1A !important",
-//   colorShadow1: "#1d6b8e",
-//   colorShadow2: "#1d6b8e",
-// "#BAD6E5"#FECA1E "#1d6b8e"#29a1c3#2bc8c8 #62A2ED #bb7629
-// min-height: 100vh - HTML // min-height: 100vh; - body
 
-// display: grid;
-// grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 const GlobalStyle = createGlobalStyle`
 html {
   font-size: 100%;
@@ -137,7 +126,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
-  background:  ${(props) => props.theme.background};
+  background-image: url( ${(props) => props.theme.background});
 }`
-// background-image: url( ${(props) => props.theme.background});
+
+// background:  ${(props) => props.theme.background};
 export { GlobalStyle, darkTheme, lightTheme }
