@@ -1,11 +1,11 @@
 import { createGlobalStyle } from 'styled-components'
 import ACFacade from '../assets/AC/ACFacade.jpg'
 import ACBuildingFacade from '../assets/AC/ACBuildingFacade.jpg'
-import VentClose from '../assets/AC/VentClose.jpg'
+// import VentClose from '../assets/AC/VentClose.jpg'
 const darkTheme = {
   text: '#CFD8DC',
   // background: '#334e68',
-  background: VentClose,
+  background: ACFacade,
   color1: '#102a43',
   color2: '#243b53',
   color3: '#334e68',
@@ -19,6 +19,7 @@ const darkTheme = {
   colorShadow3: '#236677',
   colorShadow4: '#1bb9ac',
   colorShadow5: '#88b4b4',
+  linearGradient: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))',
 }
 // dark blue theme
 
@@ -41,6 +42,7 @@ const lightTheme = {
   colorShadow3: '#236677',
   colorShadow4: '#1bb9ac',
   colorShadow5: '#88b4b4',
+  linearGradient: 'linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))',
 }
 
 const GlobalStyle = createGlobalStyle`
@@ -126,8 +128,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
-  background-image: url( ${(props) => props.theme.background});
+  background: ${(props) => props.theme.linearGradient}, url( ${(props) =>
+  props.theme.background});
+  
 }`
+// background-image: url( ${(props) => props.theme.background});
 
 // background:  ${(props) => props.theme.background};
 export { GlobalStyle, darkTheme, lightTheme }

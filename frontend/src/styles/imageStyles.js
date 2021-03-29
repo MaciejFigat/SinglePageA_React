@@ -75,8 +75,9 @@ export const CardProperActive = styled.div`
   }
 `
 
-export const CardH3 = styled.h3`
+export const CardH3 = styled.p`
   margin-top: 1rem;
+  margin-bottom: 1rem;
   font-size: 1.25rem;
 `
 export const CardImage = styled.img`

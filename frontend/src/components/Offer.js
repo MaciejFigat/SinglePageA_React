@@ -1,5 +1,5 @@
 import React from 'react'
-import { Paragraph } from '../styles/boxColorStyles'
+// import { Paragraph } from '../styles/boxColorStyles'
 import {
   ResponsiveDiv,
   BigContainerDiv,
