@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 // import ACFacade from '../assets/AC/ACFacade.jpg'
-import VentClose from '../assets/AC/VentClose.jpg'
+// import VentClose from '../assets/AC/VentClose.jpg'
 // import ACBuildingFacade from '../assets/AC/ACBuildingFacade.jpg'
 import planInk from '../assets/plans/planInk.jpg'
 // import drawingBoard from '../assets/plans/drawingBoard.jpg'
