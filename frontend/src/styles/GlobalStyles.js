@@ -1,11 +1,15 @@
 import { createGlobalStyle } from 'styled-components'
-import ACFacade from '../assets/AC/ACFacade.jpg'
-import ACBuildingFacade from '../assets/AC/ACBuildingFacade.jpg'
-// import VentClose from '../assets/AC/VentClose.jpg'
+// import ACFacade from '../assets/AC/ACFacade.jpg'
+import VentClose from '../assets/AC/VentClose.jpg'
+// import ACBuildingFacade from '../assets/AC/ACBuildingFacade.jpg'
+import planInk from '../assets/plans/planInk.jpg'
+// import drawingBoard from '../assets/plans/drawingBoard.jpg'
+import wallConcrete from '../assets/plans/wallConcrete.jpg'
 const darkTheme = {
   text: '#CFD8DC',
   // background: '#334e68',
-  background: ACFacade,
+  background: planInk,
+  backgroundNav: wallConcrete,
   color1: '#102a43',
   color2: '#243b53',
   color3: '#334e68',
@@ -27,8 +31,8 @@ const lightTheme = {
   text: '#000',
 
   // background: '#ECEFF1',
-  background: ACBuildingFacade,
-
+  background: planInk,
+  backgroundNav: wallConcrete,
   color1: '#CFD8DC',
   color2: '#B0BEC5',
   color3: '#90A4AE',
@@ -42,7 +46,8 @@ const lightTheme = {
   colorShadow3: '#236677',
   colorShadow4: '#1bb9ac',
   colorShadow5: '#88b4b4',
-  linearGradient: 'linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))',
+  linearGradient:
+    'linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3))',
 }
 
 const GlobalStyle = createGlobalStyle`
@@ -104,6 +109,17 @@ h5 {font-size: 1.25em;}
   .svgPathLogo{
     stroke: ${(props) => props.theme.textColorSvg};
   }
+
+  .nav_list {
+    
+    background: ${(props) => props.theme.linearGradient},
+    url( ${(props) => props.theme.backgroundNav});
+  }
+
+  .nav_container {
+    background: ${(props) => props.theme.linearGradient}, url( ${(props) =>
+  props.theme.backgroundNav}); 
+  }
  
 }
 ::-webkit-scrollbar {
@@ -131,8 +147,12 @@ body {
   background: ${(props) => props.theme.linearGradient}, url( ${(props) =>
   props.theme.background});
   
+
+
+
 }`
 // background-image: url( ${(props) => props.theme.background});
 
 // background:  ${(props) => props.theme.background};
+
 export { GlobalStyle, darkTheme, lightTheme }

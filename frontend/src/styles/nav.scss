@@ -1,5 +1,6 @@
 .nav_container {
-  background: var(--color1-main);
+  // background: var(--color1-main);
+  // background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/AC/VentClose.jpg'); 
   // max-height: 50px;
   padding: 1rem;
   // width: 100%;
@@ -58,7 +59,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: var(--color1-main);
+    // background-color: var(--color1-main);
+    // background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/AC/VentClose.jpg');
     position: absolute;
     left: 0;
     margin-right: 0px;
