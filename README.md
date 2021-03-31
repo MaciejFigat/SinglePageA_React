@@ -119,3 +119,7 @@ drawingBoard - [Image by Gerd Altmann from Pixabay ] (https://pixabay.com/users/
 wallconcrete - [Image by Predra6_Photos from Pixabay] () 
 
 rulerBlueprint - [Image by Wokandapix from Pixabay] (https://pixabay.com/users/wokandapix-614097/)
+
+paperYellow - [Image by MrsMary from Pixabay] (https://pixabay.com/users/mrsmary-4022219/)
+
+woodenPanel - [Image by Pexels from Pixabay] (https://www.pexels.com/@pixabay)

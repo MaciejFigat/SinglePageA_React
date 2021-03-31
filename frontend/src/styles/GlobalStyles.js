@@ -4,15 +4,18 @@ import { createGlobalStyle } from 'styled-components'
 // import ACBuildingFacade from '../assets/AC/ACBuildingFacade.jpg'
 import planInk from '../assets/plans/planInk.jpg'
 import drawingBoard from '../assets/plans/drawingBoard.jpg'
+import woodenPanel from '../assets/plans/woodenPanel.jpg'
+// import paperYellow from '../assets/plans/paperYellow.jpg'
 // import rulerBlueprint from '../assets/plans/rulerBlueprint.jpg'
 
-import wallConcrete from '../assets/plans/wallConcrete.jpg'
+// import wallConcrete from '../assets/plans/wallConcrete.jpg'
 const darkTheme = {
   text: '#CFD8DC',
   // background: '#334e68',
   background: planInk,
   backgroundNav: drawingBoard,
-  backgroundHeader: wallConcrete,
+  backgroundHeader: woodenPanel,
+  backgroundCard: woodenPanel,
   color1: '#102a43',
   color2: '#243b53',
   color3: '#334e68',
@@ -27,6 +30,8 @@ const darkTheme = {
   colorShadow4: '#1bb9ac',
   colorShadow5: '#88b4b4',
   linearGradient: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))',
+  linearGradientSecondary:
+    'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))',
 }
 // dark blue theme
 
@@ -36,7 +41,8 @@ const lightTheme = {
   // background: '#ECEFF1',
   background: planInk,
   backgroundNav: drawingBoard,
-  backgroundHeader: wallConcrete,
+  backgroundHeader: woodenPanel,
+  backgroundCard: woodenPanel,
   color1: '#CFD8DC',
   color2: '#B0BEC5',
   color3: '#90A4AE',
@@ -52,6 +58,8 @@ const lightTheme = {
   colorShadow5: '#88b4b4',
   linearGradient:
     'linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3))',
+  linearGradientSecondary:
+    'linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))',
 }
 
 const GlobalStyle = createGlobalStyle`
@@ -121,8 +129,9 @@ h5 {font-size: 1.25em;}
   
  
   .nav_container {
-    background: ${(props) => props.theme.linearGradient}, url( ${(props) =>
-  props.theme.backgroundHeader}); 
+    background: ${(props) => props.theme.linearGradientSecondary}, url( ${(
+  props
+) => props.theme.backgroundHeader}); 
   }
  
 }

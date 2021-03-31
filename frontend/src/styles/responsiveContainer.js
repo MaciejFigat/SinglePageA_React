@@ -17,9 +17,11 @@ export const ResponsiveDiv = styled.div`
   width: 80%;
   padding: 40px 50px 20px;
 
-  background: var(--color2-main);
+  /* background: var(--color2-main); */
+  background: ${(props) => props.theme.linearGradientSecondary},
+    url(${(props) => props.theme.backgroundCard});
   margin-top: ${px2vw(16)};
-  box-shadow: 13px 13px 20px var(--color2-main);
+  /* box-shadow: 13px 13px 20px var(--color2-main); */
 
   font-size: ${px2vw(14)};
 

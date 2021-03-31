@@ -39,9 +39,11 @@ export const CardWrapper = styled.ul`
 export const CardProper = styled.li`
   display: grid;
   place-items: center;
-  background-color: var(--color4-shadow);
+  /* background-color: var(--color4-shadow); */
+  background: ${(props) => props.theme.linearGradientSecondary},
+    url(${(props) => props.theme.backgroundCard});
   border-radius: 0.5rem;
-  box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem var(--color4-shadow);
+  /* box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem var(--color4-shadow); */
   padding-bottom: 1rem;
   transition: all 0.3s ease-in-out;
   &:last-child {

@@ -22,8 +22,10 @@ const Nav = () => {
 
   return (
     <nav className='nav_container'>
-      <Batex />
       <ul className={`nav_list ${menuOpen}`}>
+        <li>
+          <Batex />
+        </li>
         <li className='testLi1'>
           {' '}
           <NavLink
