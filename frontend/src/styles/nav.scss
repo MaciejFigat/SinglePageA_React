@@ -1,9 +1,8 @@
 .nav_container {
   // background: var(--color1-main);
-  // background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/AC/VentClose.jpg'); 
-  // max-height: 50px;
-  padding: 1rem;
-  // width: 100%;
+  height: 2.5rem;
+  padding: 0.5rem;
+ 
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border: 1px solid var(--color3-main);
   max-width: 100vw;
@@ -18,7 +17,8 @@
 .nav_list {
   display: flex;
   justify-content: flex-end;
-  margin-right: 40px;
+  margin-right: 40px; 
+  
 }
 .burger {
   display: none;
@@ -51,7 +51,7 @@
 
 @media screen and (max-width: 760px) {
   .nav_container {
-    height: 1.5rem;
+    height: 2rem;
   }
   .nav_list {
     z-index: 2;
@@ -59,12 +59,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    // background-color: var(--color1-main);
-    // background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/AC/VentClose.jpg');
     position: absolute;
     left: 0;
     margin-right: 0px;
-    top: 3rem;
+    top: 3.1rem;
     transform: translateX(-120%);
     min-width: 50%;
     min-height: 70vh;
@@ -85,9 +83,7 @@
     top: 10px;
     margin-right: 1rem;
   }
-  // .nav_link {
-  //   animation: nav_link_fade 1s ease forwards 0s;
-  // }
+
   .testLi1 {
     animation: nav_li_fade 1s ease forwards 0s;
     // animation: nav_link_fade 1s ease forwards 0s;
@@ -110,22 +106,15 @@
   }
 }
 
-// .visible {
-//   transform: translateX(0%);
-//   transition: transform 0.5s ease-in-out;
-// }
-// .hidden {
-//   transform: translateX(-120%);
-//   transition: transform 0.5s ease-out;
-// }
+
 @keyframes nav_link_fade {
   from {
     opacity: 0;
-    // transform: translateX(100px);
+    
   }
   to {
     opacity: 1;
-    // transform: translateX(0px);
+    
     transition: 1s;
   }
 }

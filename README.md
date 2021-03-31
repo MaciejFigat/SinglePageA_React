@@ -115,3 +115,7 @@ DarkTokyo - [Image by Inns-Web from Pixabay] (https://pixabay.com/users/inns-web
 
 planInk.jpg - [Image by pisauikan from Pixabay] (https://pixabay.com/users/pisauikan-4552082/) 
 drawingBoard - [Image by Gerd Altmann from Pixabay ] (https://pixabay.com/users/geralt-9301/)
+
+wallconcrete - [Image by Predra6_Photos from Pixabay] () 
+
+rulerBlueprint - [Image by Wokandapix from Pixabay] (https://pixabay.com/users/wokandapix-614097/)

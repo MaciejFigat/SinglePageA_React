@@ -3,13 +3,16 @@ import { createGlobalStyle } from 'styled-components'
 // import VentClose from '../assets/AC/VentClose.jpg'
 // import ACBuildingFacade from '../assets/AC/ACBuildingFacade.jpg'
 import planInk from '../assets/plans/planInk.jpg'
-// import drawingBoard from '../assets/plans/drawingBoard.jpg'
+import drawingBoard from '../assets/plans/drawingBoard.jpg'
+// import rulerBlueprint from '../assets/plans/rulerBlueprint.jpg'
+
 import wallConcrete from '../assets/plans/wallConcrete.jpg'
 const darkTheme = {
   text: '#CFD8DC',
   // background: '#334e68',
   background: planInk,
-  backgroundNav: wallConcrete,
+  backgroundNav: drawingBoard,
+  backgroundHeader: wallConcrete,
   color1: '#102a43',
   color2: '#243b53',
   color3: '#334e68',
@@ -32,7 +35,8 @@ const lightTheme = {
 
   // background: '#ECEFF1',
   background: planInk,
-  backgroundNav: wallConcrete,
+  backgroundNav: drawingBoard,
+  backgroundHeader: wallConcrete,
   color1: '#CFD8DC',
   color2: '#B0BEC5',
   color3: '#90A4AE',
@@ -109,16 +113,16 @@ h5 {font-size: 1.25em;}
   .svgPathLogo{
     stroke: ${(props) => props.theme.textColorSvg};
   }
-
-  .nav_list {
-    
-    background: ${(props) => props.theme.linearGradient},
-    url( ${(props) => props.theme.backgroundNav});
-  }
-
+  @media screen and (max-width: 760px) {
+    .nav_list {
+        background: ${(props) => props.theme.linearGradient},
+        url( ${(props) => props.theme.backgroundNav});
+  }}
+  
+ 
   .nav_container {
     background: ${(props) => props.theme.linearGradient}, url( ${(props) =>
-  props.theme.backgroundNav}); 
+  props.theme.backgroundHeader}); 
   }
  
 }
