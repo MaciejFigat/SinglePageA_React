@@ -64,13 +64,12 @@ export const CardProperActive = styled.div`
   padding: 1rem;
   padding-bottom: 1rem;
 
-  position: absolute;
+  position: fixed;
   left: 30%;
   top: 10%;
   max-width: 40vw;
   min-width: 300px;
   @media (max-width: 680px) {
-    position: fixed;
     z-index: 10;
     max-width: 80vw;
     left: 20px;

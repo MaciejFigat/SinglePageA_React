@@ -23,6 +23,7 @@ const darkTheme = {
   color5: '#5F939A',
   color6: '#2e67bd',
   colorHoverLink: '#06acf1',
+  colorHoverLinkSecondary: '#71ebd2',
   textColorSvg: '#CFD8DC !important',
   colorShadow1: '#03e9f4',
   colorShadow2: '#486581',
@@ -52,6 +53,7 @@ const lightTheme = {
   color5: '#9c3d54',
   color6: '#4a86e0',
   colorHoverLink: '#C64756',
+  colorHoverLinkSecondary: '#C64756',
   textColorSvg: '#1A1A1A !important',
   colorShadow1: '#1d6b8e',
   colorShadow2: '#1d6b8e',
@@ -106,7 +108,7 @@ h5 {font-size: 1.25em;}
   --color6-main: ${(props) => props.theme.color6};
   --color1-secondary: ${(props) => props.theme.colorHoverLink};
   --color2-secondary: ${(props) => props.theme.textColorSvg};
-  --color3-secondary: #2e67bd;
+  --color3-secondary: ${(props) => props.theme.colorHoverLinkSecondary};
   --color4-secondary: #089eff;
   --color5-secondary: #08ecff;
   --color1-shadow: ${(props) => props.theme.colorShadow3};

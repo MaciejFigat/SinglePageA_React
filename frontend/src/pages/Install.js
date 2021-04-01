@@ -1,5 +1,6 @@
 import React from 'react'
 import { Layout } from '../layout'
+import InstallationExamples from '../components/InstallationExamples'
 
 import { motion } from 'framer-motion'
 // import { AllTech } from '../components/TechPartners'
@@ -28,7 +29,7 @@ const Install = () => {
         variants={pageVariants}
         transition={pageTransition}
       >
-        <h1>Instalacje </h1>
+        <InstallationExamples />
       </motion.div>
     </Layout>
   )
