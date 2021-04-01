@@ -1,12 +1,12 @@
 import React from 'react'
 import '../styles/svg/batex.scss'
-// import textColorSvg from '../App'
+
 const Batex = () => {
   return (
     <div className='batexContainer'>
       <svg
         className='svgWidthCont'
-        width='273'
+        width='243'
         id='logo'
         height='26'
         viewBox='0 0 273 26'
@@ -171,7 +171,7 @@ const Batex = () => {
     </div>
   )
 }
-// this dom query is needed to know the length of children of svg that I style in hello.css,
+// this dom query is needed to know the length of children of svg that I style in batex.css,
 // document.addEventListener("DOMContentLoaded", function () {
 //   const logo = document.querySelectorAll("#logo path");
 //   for (let i = 0; i < logo.length; i++) {

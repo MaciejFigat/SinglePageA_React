@@ -17,10 +17,10 @@ const darkTheme = {
   backgroundHeader: woodenPanel,
   backgroundCard: woodenPanel,
   color1: '#102a43',
-  color2: '#243b53',
-  color3: '#334e68',
+  color2: '#393232',
+  color3: '#151515',
   color4: '#486581',
-  color5: '#627d98',
+  color5: '#5F939A',
   color6: '#2e67bd',
   colorHoverLink: '#06acf1',
   textColorSvg: '#CFD8DC !important',
@@ -32,6 +32,8 @@ const darkTheme = {
   linearGradient: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))',
   linearGradientSecondary:
     'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))',
+  linearGradientTertiary:
+    'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))',
 }
 // dark blue theme
 
@@ -47,9 +49,9 @@ const lightTheme = {
   color2: '#B0BEC5',
   color3: '#90A4AE',
   color4: '#90A4AE',
-  color5: '#90A4AE',
+  color5: '#9c3d54',
   color6: '#4a86e0',
-  colorHoverLink: '#62A2ED',
+  colorHoverLink: '#C64756',
   textColorSvg: '#1A1A1A !important',
   colorShadow1: '#1d6b8e',
   colorShadow2: '#1d6b8e',
@@ -59,7 +61,9 @@ const lightTheme = {
   linearGradient:
     'linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3))',
   linearGradientSecondary:
-    'linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))',
+    'linear-gradient(rgba(207, 216, 220, 0.7), rgba(207, 216, 220, 0.7))',
+  linearGradientTertiary:
+    'linear-gradient(rgba(207, 216, 220, 0.85), rgba(207, 216, 220, 0.85))',
 }
 
 const GlobalStyle = createGlobalStyle`
@@ -123,15 +127,12 @@ h5 {font-size: 1.25em;}
   }
   @media screen and (max-width: 760px) {
     .nav_list {
-        background: ${(props) => props.theme.linearGradient},
-        url( ${(props) => props.theme.backgroundNav});
+        background: ${(props) => props.theme.linearGradientTertiary};
   }}
   
  
   .nav_container {
-    background: ${(props) => props.theme.linearGradientSecondary}, url( ${(
-  props
-) => props.theme.backgroundHeader}); 
+    background: ${(props) => props.theme.linearGradientSecondary}; 
   }
  
 }
@@ -167,5 +168,7 @@ body {
 // background-image: url( ${(props) => props.theme.background});
 
 // background:  ${(props) => props.theme.background};
-
+//  background: ${(props) => props.theme.linearGradientSecondary}, url( ${(
+//   props
+//   ) => props.theme.backgroundHeader});
 export { GlobalStyle, darkTheme, lightTheme }

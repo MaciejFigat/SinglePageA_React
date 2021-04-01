@@ -40,8 +40,9 @@ export const CardProper = styled.li`
   display: grid;
   place-items: center;
   /* background-color: var(--color4-shadow); */
-  background: ${(props) => props.theme.linearGradientSecondary},
-    url(${(props) => props.theme.backgroundCard});
+  background: ${(props) => props.theme.linearGradientSecondary};
+  /* background: ${(props) => props.theme.linearGradientSecondary},
+    url(${(props) => props.theme.backgroundCard}); */
   border-radius: 0.5rem;
   /* box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem var(--color4-shadow); */
   padding-bottom: 1rem;
@@ -50,7 +51,7 @@ export const CardProper = styled.li`
     margin-bottom: 0;
   }
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.07);
     transition: all 0.3s ease-in-out;
   }
 `

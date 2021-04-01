@@ -2,8 +2,6 @@
   // background: var(--color1-main);
   height: 2.5rem;
   padding: 0.5rem;
- 
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border: 1px solid var(--color3-main);
   max-width: 100vw;
 }
@@ -38,7 +36,7 @@
   font-family: "Roboto Slab", serif;
   font-weight: 700;
   transition: 0.6s;
-  // animation: nav_link_fade 1s ease-in 1.3s;
+  
   &:hover {
     color: var(--color1-secondary) !important;
     transition: 0.3s;
@@ -66,6 +64,9 @@
     transform: translateX(-120%);
     min-width: 50%;
     min-height: 70vh;
+    border-right: 1px solid var(--color3-main);
+    border-bottom: 1px solid var(--color3-main);
+    border-left: 2px solid var(--color3-main);
   }
   .nav_list.true {
     transform: translateX(0%);
@@ -86,23 +87,23 @@
   
   .testLi1 {
     animation: nav_li_fade 1s ease forwards 0s;
-    // animation: nav_link_fade 1s ease forwards 0s;
+ 
   }
   .testLi2 {
     animation: nav_li_fade 1.2s ease forwards 0s;
-    // animation: nav_link_fade 1s ease forwards 0s;
+  
   }
   .testLi3 {
     animation: nav_li_fade 1.4s ease forwards 0s;
-    // animation: nav_link_fade 1s ease forwards 0s;
+   
   }
   .testLi4 {
     animation: nav_li_fade 1.6s ease forwards 0s;
-    // animation: nav_link_fade 1s ease forwards 0s;
+    
   }
   .testLi5 {
     animation: nav_li_fade 1.8s ease forwards 0s;
-    // animation: nav_link_fade 1s ease forwards 0s;
+
   }
 }
 
