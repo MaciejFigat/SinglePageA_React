@@ -1,10 +1,8 @@
 import React from 'react'
 import { Layout } from '../layout'
 import '../styles/about.scss'
-import { motion } from 'framer-motion'
-
+import AnimationWrapper from '../animations/AnimationWrapper'
 import { ResponsiveDiv, BigContainerDiv } from '../styles/responsiveContainer'
-
 import {
   StyledImage,
   WrapperCentringDiv,
@@ -14,30 +12,15 @@ import {
   CardH3,
   CardP,
 } from '../styles/imageStyles'
-
 import sunset1 from '../assets/sunset1.jpg'
 import sunset2 from '../assets/sunset2.jpg'
 import mountain1 from '../assets/mountain1.jpg'
 import mountain2 from '../assets/mountain2.jpg'
 
-const pageTransition = {
-  in: {
-    opacity: 1,
-    y: 0,
-  },
-  out: {
-    opacity: 0,
-  },
-}
 const About = () => {
   return (
     <Layout>
-      <motion.div
-        initial='out'
-        animate='in'
-        exit='out'
-        variants={pageTransition}
-      >
+      <AnimationWrapper>
         <WrapperCentringDiv>
           <CardWrapper>
             <CardProper>
@@ -164,7 +147,7 @@ const About = () => {
             gezogen, Wird selbst ein weiser Mann gewogen.
           </ResponsiveDiv>
         </BigContainerDiv>
-      </motion.div>
+      </AnimationWrapper>
     </Layout>
   )
 }

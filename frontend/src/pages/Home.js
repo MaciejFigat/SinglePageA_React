@@ -1,23 +1,10 @@
 import React, { useState } from 'react'
 import { Layout } from '../layout'
-import { motion } from 'framer-motion'
+import AnimationWrapper from '../animations/AnimationWrapper'
 import { OfferOne, OfferTwo } from '../components/Offer'
 import { GridCenter, LinkAboutSubtle } from '../styles/boxColorStyles'
 import { BigContainerDiv } from '../styles/responsiveContainer'
 
-const pageVariants = {
-  in: {
-    opacity: 1,
-  },
-  out: {
-    opacity: 0,
-  },
-}
-const pageTransition = {
-  type: 'tween',
-  ease: 'anticipate',
-  duration: 0.5,
-}
 const Home = () => {
   const [showHomeEl, setShowHomeEl] = useState('showNone')
 
@@ -43,13 +30,7 @@ const Home = () => {
   if (showHomeEl === 'showNone') {
     return (
       <Layout>
-        <motion.div
-          initial='out'
-          animate='in'
-          exit='out'
-          variants={pageVariants}
-          transition={pageTransition}
-        >
+        <AnimationWrapper>
           <BigContainerDiv>
             <GridCenter>
               <LinkAboutSubtle onClick={handleClickOne}>
@@ -64,32 +45,20 @@ const Home = () => {
               </LinkAboutSubtle>
             </GridCenter>
           </BigContainerDiv>
-        </motion.div>
+        </AnimationWrapper>
       </Layout>
     )
   } else if (showHomeEl === 'showFirst') {
     return (
-      <motion.div
-        initial='out'
-        animate='in'
-        exit='out'
-        variants={pageVariants}
-        transition={pageTransition}
-      >
+      <AnimationWrapper>
         <OfferOne handleClickOne={handleClickOne} />
-      </motion.div>
+      </AnimationWrapper>
     )
   } else {
     return (
-      <motion.div
-        initial='out'
-        animate='in'
-        exit='out'
-        variants={pageVariants}
-        transition={pageTransition}
-      >
+      <AnimationWrapper>
         <OfferTwo handleClickTwo={handleClickTwo} />
-      </motion.div>
+      </AnimationWrapper>
     )
   }
 }
