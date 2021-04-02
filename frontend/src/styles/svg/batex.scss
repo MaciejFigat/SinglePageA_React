@@ -8,13 +8,13 @@
   position: absolute;
   z-index: -1;
   
-  // top: 2%;
-  // left: 1.5%;
+ 
   @media screen and (min-width: 760px) and (max-width: 960px) {
     display: none;
   }
   @media screen and (max-width: 759px) {
     display: flex;
+    z-index: 1;
     justify-content: center;
     align-items: center;
     min-height: 2.4rem;

@@ -34,7 +34,7 @@ const darkTheme = {
   linearGradientSecondary:
     'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))',
   linearGradientTertiary:
-    'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))',
+    'linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))',
 }
 // dark blue theme
 
@@ -46,7 +46,7 @@ const lightTheme = {
   backgroundNav: drawingBoard,
   backgroundHeader: woodenPanel,
   backgroundCard: woodenPanel,
-  color1: '#CFD8DC',
+  color1: '#fafad2',
   color2: '#B0BEC5',
   color3: '#90A4AE',
   color4: '#90A4AE',
@@ -60,12 +60,16 @@ const lightTheme = {
   colorShadow3: '#236677',
   colorShadow4: '#1bb9ac',
   colorShadow5: '#88b4b4',
+  // linearGradient:
+  //   'linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3))',
   linearGradient:
-    'linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3))',
+    'linear-gradient(rgba(250, 250, 210, 0.3), rgba(255, 255, 255, 0.3))',
   linearGradientSecondary:
-    'linear-gradient(rgba(207, 216, 220, 0.7), rgba(207, 216, 220, 0.7))',
+    'linear-gradient(rgba(250, 250, 210, 0.8), rgba(250, 250, 210, 0.8))',
+  // 'linear-gradient(rgba(207, 216, 220, 0.7), rgba(207, 216, 220, 0.7))',
   linearGradientTertiary:
-    'linear-gradient(rgba(207, 216, 220, 0.85), rgba(207, 216, 220, 0.85))',
+    'linear-gradient(rgba(250, 250, 210, 0.75), rgba(250, 250, 210, 0.75))',
+  // 'linear-gradient(rgba(207, 216, 220, 0.85), rgba(207, 216, 220, 0.85))',
 }
 
 const GlobalStyle = createGlobalStyle`
