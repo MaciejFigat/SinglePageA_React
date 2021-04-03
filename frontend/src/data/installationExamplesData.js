@@ -11,43 +11,43 @@ import saw3 from '../assets/Installation/saw3.jpg'
 const installationData = [
   {
     picture: saw1,
-    title: 'Template title',
+    title: 'Template title 1',
     description: 'Template description',
   },
   {
     picture: saw2,
-    title: 'Template title',
+    title: 'Template title 2',
     description: 'Template description',
   },
   {
     picture: saw3,
-    title: 'Template title',
+    title: 'Template title 3',
     description: 'Template description',
   },
 
   {
     picture: sanitation1,
-    title: 'Template title',
+    title: 'Template title 4',
     description: 'Template description',
   },
   {
     picture: sanitation2,
-    title: 'Template title',
+    title: 'Template title 5',
     description: 'Template description',
   },
   {
     picture: sanitation3,
-    title: 'Template title',
+    title: 'Template title 6',
     description: 'Template description',
   },
   {
     picture: sanitation4,
-    title: 'Template title',
+    title: 'Template title 7',
     description: 'Template description',
   },
   {
     picture: facadeBrick,
-    title: 'Template title',
+    title: 'Template title 8',
     description: 'Template title',
   },
 ]

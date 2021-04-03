@@ -1,11 +1,9 @@
 import React from 'react'
 import { installationData } from '../data/installationExamplesData'
 import {
-  // CardH3,
   CardP,
   CardWrapper,
   CardProper,
-  // CardProperActive,
   CardImage,
   WrapperCentringDiv,
 } from '../styles/imageStyles'
