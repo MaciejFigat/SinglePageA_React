@@ -1,4 +1,3 @@
-// import React from 'react'
 import facadeBrick from '../assets/Installation/facadeBrick.jpg'
 import sanitation1 from '../assets/Installation/sanitation1.jpg'
 import sanitation2 from '../assets/Installation/sanitation2.jpg'

@@ -11,22 +11,20 @@ import { LinkPartners } from '../styles/boxColorStyles'
 
 const InstallationExamples = () => {
   return (
-    <>
-      <WrapperCentringDiv>
-        <CardWrapper>
-          {installationData.map((data) => (
-            <div key={data.title}>
-              <CardProper>
-                <CardImage src={data.picture} alt='mountain' />
+    <WrapperCentringDiv>
+      <CardWrapper>
+        {installationData.map((data) => (
+          <div key={data.title}>
+            <CardProper>
+              <CardImage src={data.picture} alt='mountain' />
 
-                <LinkPartners>{data.title}</LinkPartners>
-                <CardP>{data.description}</CardP>
-              </CardProper>
-            </div>
-          ))}
-        </CardWrapper>
-      </WrapperCentringDiv>
-    </>
+              <LinkPartners>{data.title}</LinkPartners>
+              <CardP>{data.description}</CardP>
+            </CardProper>
+          </div>
+        ))}
+      </CardWrapper>
+    </WrapperCentringDiv>
   )
 }
 
