@@ -11,11 +11,10 @@ const InstallationSolarVent = () => {
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
           <Masonry>
             {installationData.map((installation) => (
-              <CardProper>
+              <CardProper key={installation.toString()}>
                 <LinkPartners>{installation.title}</LinkPartners>
                 <CardP>{installation.description}</CardP>
                 <StyledImage
-                  key={installation.toString()}
                   width='100%'
                   height='100%'
                   src={installation.picture}
