@@ -7,6 +7,12 @@ export const StyledImage = styled.img`
   border: var(--color3-main);
   border-radius: 5px;
 `
+export const StyledImageAlt = styled.img`
+  width: ${(props) => (props.width ? props.width : '80%')};
+  height: ${(props) => (props.height ? props.height : '80%')};
+  object-fit: cover;
+  /* border: var(--color3-main); */
+`
 // Card with a picture
 // <CardWrapper>
 //   <CardProper>
@@ -44,8 +50,8 @@ export const CardProper = styled.li`
   /* background: ${(props) => props.theme.linearGradientSecondary},
     url(${(props) => props.theme.backgroundCard}); */
   border-radius: 0.5rem;
-  /* box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem var(--color4-shadow); */
-  padding-bottom: 1rem;
+  font-family: 'Roboto Slab', serif;
+  /* padding-bottom: 1rem; */
   transition: all 0.3s ease-in-out;
   &:last-child {
     margin-bottom: 0;

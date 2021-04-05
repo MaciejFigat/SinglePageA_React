@@ -9,6 +9,13 @@ export const ContainerDiv = styled.div`
   display: grid;
   place-items: center;
 `
+export const WrapperDiv = styled.div`
+  display: grid;
+  place-items: left;
+
+  width: 80%;
+`
+
 export const ResponsiveDiv = styled.div`
   display: grid;
   place-items: left;
@@ -17,12 +24,9 @@ export const ResponsiveDiv = styled.div`
   width: 80%;
   padding: 40px 50px 20px;
 
-  /* background: var(--color2-main); */
   background: ${(props) => props.theme.linearGradientSecondary};
-  /* background: ${(props) => props.theme.linearGradientSecondary},
-    url(${(props) => props.theme.backgroundCard}); */
+
   margin-top: ${px2vw(16)};
-  /* box-shadow: 13px 13px 20px var(--color2-main); */
 
   font-size: ${px2vw(14)};
 
@@ -41,11 +45,10 @@ export const ResponsiveDiv = styled.div`
 export const ContainerLogos = styled.div`
   display: grid;
   place-items: center;
-  /* grid-template-columns: repeat(4, 1fr); */
+
   grid-template: 1fr 1fr 1fr/ 1fr 1fr 1fr;
   row-gap: 60px;
   @media (max-width: 1024px) {
-    /* grid-template-columns: repeat(3, 1fr); */
     grid-template: 1fr 1fr / 1fr 1fr;
     row-gap: 20px;
   }
@@ -80,15 +83,11 @@ export const H2 = styled.h4`
   cursor: pointer;
   display: flex;
   justify-content: flex-end;
-  /* top: 10rem; */
-  /* right: -95%; */
-  /* left: 1rem; */
-  /* left: 0; */
-  margin: 0;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem;
+  /* margin-bottom: 0.5rem; */
   padding: 0;
   fill: var(--color2-secondary);
-  font-size: 2em;
+  font-size: 1.5em;
 
   transition: 0.7s;
   &:hover {
@@ -112,7 +111,6 @@ export const H2Bottom = styled(H2)`
   top: 0;
 
   margin-top: 0.25rem;
-  /* margin-bottom: 0.5rem; */
-  /* bottom: 1rem; */
+
   right: 1rem;
 `

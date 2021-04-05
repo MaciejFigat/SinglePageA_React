@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Layout } from '../layout'
 import AnimationWrapper from '../animations/AnimationWrapper'
 import { OfferOne, OfferTwo } from '../components/Offer'
+import InstallationAC from '../components/InstallationAC'
 import { GridCenter, LinkAboutSubtle } from '../styles/boxColorStyles'
 import { BigContainerDiv } from '../styles/responsiveContainer'
 
@@ -51,7 +52,7 @@ const Home = () => {
   } else if (showHomeEl === 'showFirst') {
     return (
       <AnimationWrapper>
-        <OfferOne handleClickOne={handleClickOne} />
+        <InstallationAC handleClickOne={handleClickOne} />
       </AnimationWrapper>
     )
   } else {

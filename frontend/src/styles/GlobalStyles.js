@@ -150,15 +150,15 @@ h5 {font-size: 1.25em;}
 body {
 
    
+  font-family: 'Roboto Slab', serif;
   
-  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   line-height: 1.65;
   color: ${(props) => props.theme.text};
   
   
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Noto Sans", "Roboto",
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Noto Sans",
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -167,10 +167,8 @@ body {
   background: ${(props) => props.theme.linearGradient}, url( ${(props) =>
   props.theme.background});
   
-
-
-
-}`
+}
+`
 // background-image: url( ${(props) => props.theme.background});
 
 // background:  ${(props) => props.theme.background};

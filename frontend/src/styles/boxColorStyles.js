@@ -294,7 +294,7 @@ export const Link2 = styled.a`
   border-radius: 10px;
   /* font-size: 20px; */
   font-weight: 700;
-  /* font-family: "Lato", sans-serif; */
+
   /* color: #fff; */
   text-align: center;
   background: var(--color2-main);

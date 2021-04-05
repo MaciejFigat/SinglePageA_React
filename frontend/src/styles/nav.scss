@@ -2,7 +2,9 @@
   height: 2.5rem;
   padding: 0.5rem;
   border: 1px solid var(--color3-main);
-  max-width: 100vw;
+  max-width: 100%;
+  // margin-bottom: 0.5rem;
+  // z-index: 1000;
   
 }
 
@@ -23,6 +25,7 @@
   display: none;
   cursor: pointer;
   z-index: 20;
+
 }
 .burger div {
   width: 25px;
@@ -52,6 +55,10 @@
 @media screen and (max-width: 760px) {
   .nav_container {
     height: 2rem;
+    // position: fixed;
+    // top: 0;
+    // width: 100vw;
+    
   }
   .nav_list {
     
@@ -59,7 +66,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    position: absolute;
+    // position: absolute;
+    position: fixed;
     left: 0;
     margin-right: 0px;
     top: 3.1rem;
@@ -81,7 +89,8 @@
 
   .burger {
     display: block;
-    position: absolute;
+    // position: absolute;
+    position: fixed;
     left: 10px;
     top: 10px;
     margin-right: 1rem;
