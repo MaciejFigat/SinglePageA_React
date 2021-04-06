@@ -1,14 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
-// import ACFacade from '../assets/AC/ACFacade.jpg'
-// import VentClose from '../assets/AC/VentClose.jpg'
-// import ACBuildingFacade from '../assets/AC/ACBuildingFacade.jpg'
+
 import planInk from '../assets/plans/planInk.jpg'
 import drawingBoard from '../assets/plans/drawingBoard.jpg'
 import woodenPanel from '../assets/plans/woodenPanel.jpg'
-// import paperYellow from '../assets/plans/paperYellow.jpg'
-// import rulerBlueprint from '../assets/plans/rulerBlueprint.jpg'
 
-// import wallConcrete from '../assets/plans/wallConcrete.jpg'
 const darkTheme = {
   text: '#CFD8DC',
   // background: '#334e68',
@@ -63,7 +58,7 @@ const lightTheme = {
   // linearGradient:
   //   'linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3))',
   linearGradient:
-    'linear-gradient(rgba(250, 250, 210, 0.3), rgba(255, 255, 255, 0.3))',
+    'linear-gradient(rgba(250, 250, 210, 0.5), rgba(250, 250, 210, 0.5))',
   linearGradientSecondary:
     'linear-gradient(rgba(250, 250, 210, 0.8), rgba(250, 250, 210, 0.8))',
   // 'linear-gradient(rgba(207, 216, 220, 0.7), rgba(207, 216, 220, 0.7))',

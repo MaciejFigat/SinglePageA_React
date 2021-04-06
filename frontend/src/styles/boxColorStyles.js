@@ -49,24 +49,19 @@ export const LinkAboutSecondary = styled.a`
 export const LinkAboutSubtle = styled.a`
   display: flex;
   justify-content: center;
-  /* display: inline-block; */
-  /* display: grid;
-
-  place-items: center; */
   padding: 0px 0px;
   margin: 20px 20px 0;
-  color: var(--color4-shadow);
-  fill: var(--color2-secondary);
   text-decoration: none;
   text-transform: uppercase;
   transition: 0.5s;
   letter-spacing: 4px;
   overflow: hidden;
+  max-height: fit-content;
 
   &:hover {
     /* background: var(--color4-shadow); */
-    color: var(--color3-shadow);
-    opacity: 0.7;
+    color: var(--color3-secondary);
+    /* opacity: 0.7;     */
     /* text-shadow: 0 0 5px var(--color2-secondary); */
     /* -webkit-box-reflect: below 1px linear-gradient(transparent, #0005); */
   }
