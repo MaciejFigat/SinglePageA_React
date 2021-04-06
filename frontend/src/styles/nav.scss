@@ -3,8 +3,8 @@
   padding: 0.5rem;
   border: 1px solid var(--color3-main);
   max-width: 100%;
-  // margin-bottom: 0.5rem;
-  // z-index: 1000;
+  background: var(--background2-main);  
+
   
 }
 
@@ -61,19 +61,19 @@
     
   }
   .nav_list {
-    
+    background: var(--background3-main);  
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    // position: absolute;
-    position: fixed;
+    position: absolute;
+    // position: fixed;
     left: 0;
     margin-right: 0px;
     top: 3.1rem;
     transform: translateX(-120%);
     min-width: 50%;
-    min-height: 70vh;
+    min-height: 40vh;
     border-right: 1px solid var(--color3-main);
     border-bottom: 1px solid var(--color3-main);
     border-left: 2px solid var(--color3-main);
@@ -89,8 +89,8 @@
 
   .burger {
     display: block;
-    // position: absolute;
-    position: fixed;
+    position: absolute;
+    // position: fixed;
     left: 10px;
     top: 10px;
     margin-right: 1rem;

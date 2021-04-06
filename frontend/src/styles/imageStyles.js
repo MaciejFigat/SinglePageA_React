@@ -45,13 +45,13 @@ export const CardWrapper = styled.ul`
 export const CardProper = styled.li`
   display: grid;
   place-items: center;
-  /* background-color: var(--color4-shadow); */
+
   background: ${(props) => props.theme.linearGradientSecondary};
   /* background: ${(props) => props.theme.linearGradientSecondary},
     url(${(props) => props.theme.backgroundCard}); */
   border-radius: 0.5rem;
   font-family: 'Roboto Slab', serif;
-  /* padding-bottom: 1rem; */
+
   transition: all 0.3s ease-in-out;
   &:last-child {
     margin-bottom: 0;

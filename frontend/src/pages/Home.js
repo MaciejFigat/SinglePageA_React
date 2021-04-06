@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { Layout } from '../layout'
 import AnimationWrapper from '../animations/AnimationWrapper'
-import { OfferOne, OfferTwo } from '../components/Offer'
+import { OfferTwo } from '../components/Offer'
 import InstallationAC from '../components/InstallationAC'
 import { GridCenter, LinkAboutSubtle } from '../styles/boxColorStyles'
 import { BigContainerDiv } from '../styles/responsiveContainer'
-
+import InstallationSolarVent from '../components/InstallationSolarVent'
 const Home = () => {
   const [showHomeEl, setShowHomeEl] = useState('showNone')
 
@@ -52,7 +52,8 @@ const Home = () => {
   } else if (showHomeEl === 'showFirst') {
     return (
       <AnimationWrapper>
-        <InstallationAC handleClickOne={handleClickOne} />
+        <InstallationAC />
+        <InstallationSolarVent handleClickOne={handleClickOne} />
       </AnimationWrapper>
     )
   } else {

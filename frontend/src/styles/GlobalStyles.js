@@ -120,6 +120,9 @@ h5 {font-size: 1.25em;}
   --color3-shadow: ${(props) => props.theme.colorShadow1};
   --color4-shadow: ${(props) => props.theme.colorShadow2};
   --color5-shadow: ${(props) => props.theme.colorShadow5};
+  --background1-main: ${(props) => props.theme.linearGradient};
+  --background2-main: ${(props) => props.theme.linearGradientSecondary};
+  --background3-main: ${(props) => props.theme.linearGradientTertiary};
   a, a:link, a:visited{
     text-decoration: none;
     color: ${(props) => props.theme.text};
@@ -131,16 +134,8 @@ h5 {font-size: 1.25em;}
   .svgPathLogo{
     stroke: ${(props) => props.theme.textColorSvg};
   }
-  @media screen and (max-width: 760px) {
-    .nav_list {
-        background: ${(props) => props.theme.linearGradientTertiary};
-  }}
   
- 
-  .nav_container {
-    background: ${(props) => props.theme.linearGradientSecondary}; 
-  }
- 
+
 }
 ::-webkit-scrollbar {
   width: 0px;

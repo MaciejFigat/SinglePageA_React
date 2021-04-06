@@ -2,13 +2,13 @@ import React from 'react'
 import { Layout } from '../layout'
 import '../styles/about.scss'
 import AnimationWrapper from '../animations/AnimationWrapper'
-import InstallationSolarVent from '../components/InstallationSolarVent'
+import InstallationAC from '../components/InstallationAC'
 
 const About = () => {
   return (
     <Layout>
       <AnimationWrapper>
-        <InstallationSolarVent />
+        <InstallationAC />
       </AnimationWrapper>
     </Layout>
   )

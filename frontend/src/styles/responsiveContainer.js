@@ -61,21 +61,22 @@ export const LinkOne = styled.a`
   margin: 20px 0px 20px;
   padding: 10px 20px;
   border-radius: 5px;
-  max-width: fit-content;
+  min-width: fit-content;
   text-decoration: none;
   border: 1px solid var(--color2-secondary);
-  display: inline-block;
+  /* display: inline-block; */
   transition: 0.5s;
-  transform: translateY(-10px);
-  opacity: 0.1;
-
+  transform: translateY(-5px);
+  /* opacity: 0.9; */
+  /* background: var(--color1-main); */
+  background: ${(props) => props.theme.linearGradientSecondary};
   ${ResponsiveDiv}:hover & {
     transform: translateY(0px);
-    opacity: 1;
+    /* opacity: 1; */
     transition: 0.5s;
   }
   &:hover {
-    background: var(--color1-main);
+    color: var(--color1-secondary) !important;
   }
 `
 export const H2 = styled.h4`

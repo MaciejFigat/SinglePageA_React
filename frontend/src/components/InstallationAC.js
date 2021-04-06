@@ -1,21 +1,17 @@
 import React from 'react'
 import {
-  ResponsiveDiv,
+  // ResponsiveDiv,
   BigContainerDiv,
   WrapperDiv,
-  H2,
 } from '../styles/responsiveContainer'
 import { StyledImageAlt, CardProper } from '../styles/imageStyles'
 import { installationData } from '../data/installationAC'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 
-const InstallationAC = ({ handleClickOne }) => {
+const InstallationAC = () => {
   return (
     <BigContainerDiv>
       <WrapperDiv>
-        <H2 onClick={handleClickOne}>
-          Powrót &nbsp;<i className='fas fa-chevron-circle-left'></i>
-        </H2>
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
           <Masonry>
             {installationData.map((installation) => (

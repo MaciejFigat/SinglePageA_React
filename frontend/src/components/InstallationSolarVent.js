@@ -1,13 +1,17 @@
 import React from 'react'
-import { ResponsiveDiv, BigContainerDiv } from '../styles/responsiveContainer'
+import {
+  BigContainerDiv,
+  LinkOne,
+  WrapperDiv,
+} from '../styles/responsiveContainer'
 import { StyledImage, CardP, CardProper } from '../styles/imageStyles'
 import { LinkPartners } from '../styles/boxColorStyles'
 import { installationData } from '../data/installationSolarVent'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
-const InstallationSolarVent = () => {
+const InstallationSolarVent = ({ handleClickOne }) => {
   return (
     <BigContainerDiv>
-      <ResponsiveDiv>
+      <WrapperDiv>
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
           <Masonry>
             {installationData.map((installation) => (
@@ -23,7 +27,11 @@ const InstallationSolarVent = () => {
             ))}
           </Masonry>
         </ResponsiveMasonry>
-      </ResponsiveDiv>
+      </WrapperDiv>
+      <LinkOne onClick={handleClickOne}>
+        {' '}
+        Powrót &nbsp;<i className='fas fa-chevron-circle-left'></i>
+      </LinkOne>
     </BigContainerDiv>
   )
 }
