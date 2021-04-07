@@ -33,9 +33,9 @@ const SvgThemeButton = () => {
       <button className='buttonThemes' onClick={handleClickColor}>
         <svg
           xmlns='http://www.w3.org/2000/svg'
-          height='24'
-          viewBox='0 0 24 24'
-          width='24'
+          height='18'
+          viewBox='0 0 18 24'
+          width='18'
         >
           <path d='M0 0h24v24H0V0z' fill='none' />
           <path
@@ -50,9 +50,9 @@ const SvgThemeButton = () => {
       <button className='buttonThemes' onClick={handleClickColor}>
         <svg
           xmlns='http://www.w3.org/2000/svg'
-          height='24'
-          viewBox='0 0 24 24'
-          width='24'
+          height='18'
+          viewBox='0 0 18 24'
+          width='18'
         >
           <path d='M0 0h24v24H0V0z' fill='none' />
           <path

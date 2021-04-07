@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Layout } from '../layout'
 import AnimationWrapper from '../animations/AnimationWrapper'
-import { OfferTwo } from '../components/Offer'
+import { Projects } from '../components/ProjectsExamples'
 import { GridCenter, LinkAboutSubtle } from '../styles/boxColorStyles'
 import { BigContainerDiv } from '../styles/responsiveContainer'
 import InstallationSolarVent from '../components/InstallationSolarVent'
@@ -57,7 +57,7 @@ const Home = () => {
   } else {
     return (
       <AnimationWrapper>
-        <OfferTwo handleClickTwo={handleClickTwo} />
+        <Projects handleClickTwo={handleClickTwo} />
       </AnimationWrapper>
     )
   }

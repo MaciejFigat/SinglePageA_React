@@ -4,30 +4,35 @@ import {
   LinkOne,
   WrapperDiv,
 } from '../styles/responsiveContainer'
-import { StyledImage, CardP, CardProper } from '../styles/imageStyles'
-import { LinkPartners } from '../styles/boxColorStyles'
+import {
+  // StyledImage,
+  CardP,
+  CardProper,
+  CardH3,
+  CardWrapper,
+  CardImage,
+} from '../styles/imageStyles'
+// import { LinkPartners } from '../styles/boxColorStyles'
 import { installationData } from '../data/installationSolarVent'
-import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
+// import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 const InstallationSolarVent = ({ handleClickOne }) => {
   return (
     <BigContainerDiv>
       <WrapperDiv>
-        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
-          <Masonry>
-            {installationData.map((installation) => (
-              <CardProper key={installation.toString()}>
-                <LinkPartners>{installation.title}</LinkPartners>
-                <CardP>{installation.description}</CardP>
-                <StyledImage
-                  width='100%'
-                  height='100%'
-                  src={installation.picture}
-                />
-              </CardProper>
-            ))}
-          </Masonry>
-        </ResponsiveMasonry>
-      </WrapperDiv>
+        <CardWrapper>
+          {' '}
+          <CardProper>
+            <CardH3>Przykładowe wykonane instalacje </CardH3>
+          </CardProper>
+          {installationData.map((installation) => (
+            <CardProper key={installation.id.toString()}>
+              <CardImage src={installation.picture} />
+              <CardH3>{installation.title}</CardH3>
+              <CardP>{installation.description}</CardP>
+            </CardProper>
+          ))}
+        </CardWrapper>
+      </WrapperDiv>{' '}
       <LinkOne onClick={handleClickOne}>
         {' '}
         Powrót &nbsp;<i className='fas fa-chevron-circle-left'></i>
