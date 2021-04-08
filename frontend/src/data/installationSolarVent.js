@@ -1,7 +1,7 @@
 import solarSaw1 from '../assets/Installation/solarSaw1.jpg'
 // import solarSaw2 from '../assets/Installation/solarSaw2.jpg'
 import solarSaw3 from '../assets/Installation/solarSaw3.jpg'
-import ventChannel from '../assets/Installation/ventChannel.jpg'
+// import ventChannel from '../assets/Installation/ventChannel.jpg'
 // import ventChannel2 from '../assets/Installation/ventChannel2.jpg'
 const installationData = [
   {
@@ -24,7 +24,7 @@ const installationData = [
   },
   {
     id: 4,
-    picture: ventChannel,
+    picture: solarSaw3,
     title: 'Instalacja gazowa z urządzeniami grzewczymi',
     description:
       'Uwzględniając: detrafikatory, przyłącze gazu, punkt redukcyjno-pomiarowy, pakietem kominowy do kotłowni. Budynek biurowo-magazynowy w Piascznie.',
