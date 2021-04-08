@@ -32,6 +32,7 @@ export const CardWrapper = styled.ul`
   padding: 0;
   margin: 1.5rem 1.5rem 0rem 1.5rem;
   display: grid;
+
   /* grid-template-columns: repeat(5, 1fr) */
   grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
   grid-gap: 1.5rem;
@@ -45,19 +46,17 @@ export const CardWrapper = styled.ul`
 export const CardProper = styled.li`
   display: grid;
   place-items: center;
-
   background: ${(props) => props.theme.linearGradientSecondary};
-  /* background: ${(props) => props.theme.linearGradientSecondary},
-    url(${(props) => props.theme.backgroundCard}); */
   border-radius: 0.5rem;
   font-family: 'Roboto Slab', serif;
-
   transition: all 0.3s ease-in-out;
-  &:last-child {
+
+  /* margin-bottom: 2rem; */
+  /* &:last-child {
     margin-bottom: 0;
-  }
+  } */
   &:hover {
-    transform: scale(1.07);
+    transform: scale(1.03);
     transition: all 0.3s ease-in-out;
   }
 `
@@ -69,7 +68,6 @@ export const CardProperActive = styled.div`
   box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem var(--color4-shadow);
   padding: 1rem;
   padding-bottom: 1rem;
-
   position: fixed;
   left: 30%;
   top: 10%;
@@ -99,4 +97,6 @@ export const CardImage = styled.img`
 `
 export const CardP = styled.p`
   margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 `

@@ -3,7 +3,7 @@ import {
   // ResponsiveDiv,
   BigContainerDiv,
   LinkOne,
-  WrapperDiv,
+  ContainerDiv,
 } from '../styles/responsiveContainer'
 
 import {
@@ -18,10 +18,10 @@ import {
 import { data } from '../data/projectsExamples'
 import rulerBlueprint from '../assets/plans/rulerBlueprint.jpg'
 
-const Projects = ({ handleClickTwo }) => {
+const Projects = ({ handleClickHome }) => {
   return (
     <BigContainerDiv>
-      <WrapperDiv>
+      <ContainerDiv>
         <CardWrapper>
           {' '}
           <CardProper>
@@ -46,14 +46,14 @@ const Projects = ({ handleClickTwo }) => {
           ))}
           <CardProper>
             <CardH3>
-              <LinkOne onClick={handleClickTwo}>
+              <LinkOne onClick={handleClickHome}>
                 {' '}
                 Powrót &nbsp;<i className='fas fa-chevron-circle-left'></i>
               </LinkOne>
             </CardH3>
           </CardProper>
         </CardWrapper>
-      </WrapperDiv>{' '}
+      </ContainerDiv>{' '}
     </BigContainerDiv>
   )
 }

@@ -15,7 +15,7 @@ import {
 // import { LinkPartners } from '../styles/boxColorStyles'
 import { installationData } from '../data/installationSolarVent'
 // import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
-const InstallationSolarVent = ({ handleClickOne }) => {
+const InstallationSolarVent = ({ handleClickHome }) => {
   return (
     <BigContainerDiv>
       <WrapperDiv>
@@ -33,7 +33,7 @@ const InstallationSolarVent = ({ handleClickOne }) => {
           ))}
         </CardWrapper>
       </WrapperDiv>{' '}
-      <LinkOne onClick={handleClickOne}>
+      <LinkOne onClick={handleClickHome}>
         {' '}
         Powrót &nbsp;<i className='fas fa-chevron-circle-left'></i>
       </LinkOne>

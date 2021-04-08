@@ -6,39 +6,29 @@ import { GridCenter, LinkAboutSubtle } from '../styles/boxColorStyles'
 import { BigContainerDiv } from '../styles/responsiveContainer'
 import InstallationSolarVent from '../components/InstallationSolarVent'
 const Home = () => {
-  const [showHomeEl, setShowHomeEl] = useState('showNone')
+  const [showHomeEl, setShowHomeEl] = useState('showHome')
 
-  const handleClickOne = () => {
-    if (showHomeEl === 'showNone') {
-      setShowHomeEl('showFirst')
-    } else if (showHomeEl === 'showSecond') {
-      setShowHomeEl('showFirst')
-    } else {
-      setShowHomeEl('showNone')
-    }
+  const handleClickInstallations = () => {
+    setShowHomeEl('showInstallation')
   }
-  const handleClickTwo = () => {
-    if (showHomeEl === 'showNone') {
-      setShowHomeEl('showSecond')
-    } else if (showHomeEl === 'showFirst') {
-      setShowHomeEl('showSecond')
-    } else {
-      setShowHomeEl('showNone')
-    }
+  const handleClickProjects = () => {
+    setShowHomeEl('showProjects')
   }
-
-  if (showHomeEl === 'showNone') {
-    return (
-      <Layout>
+  const handleClickHome = () => {
+    setShowHomeEl('showHome')
+  }
+  return (
+    <Layout>
+      {showHomeEl === 'showHome' && (
         <AnimationWrapper>
           <BigContainerDiv>
             <GridCenter>
-              <LinkAboutSubtle onClick={handleClickOne}>
+              <LinkAboutSubtle onClick={handleClickInstallations}>
                 <h3>
                   Realizacje <i className='fas fa-gavel'></i>
                 </h3>
               </LinkAboutSubtle>
-              <LinkAboutSubtle onClick={handleClickTwo}>
+              <LinkAboutSubtle onClick={handleClickProjects}>
                 <h3>
                   Projekty <i className='fas fa-drafting-compass'></i>
                 </h3>
@@ -46,21 +36,19 @@ const Home = () => {
             </GridCenter>
           </BigContainerDiv>
         </AnimationWrapper>
-      </Layout>
-    )
-  } else if (showHomeEl === 'showFirst') {
-    return (
-      <AnimationWrapper>
-        <InstallationSolarVent handleClickOne={handleClickOne} />
-      </AnimationWrapper>
-    )
-  } else {
-    return (
-      <AnimationWrapper>
-        <Projects handleClickTwo={handleClickTwo} />
-      </AnimationWrapper>
-    )
-  }
+      )}
+      {showHomeEl === 'showInstallation' && (
+        <AnimationWrapper>
+          <InstallationSolarVent handleClickHome={handleClickHome} />
+        </AnimationWrapper>
+      )}
+      {showHomeEl === 'showProjects' && (
+        <AnimationWrapper>
+          <Projects handleClickHome={handleClickHome} />
+        </AnimationWrapper>
+      )}
+    </Layout>
+  )
 }
 
 export default Home
