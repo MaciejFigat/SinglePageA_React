@@ -12,65 +12,37 @@ const data = [
   {
     id: 1,
     picture: ACBuildingFacade,
-    title: 'Template title 1',
-    description:
-      'Projekt i nadzór autorski nad wykonaniem instalacji wentylacji mechanicznej i chłodzenia dla rozbudowy hotelu przy ul.Piwnej w Gdańsku ',
+    title: 'Wentylacja mechaniczna, chłodzenie + nadzór autorski',
+    description: 'Hotel przy ul.Piwnej w Gdańsku ',
+    description2:
+      'Sala widowiskowa w Serocku dla Urzędu Miasta i Gminy Serock przy ul. Rynek 21 w Serocku',
+    description3: 'Pomieszczenia strefy ochronnej w kancelarii sejmu RP',
   },
+
   {
     id: 2,
-    picture: ACFacade,
-    title: 'Template title 2',
-    description:
-      'Projekt budowlano-wykonawczy instalacji wentylacji i chłodzenia, instalacji co. , wod.-kan.,kotłowni dla budynków ośrodka rehabilitacji w Sawicach',
+    picture: ACHouseFacade,
+    title:
+      'Wentylacja mechaniczna, chłodzenie, instalacje co., wod-kan, wraz z węzłem cieplnym',
+    description: 'Zabytkowy budynek Wielkiej Zbrojowni ASP w Gdańsku',
+    description2: 'Budynek kasyna wojskowego w Sochaczewie',
+    description3: 'Budynki ośrodka rehabilitacji w Sawicach',
   },
   {
     id: 3,
-    picture: ACHouseFacade,
-    title: 'Template title 3',
+    picture: ACUnitsBottomView,
+    title: 'Wentylacja i klimatyzacja + nadzór autorski',
     description:
-      'Projekt i nadzór autorski nad wykonaniem instalacji wentylacji mechanicznej i chłodzenia, instalacji co., wod.kan, wraz z węzłem cieplnym /parter i piwnice/ w budynku zabytkowym Wielkiej Zbrojowni ASP w Gdańsku',
+      'Pomieszczenia nastawni kotłów parowych i kotłów wodnych na terenie Ec Siekierki',
+    description2:
+      'Pomieszczenie nastawni kotłów fluidalnych na terenie Ec Żerań',
+    description3: 'Pomieszczenia lokalu gastronomicznego w Warszawie',
   },
   {
     id: 4,
-    picture: ACUnitsBottomView,
-    title: 'Template title 3',
-    description:
-      'Projekt budowlano-wykonawczy instalacji wentylacji i klimatyzacji pomieszczeń lokalu gastronomicznego.',
-  },
-  {
-    id: 5,
     picture: DarkTokyo,
-    title: 'Template title 3',
-    description:
-      'Projekt i nadzór autorski nad wykonaniem instalacji wentylacji mechanicznej i chłodzenia wraz z instalacjami co. , wod.-kan., węzłem cieplnym budynku kasyna wojskowego w Sochaczewie',
-  },
-  {
-    id: 6,
-    picture: PipesVent,
-    title: 'Template title 3',
-    description:
-      'Projekt budowlano-wykonawczy instalacji wentylacji i klimatyzacji pomieszczeń operacyjnych i nieoperacyjnych nastawni kotłów parowych i kotłów wodnych na terenie Ec Siekierki ',
-  },
-  {
-    id: 7,
-    picture: VentCeiling,
-    title: 'Template title 3',
-    description:
-      'Projekt budowlano-wykonawczy instalacji wentylacji i klimatyzacji pomieszczeń operacyjnych i nieoperacyjnych nastawni kotłów fluidalnych na terenie Ec Żerań ',
-  },
-  {
-    id: 8,
-    picture: VentClose,
-    title: 'Template title 3',
-    description:
-      'Projekt budowlano-wykonawczy instalacji wentylacji i chłodzenia pomieszczeń Sali widowiskowej w Serocku dla Urzędu Miasta i Gminy Serock przy ul. Rynek 21 w Serocku',
-  },
-  {
-    id: 9,
-    picture: VentRoof,
-    title: 'Template title 3',
-    description:
-      'Projekt i wykonanie doposażenia w instalację wentylacji i chłodzenia pomieszczeń strefy ochronnej obejmującej specjalną strefę ochronną w kancelarii sejmu',
+    title: '',
+    description: '',
   },
 ]
 

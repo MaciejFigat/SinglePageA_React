@@ -30,6 +30,8 @@ const darkTheme = {
     'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))',
   linearGradientTertiary:
     'linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))',
+  linearGradientQuaternary:
+    'linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9))',
 }
 // dark blue theme
 
@@ -64,6 +66,8 @@ const lightTheme = {
   // 'linear-gradient(rgba(207, 216, 220, 0.7), rgba(207, 216, 220, 0.7))',
   linearGradientTertiary:
     'linear-gradient(rgba(250, 250, 210, 0.75), rgba(250, 250, 210, 0.75))',
+  linearGradientQuaternary:
+    'linear-gradient(rgba(250, 250, 210, 0.98), rgba(250, 250, 210, 0.98))',
   // 'linear-gradient(rgba(207, 216, 220, 0.85), rgba(207, 216, 220, 0.85))',
 }
 
@@ -118,6 +122,7 @@ h5 {font-size: 1.25em;}
   --background1-main: ${(props) => props.theme.linearGradient};
   --background2-main: ${(props) => props.theme.linearGradientSecondary};
   --background3-main: ${(props) => props.theme.linearGradientTertiary};
+  --background4-main: ${(props) => props.theme.linearGradientQuaternary};
   a, a:link, a:visited{
     text-decoration: none;
     color: ${(props) => props.theme.text};

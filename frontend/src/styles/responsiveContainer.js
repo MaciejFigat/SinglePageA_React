@@ -85,6 +85,7 @@ export const H2 = styled.h4`
   display: flex;
   justify-content: flex-end;
   margin: 0.5rem;
+
   /* margin-bottom: 0.5rem; */
   padding: 0;
   fill: var(--color2-secondary);
@@ -110,8 +111,7 @@ export const H2 = styled.h4`
 export const H2Bottom = styled(H2)`
   position: absolute;
   top: 0;
-
-  margin-top: 0.25rem;
+  margin-top: 1rem;
 
   right: 1rem;
 `

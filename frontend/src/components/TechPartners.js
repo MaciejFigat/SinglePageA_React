@@ -1,34 +1,21 @@
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
 import { LinkPartners } from '../styles/boxColorStyles'
-import { H2Bottom } from '../styles/responsiveContainer'
 import {
-  CardH3,
-  CardP,
   CardWrapper,
   CardProper,
-  CardProperActive,
   CardImage,
   WrapperCentringDiv,
 } from '../styles/imageStyles'
+import {
+  H2Popup,
+  CardPopupP,
+  CardPopupH3,
+  CardPopupActive,
+} from '../styles/popupCard'
 import mountain2 from '../assets/sunset2.jpg'
-
+import AnimationWrapper from '../animations/AnimationWrapper'
 import { techData } from '../data/techPartnersData'
 
-const pageVariants = {
-  in: {
-    opacity: 1,
-    x: 0,
-  },
-  out: {
-    opacity: 0,
-  },
-}
-const pageTransitions = {
-  type: 'tween',
-  ease: 'anticipate',
-  duration: 0.5,
-}
 const AllTech = () => {
   const [showDetails, setShowDetails] = useState(false)
   const [partnerName, setPartnerName] = useState({
@@ -49,13 +36,7 @@ const AllTech = () => {
     }
   }
   return (
-    <motion.div
-      initial='out'
-      animate='in'
-      exit='out'
-      variants={pageVariants}
-      transitions={pageTransitions}
-    >
+    <AnimationWrapper>
       <WrapperCentringDiv>
         <CardWrapper>
           {techData.map((partner) => (
@@ -78,35 +59,28 @@ const AllTech = () => {
             </div>
           ))}{' '}
           {showDetails === true && (
-            <motion.div
-              initial='out'
-              animate='in'
-              exit='out'
-              variants={pageVariants}
-              transitions={pageTransitions}
-            >
-              <CardProperActive>
-                <CardH3>
-                  <H2Bottom onClick={showDetailsHandler}>
-                    <i className='fas fa-times'></i>
-                  </H2Bottom>
-                </CardH3>
-                <CardImage src={mountain2} alt='mountain' />
+            <AnimationWrapper>
+              <CardPopupActive>
+                <H2Popup onClick={showDetailsHandler}>
+                  <i className='fas fa-times'></i>
+                </H2Popup>
 
-                <CardH3>{motto}</CardH3>
-                <CardP>{description}</CardP>
-                <CardP>
+                <CardImage height='85%' src={mountain2} alt='mountain' />
+
+                <CardPopupH3>{motto}</CardPopupH3>
+                <CardPopupP>{description}</CardPopupP>
+                <CardPopupP>
                   <LinkPartners href={link}>
                     <i className='fas fa-link'></i>
                     {name}
                   </LinkPartners>
-                </CardP>
-              </CardProperActive>
-            </motion.div>
+                </CardPopupP>
+              </CardPopupActive>
+            </AnimationWrapper>
           )}
         </CardWrapper>
       </WrapperCentringDiv>
-    </motion.div>
+    </AnimationWrapper>
   )
 }
 

@@ -11,7 +11,7 @@ import {
   CardProper,
   CardWrapper,
   CardH3,
-  // CardImage,
+  CardImage,
   StyledImage,
 } from '../styles/imageStyles'
 // import { installationData } from '../data/installationAC'
@@ -27,7 +27,7 @@ const Projects = ({ handleClickHome }) => {
           <CardProper>
             <StyledImage
               width='100%'
-              height='80%'
+              height='57%'
               src={rulerBlueprint}
               alt='ruler on a blueprint'
             />
@@ -35,13 +35,16 @@ const Projects = ({ handleClickHome }) => {
           </CardProper>
           {data.map((installation) => (
             <CardProper key={installation.id.toString()}>
-              <StyledImage
-                width='100%'
-                height='75%'
-                src={installation.picture}
-              />
+              <CardImage src={installation.picture} alt='mountain' />
+
               <CardH3>{installation.title}</CardH3>
               <CardP>{installation.description}</CardP>
+              {installation.description2 && (
+                <CardP>{installation.description2}</CardP>
+              )}
+              {installation.description3 && (
+                <CardP>{installation.description3}</CardP>
+              )}
             </CardProper>
           ))}
           <CardProper>
@@ -59,7 +62,7 @@ const Projects = ({ handleClickHome }) => {
 }
 
 export { Projects }
-
+// <StyledImage width='100%' height='75%' src={installation.picture} />
 // <h4>Znaczenie dla zdrowia</h4> <br />
 //         <Paragraph>
 //           Zbyt wysokie stężenie CO2 w powietrzu bezpośrednio wpływa na

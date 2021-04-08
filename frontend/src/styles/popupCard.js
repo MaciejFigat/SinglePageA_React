@@ -1,0 +1,62 @@
+import styled from 'styled-components'
+
+export const CardPopupActive = styled.div`
+  display: grid;
+  place-items: center;
+  background: var(--background3-main);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  padding-bottom: 1rem;
+  position: fixed;
+  left: 30%;
+  top: 15%;
+  max-width: 40vw;
+  min-width: 300px;
+  @media (max-width: 680px) {
+    z-index: 10;
+    max-width: 80vw;
+    left: 5%;
+    top: 10%;
+  }
+`
+
+export const CardPopupH3 = styled.p`
+  margin: 1.5rem;
+  font-size: 1.25rem;
+`
+
+export const CardPopupP = styled.p`
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  min-width: 90%;
+`
+export const H2Popup = styled.h4`
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0.75rem;
+  margin-top: 0.5rem;
+  padding: 0;
+  font-size: 1.5em;
+
+  transition: 0.7s;
+  &:hover {
+    fill: var(--color3-secondary);
+    color: var(--color3-secondary);
+    opacity: 0.7;
+    transition: 0.7s;
+  }
+
+  @media (max-width: 1024px) {
+    height: 33px important!;
+    width: 33px important!;
+  }
+  @media (max-width: 768px) {
+    height: 22px important!;
+    width: 22px important!;
+  }
+`
