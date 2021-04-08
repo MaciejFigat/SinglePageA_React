@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BigContainerDiv, LinkOne } from '../styles/responsiveContainer'
+import { BigContainerDiv } from '../styles/responsiveContainer'
 import {
   H2Popup,
   CardPopupP,

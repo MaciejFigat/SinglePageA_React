@@ -1,12 +1,12 @@
 import ACBuildingFacade from '../assets/AC/ACBuildingFacade.jpg'
-import ACFacade from '../assets/AC/ACFacade.jpg'
+// import ACFacade from '../assets/AC/ACFacade.jpg'
 import ACHouseFacade from '../assets/AC/ACHouseFacade.jpg'
 import ACUnitsBottomView from '../assets/AC/ACUnitsBottomView.jpg'
 import DarkTokyo from '../assets/AC/DarkTokyo.jpg'
-import PipesVent from '../assets/AC/PipesVent.jpg'
-import VentCeiling from '../assets/AC/VentCeiling.jpg'
-import VentClose from '../assets/AC/VentClose.jpg'
-import VentRoof from '../assets/AC/VentRoof.jpg'
+// import PipesVent from '../assets/AC/PipesVent.jpg'
+// import VentCeiling from '../assets/AC/VentCeiling.jpg'
+// import VentClose from '../assets/AC/VentClose.jpg'
+// import VentRoof from '../assets/AC/VentRoof.jpg'
 
 const data = [
   {
