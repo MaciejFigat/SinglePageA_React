@@ -1,62 +1,102 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { BigContainerDiv, LinkOne } from '../styles/responsiveContainer'
 import {
-  // ResponsiveDiv,
-  BigContainerDiv,
-  LinkOne,
-  ContainerDiv,
-} from '../styles/responsiveContainer'
-
+  H2Popup,
+  CardPopupP,
+  CardPopupH3,
+  CardPopupActive,
+  LinkPopup,
+} from '../styles/popupCard'
 import {
-  CardP,
   CardProper,
   CardWrapper,
   CardH3,
   CardImage,
   StyledImage,
 } from '../styles/imageStyles'
-// import { installationData } from '../data/installationAC'
+import AnimationWrapper from '../animations/AnimationWrapper'
 import { data } from '../data/projectsExamples'
 import rulerBlueprint from '../assets/plans/rulerBlueprint.jpg'
 
 const Projects = ({ handleClickHome }) => {
+  const [showExamples, setShowExamples] = useState(false)
+  const [examples, setExamples] = useState({
+    exampleTitle: null,
+    example1: null,
+    example2: null,
+    example3: null,
+    example4: null,
+    example5: null,
+  })
+  const {
+    exampleTitle,
+    example1,
+    example2,
+    example3,
+    example4,
+    example5,
+  } = examples
+  const showExamplesHandler = (e) => {
+    e.preventDefault()
+    if (showExamples === true) {
+      setShowExamples(false)
+    } else {
+      setShowExamples(true)
+    }
+  }
   return (
     <BigContainerDiv>
-      <ContainerDiv>
-        <CardWrapper>
-          {' '}
-          <CardProper>
-            <StyledImage
-              width='100%'
-              height='57%'
-              src={rulerBlueprint}
-              alt='ruler on a blueprint'
-            />
-            <CardH3>Przykładowe projekty instalacji</CardH3>
-          </CardProper>
-          {data.map((installation) => (
-            <CardProper key={installation.id.toString()}>
+      <CardWrapper>
+        <CardProper>
+          <StyledImage
+            width='100%'
+            height='79%'
+            src={rulerBlueprint}
+            alt='ruler on a blueprint'
+          />
+          <CardH3>Przykładowe projekty instalacji</CardH3>
+        </CardProper>
+        {data.map((installation) => (
+          <div
+            key={installation.id.toString()}
+            onClick={() =>
+              setExamples({
+                exampleTitle: installation.title,
+                example1: installation.description,
+                example2: installation.description2,
+                example3: installation.description3,
+                example4: installation.description4,
+                example5: installation.description5,
+              })
+            }
+          >
+            <CardProper onClick={showExamplesHandler}>
               <CardImage src={installation.picture} alt='mountain' />
 
               <CardH3>{installation.title}</CardH3>
-              <CardP>{installation.description}</CardP>
-              {installation.description2 && (
-                <CardP>{installation.description2}</CardP>
-              )}
-              {installation.description3 && (
-                <CardP>{installation.description3}</CardP>
-              )}
             </CardProper>
-          ))}
-          <CardProper>
-            <CardH3>
-              <LinkOne onClick={handleClickHome}>
-                {' '}
-                Powrót &nbsp;<i className='fas fa-chevron-circle-left'></i>
-              </LinkOne>
-            </CardH3>
-          </CardProper>
-        </CardWrapper>
-      </ContainerDiv>{' '}
+          </div>
+        ))}
+        {showExamples === true && (
+          <AnimationWrapper>
+            <CardPopupActive>
+              <H2Popup onClick={showExamplesHandler}>
+                <i className='fas fa-times'></i>
+              </H2Popup>
+              <CardPopupH3>{exampleTitle}</CardPopupH3>
+              {example1 && <CardPopupP>{example1}</CardPopupP>}
+              {example2 && <CardPopupP>{example2}</CardPopupP>}
+              {example3 && <CardPopupP>{example3}</CardPopupP>}
+              {example4 && <CardPopupP>{example4}</CardPopupP>}
+              {example5 && <CardPopupP>{example5}</CardPopupP>}
+            </CardPopupActive>
+          </AnimationWrapper>
+        )}
+      </CardWrapper>{' '}
+      <LinkPopup onClick={handleClickHome}>
+        {' '}
+        Powrót &nbsp;<i className='fas fa-chevron-circle-left'></i>
+      </LinkPopup>
     </BigContainerDiv>
   )
 }

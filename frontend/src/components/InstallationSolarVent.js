@@ -5,10 +5,10 @@ import {
   CardPopupP,
   CardPopupH3,
   CardPopupActive,
+  LinkPopup,
 } from '../styles/popupCard'
-import { BigContainerDiv, LinkOne } from '../styles/responsiveContainer'
+import { BigContainerDiv } from '../styles/responsiveContainer'
 import {
-  CardP,
   CardProper,
   CardH3,
   CardWrapper,
@@ -47,11 +47,9 @@ const InstallationSolarVent = ({ handleClickHome }) => {
   return (
     <BigContainerDiv>
       <CardWrapper>
-        {' '}
         <CardProper>
-          <CardImage src={PipesVent} />
-          <CardH3>Przykładowe instalacje</CardH3>
-          <CardP>wykonane w latach 2013-2020</CardP>
+          <CardImage height='69%' src={PipesVent} />
+          <CardH3>Przykładowe instalacje wykonane w latach 2013-2020</CardH3>
         </CardProper>
         {installationData.map((installation) => (
           <div
@@ -67,10 +65,7 @@ const InstallationSolarVent = ({ handleClickHome }) => {
               })
             }
           >
-            <CardProper
-              key={installation.id.toString()}
-              onClick={showExamplesHandler}
-            >
+            <CardProper onClick={showExamplesHandler}>
               <CardImage src={installation.picture} />
               <CardH3>{installation.title}</CardH3>
             </CardProper>
@@ -92,10 +87,10 @@ const InstallationSolarVent = ({ handleClickHome }) => {
           </AnimationWrapper>
         )}
       </CardWrapper>{' '}
-      <LinkOne onClick={handleClickHome}>
+      <LinkPopup onClick={handleClickHome}>
         {' '}
         Powrót &nbsp;<i className='fas fa-chevron-circle-left'></i>
-      </LinkOne>
+      </LinkPopup>
     </BigContainerDiv>
   )
 }

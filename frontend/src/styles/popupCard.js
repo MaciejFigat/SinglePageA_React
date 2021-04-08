@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const CardPopupActive = styled.div`
   display: grid;
   place-items: center;
-  background: var(--background3-main);
+  background: var(--background4-main);
   border-radius: 0.5rem;
   padding: 1rem;
   padding-bottom: 1rem;
@@ -58,5 +58,21 @@ export const H2Popup = styled.h4`
   @media (max-width: 768px) {
     height: 22px important!;
     width: 22px important!;
+  }
+`
+export const LinkPopup = styled.a`
+  margin: 20px 0px 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  min-width: fit-content;
+  text-decoration: none;
+  border: 1px solid var(--color2-secondary);
+  transition: 0.4s;
+  background: ${(props) => props.theme.linearGradientSecondary};
+
+  &:hover {
+    color: var(--color1-secondary) !important;
+    transition: 0.6s;
+    border: 2px solid var(--color1-secondary);
   }
 `
