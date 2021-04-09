@@ -15,6 +15,7 @@ It is a lightweight SPA meant to feature basic data about the company. It all st
 │   │   ├── index.html
 │   ├── src
 │   │   ├── actions (Redux)
+│   │   ├── animations (wrappers and transitions for framer-motion)
 │   │   ├── assets (photos, graphics etc.)
 │   │   ├── components (some reusable components)
 |   |   |  ├──svg (svg logos)
@@ -123,3 +124,9 @@ rulerBlueprint - [Image by Wokandapix from Pixabay] (https://pixabay.com/users/w
 paperYellow - [Image by MrsMary from Pixabay] (https://pixabay.com/users/mrsmary-4022219/)
 
 woodenPanel - [Image by Pexels from Pixabay] (https://www.pexels.com/@pixabay)
+
+fujitsuTower - [Image by Ensi2000 from Pixabay] (https://pixabay.com/users/2143218/)
+fujiElectric - [Image by マサコ アーント from Pixabay ] (https://pixabay.com/ja/users/auntmasako-2127108/)
+LGBuilding - [Image by Pexels from Pixabay] (https://www.pexels.com/@pixabay)
+
+seoulNight - [Ethan BrookeによるPixabayからの画像 ] (https://pixabay.com/ja/users/seoulinspired-12152046/)

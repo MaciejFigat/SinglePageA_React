@@ -7,10 +7,24 @@ import Lg from '../components/svg/Lg'
 import Mitsubishi from '../components/svg/Mitsubishi'
 import Panasonic from '../components/svg/Panasonic'
 import Samsung from '../components/svg/Samsung'
+import fujiElectric from '../assets/logos/fujiElectric.jpg'
+import fujitsuTower from '../assets/logos/fujitsuTower.jpg'
+import LGBuilding from '../assets/logos/LGBuilding.jpg'
+import seoulNight from '../assets/logos/seoulNight.jpg'
 
 const techData = [
   {
+    name: 'Samsung',
+    picture: seoulNight,
+    logo: <Samsung />,
+    motto: 'Niezawodne produkty, które pracują dla Ciebie.',
+    description:
+      'Jako światowy lider w zakresie technologii firma Samsung nieustannie wykorzystuje innowacje i nowe odkrycia, aby w sposób ciągły zmieniać oblicze branży elektronicznej. Przez ostatnie czterdzieści lat stosowaliśmy te same przełomowe innowacje w systemach klimatyzacji. Dzięki niesamowitej konstrukcji oraz zaawansowanym funkcjom systemy klimatyzacji firmy Samsung rewolucjonizują branżę klimatyzacyjną.',
+    link: 'https://www.samsung.com/pl/business/climate/',
+  },
+  {
     name: 'Fuji Electric',
+    picture: fujiElectric,
     logo: <FujiElectric />,
     motto: 'Innovating Energy Technology',
     description:
@@ -20,6 +34,7 @@ const techData = [
 
   {
     name: 'Fujitsu',
+    picture: fujitsuTower,
     logo: <Fujitsu />,
     motto: 'Living together for our future',
     description:
@@ -27,32 +42,8 @@ const techData = [
     link: 'https://www.fujitsu.com/pl/',
   },
   {
-    name: 'Mitsubishi',
-    logo: <Mitsubishi />,
-    motto: 'Zmieniamy świat na lepsze przy użyciu zaawansowanych technologii.',
-    description:
-      'Od momentu powstania w 1921 roku Mitsubishi Electric jest liderem rozwoju myśli technicznej i innowacyjnych produktów w Japonii.',
-    link: 'https://pl.mitsubishielectric.com/pl/index.html',
-  },
-  {
-    name: 'Samsung',
-    logo: <Samsung />,
-    motto: 'Niezawodne produkty, które pracują dla Ciebie.',
-    description:
-      'Jako światowy lider w zakresie technologii firma Samsung nieustannie wykorzystuje innowacje i nowe odkrycia, aby w sposób ciągły zmieniać oblicze branży elektronicznej. Przez ostatnie czterdzieści lat stosowaliśmy te same przełomowe innowacje w systemach klimatyzacji. Dzięki niesamowitej konstrukcji oraz zaawansowanym funkcjom systemy klimatyzacji firmy Samsung rewolucjonizują branżę klimatyzacyjną.',
-    link: 'https://www.samsung.com/pl/business/climate/',
-  },
-  {
-    name: 'Daikin',
-    logo: <Daikin />,
-    motto: 'Energooszczędna klimatyzacja w twoim domu',
-    description:
-      'Ponad 90 lat doświadczenia w klimatyzacji umożliwia nam oferowanie najbardziej komfortowych, energooszczędnych i niezawodnych rozwiązań dostępnych na rynku.',
-    link:
-      'https://www.daikin.pl/pl_pl/klimatyzacja-ogrzewanie-wentylacja/do-domu/klimatyzator.html',
-  },
-  {
     name: 'Lg',
+    picture: LGBuilding,
     logo: <Lg />,
     motto: "Żyj zdrowo - Life's good.",
     description:
@@ -60,7 +51,29 @@ const techData = [
     link: 'https://www.lg.com/pl/klimatyzacja',
   },
   {
+    name: 'Mitsubishi',
+    picture: LGBuilding,
+    logo: <Mitsubishi />,
+    motto: 'Zmieniamy świat na lepsze przy użyciu zaawansowanych technologii.',
+    description:
+      'Od momentu powstania w 1921 roku Mitsubishi Electric jest liderem rozwoju myśli technicznej i innowacyjnych produktów w Japonii.',
+    link: 'https://pl.mitsubishielectric.com/pl/index.html',
+  },
+
+  {
+    name: 'Daikin',
+    picture: LGBuilding,
+    logo: <Daikin />,
+    motto: 'Energooszczędna klimatyzacja w twoim domu',
+    description:
+      'Ponad 90 lat doświadczenia w klimatyzacji umożliwia nam oferowanie najbardziej komfortowych, energooszczędnych i niezawodnych rozwiązań dostępnych na rynku.',
+    link:
+      'https://www.daikin.pl/pl_pl/klimatyzacja-ogrzewanie-wentylacja/do-domu/klimatyzator.html',
+  },
+
+  {
     name: 'Gree',
+    picture: LGBuilding,
     logo: <Gree />,
     motto: '30 lat doświadczenia',
     description:
@@ -69,6 +82,7 @@ const techData = [
   },
   {
     name: 'Panasonic',
+    picture: LGBuilding,
     logo: <Panasonic />,
     motto: 'Wydajność i oszczędności.',
     description:

@@ -20,9 +20,11 @@ export const CardPopupActive = styled.div`
   }
 `
 
-export const CardPopupH3 = styled.p`
-  margin: 1.5rem;
-  font-size: 1.25rem;
+export const CardPopupH3 = styled.h3`
+  /* margin: 1.5rem; */
+  margin: 2rem 0 1rem 2rem;
+
+  font-size: 1.55rem;
 `
 
 export const CardPopupP = styled.p`
@@ -64,7 +66,8 @@ export const LinkPopup = styled.a`
   margin: 20px 0px 20px;
   padding: 10px 20px;
   border-radius: 5px;
-  min-width: fit-content;
+  max-width: fit-content;
+  /* max-height: 12rem; */
   text-decoration: none;
   border: 1px solid var(--color2-secondary);
   transition: 0.4s;

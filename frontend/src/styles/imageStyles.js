@@ -82,17 +82,15 @@ export const CardProperActive = styled.div`
 `
 
 export const CardH3 = styled.p`
-  /* margin-top: 1rem;
-  margin-left: 1rem;
-  margin-bottom: 1rem; */
   margin: 1.5rem;
-  /* position: relative; */
-  /* top: ; */
   font-size: 1.25rem;
 `
 export const CardImage = styled.img`
   border-radius: 0.5rem 0.5rem 0 0;
-
+  /* object-fit: cover; */
+  /* max-height: 70%; */
+  /* object-fit: contain; */
+  /* object-fit: scale-down; */
   width: 100%;
   & ~ * {
     margin-left: 1rem;

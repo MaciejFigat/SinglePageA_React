@@ -5,6 +5,7 @@ import {
   CardProper,
   CardImage,
   WrapperCentringDiv,
+  StyledImage,
 } from '../styles/imageStyles'
 import {
   H2Popup,
@@ -12,7 +13,7 @@ import {
   CardPopupH3,
   CardPopupActive,
 } from '../styles/popupCard'
-import mountain2 from '../assets/sunset2.jpg'
+
 import AnimationWrapper from '../animations/AnimationWrapper'
 import { techData } from '../data/techPartnersData'
 
@@ -20,12 +21,13 @@ const AllTech = () => {
   const [showDetails, setShowDetails] = useState(false)
   const [partnerName, setPartnerName] = useState({
     name: 'none',
+    picture: null,
     logo: React.FC,
     motto: '',
     description: '',
     link: '#',
   })
-  const { name, motto, description, link } = partnerName
+  const { name, picture, motto, description, link } = partnerName
 
   const showDetailsHandler = (e) => {
     e.preventDefault()
@@ -45,6 +47,7 @@ const AllTech = () => {
               onClick={() =>
                 setPartnerName({
                   name: partner.name,
+                  picture: partner.picture,
                   motto: partner.motto,
                   description: partner.description,
                   link: partner.link,
@@ -52,8 +55,7 @@ const AllTech = () => {
               }
             >
               <CardProper onClick={showDetailsHandler}>
-                <CardImage src={mountain2} alt='mountain' />
-
+                <StyledImage width='100%' height='100%' src={partner.picture} />
                 <LinkPartners>{partner.logo}</LinkPartners>
               </CardProper>
             </div>
@@ -64,8 +66,12 @@ const AllTech = () => {
                 <H2Popup onClick={showDetailsHandler}>
                   <i className='fas fa-times'></i>
                 </H2Popup>
-
-                <CardImage height='85%' src={mountain2} alt='mountain' />
+                <StyledImage
+                  width='90%'
+                  height='100%'
+                  src={picture}
+                  alt='logo picture'
+                />
 
                 <CardPopupH3>{motto}</CardPopupH3>
                 <CardPopupP>{description}</CardPopupP>

@@ -17,11 +17,13 @@ import {
 import AnimationWrapper from '../animations/AnimationWrapper'
 import { data } from '../data/projectsExamples'
 import rulerBlueprint from '../assets/plans/rulerBlueprint.jpg'
+import VentRoof from '../assets/AC/VentRoof.jpg'
 
 const Projects = ({ handleClickHome }) => {
   const [showExamples, setShowExamples] = useState(false)
   const [examples, setExamples] = useState({
     exampleTitle: null,
+    examplePicture: null,
     example1: null,
     example2: null,
     example3: null,
@@ -30,6 +32,7 @@ const Projects = ({ handleClickHome }) => {
   })
   const {
     exampleTitle,
+    examplePicture,
     example1,
     example2,
     example3,
@@ -62,6 +65,7 @@ const Projects = ({ handleClickHome }) => {
             onClick={() =>
               setExamples({
                 exampleTitle: installation.title,
+                examplePicture: installation.picture,
                 example1: installation.description,
                 example2: installation.description2,
                 example3: installation.description3,
@@ -77,6 +81,13 @@ const Projects = ({ handleClickHome }) => {
             </CardProper>
           </div>
         ))}
+        <CardProper>
+          <CardImage height='70%' src={VentRoof} />
+          <LinkPopup onClick={handleClickHome}>
+            {' '}
+            Powrót &nbsp;<i className='fas fa-chevron-circle-left'></i>
+          </LinkPopup>
+        </CardProper>
         {showExamples === true && (
           <AnimationWrapper>
             <CardPopupActive>
@@ -84,6 +95,7 @@ const Projects = ({ handleClickHome }) => {
                 <i className='fas fa-times'></i>
               </H2Popup>
               <CardPopupH3>{exampleTitle}</CardPopupH3>
+              <StyledImage width='90%' height='70%' src={examplePicture} />
               {example1 && <CardPopupP>{example1}</CardPopupP>}
               {example2 && <CardPopupP>{example2}</CardPopupP>}
               {example3 && <CardPopupP>{example3}</CardPopupP>}
@@ -93,10 +105,6 @@ const Projects = ({ handleClickHome }) => {
           </AnimationWrapper>
         )}
       </CardWrapper>{' '}
-      <LinkPopup onClick={handleClickHome}>
-        {' '}
-        Powrót &nbsp;<i className='fas fa-chevron-circle-left'></i>
-      </LinkPopup>
     </BigContainerDiv>
   )
 }

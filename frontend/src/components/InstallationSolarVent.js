@@ -13,14 +13,17 @@ import {
   CardH3,
   CardWrapper,
   CardImage,
+  StyledImage,
 } from '../styles/imageStyles'
 import { installationData } from '../data/installationSolarVent'
-
 import PipesVent from '../assets/AC/PipesVent.jpg'
+import VentCeiling from '../assets/AC/VentCeiling.jpg'
+
 const InstallationSolarVent = ({ handleClickHome }) => {
   const [showExamples, setShowExamples] = useState(false)
   const [examples, setExamples] = useState({
     exampleTitle: null,
+    examplePicture: null,
     example1: null,
     example2: null,
     example3: null,
@@ -29,6 +32,7 @@ const InstallationSolarVent = ({ handleClickHome }) => {
   })
   const {
     exampleTitle,
+    examplePicture,
     example1,
     example2,
     example3,
@@ -57,6 +61,7 @@ const InstallationSolarVent = ({ handleClickHome }) => {
             onClick={() =>
               setExamples({
                 exampleTitle: installation.title,
+                examplePicture: installation.picture,
                 example1: installation.description,
                 example2: installation.description2,
                 example3: installation.description3,
@@ -71,6 +76,13 @@ const InstallationSolarVent = ({ handleClickHome }) => {
             </CardProper>
           </div>
         ))}
+        <CardProper>
+          <CardImage height='70%' src={VentCeiling} />
+          <LinkPopup onClick={handleClickHome}>
+            {' '}
+            Powrót &nbsp;<i className='fas fa-chevron-circle-left'></i>
+          </LinkPopup>
+        </CardProper>
         {showExamples === true && (
           <AnimationWrapper>
             <CardPopupActive>
@@ -78,6 +90,7 @@ const InstallationSolarVent = ({ handleClickHome }) => {
                 <i className='fas fa-times'></i>
               </H2Popup>
               <CardPopupH3>{exampleTitle}</CardPopupH3>
+              <StyledImage width='90%' height='70%' src={examplePicture} />
               {example1 && <CardPopupP>{example1}</CardPopupP>}
               {example2 && <CardPopupP>{example2}</CardPopupP>}
               {example3 && <CardPopupP>{example3}</CardPopupP>}
@@ -87,10 +100,6 @@ const InstallationSolarVent = ({ handleClickHome }) => {
           </AnimationWrapper>
         )}
       </CardWrapper>{' '}
-      <LinkPopup onClick={handleClickHome}>
-        {' '}
-        Powrót &nbsp;<i className='fas fa-chevron-circle-left'></i>
-      </LinkPopup>
     </BigContainerDiv>
   )
 }

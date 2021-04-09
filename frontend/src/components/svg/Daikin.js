@@ -4,7 +4,7 @@ const Daikin = () => {
   return (
     <div>
       <svg
-        height='201'
+        height='151'
         viewBox='27.777 54.271 273.446 57.458'
         width='200'
         xmlns='http://www.w3.org/2000/svg'

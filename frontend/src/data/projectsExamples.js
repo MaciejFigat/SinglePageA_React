@@ -41,8 +41,9 @@ const data = [
   {
     id: 4,
     picture: DarkTokyo,
-    title: '',
-    description: '',
+    title: 'Wentylacja i klimatyzacja + nadzór autorski',
+    description:
+      'Pomieszczenia nastawni kotłów parowych i kotłów wodnych na terenie Ec Siekierki',
   },
 ]
 
