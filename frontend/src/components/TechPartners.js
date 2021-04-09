@@ -3,7 +3,7 @@ import { LinkPartners } from '../styles/boxColorStyles'
 import {
   CardWrapper,
   CardProper,
-  CardImage,
+  // CardImage,
   WrapperCentringDiv,
   StyledImage,
 } from '../styles/imageStyles'
