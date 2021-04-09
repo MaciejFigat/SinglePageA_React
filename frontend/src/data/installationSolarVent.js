@@ -1,13 +1,13 @@
 // import solarSaw1 from '../assets/Installation/solarSaw1.jpg'
 import saw3 from '../assets/Installation/saw3.jpg'
 // import solarSaw3 from '../assets/Installation/solarSaw3.jpg'
-import ventChannel from '../assets/Installation/ventChannel.jpg'
+import ventilationChannel from '../assets/Installation/ventilationChannel.jpg'
 import CentralaVentSaw2 from '../assets/Installation/CentralaVentSaw2.jpg'
 // import ventChannel2 from '../assets/Installation/ventChannel2.jpg'
 const installationData = [
   {
     id: 1,
-    picture: ventChannel,
+    picture: ventilationChannel,
     title: 'Wentylacja mechaniczna wraz z oddymianiem',
     description: 'Budynek Hipoteki przy Al. Solidarności 58 w Warszawie.',
     description2: 'Budynek usługowy przy ul. Kasprowicza w Warszawie.',

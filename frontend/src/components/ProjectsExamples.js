@@ -53,7 +53,7 @@ const Projects = ({ handleClickHome }) => {
         <CardProper>
           <StyledImage
             width='100%'
-            height='79%'
+            height='65%'
             src={rulerBlueprint}
             alt='ruler on a blueprint'
           />

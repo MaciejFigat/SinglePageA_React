@@ -52,7 +52,7 @@ const InstallationSolarVent = ({ handleClickHome }) => {
     <BigContainerDiv>
       <CardWrapper>
         <CardProper>
-          <CardImage height='69%' src={PipesVent} />
+          <CardImage height='65%' src={PipesVent} />
           <CardH3>Przykładowe instalacje wykonane w latach 2013-2020</CardH3>
         </CardProper>
         {installationData.map((installation) => (
