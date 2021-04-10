@@ -74,7 +74,7 @@ export const LinkPopup = styled.a`
   border: 1px solid var(--color2-secondary);
   transition: 0.4s;
   background: ${(props) => props.theme.linearGradientSecondary};
-  will-change: transform;
+  /* will-change: transform; */
   &:hover {
     color: var(--color1-secondary) !important;
     transition: 0.4s;
