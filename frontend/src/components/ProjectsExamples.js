@@ -16,7 +16,7 @@ import {
 } from '../styles/imageStyles'
 import AnimationWrapper from '../animations/AnimationWrapper'
 import { data } from '../data/projectsExamples'
-import rulerBlueprint from '../assets/plans/rulerBlueprint.jpg'
+
 import VentRoof from '../assets/AC/VentRoof.jpg'
 
 const Projects = ({ handleClickHome }) => {
@@ -50,15 +50,6 @@ const Projects = ({ handleClickHome }) => {
   return (
     <BigContainerDiv>
       <CardWrapper>
-        <CardProper>
-          <StyledImage
-            width='100%'
-            height='65%'
-            src={rulerBlueprint}
-            alt='ruler on a blueprint'
-          />
-          <CardH3>Przykładowe projekty instalacji</CardH3>
-        </CardProper>
         {data.map((installation) => (
           <div
             key={installation.id.toString()}
@@ -75,14 +66,17 @@ const Projects = ({ handleClickHome }) => {
             }
           >
             <CardProper onClick={showExamplesHandler}>
-              <CardImage src={installation.picture} alt='mountain' />
+              <CardImage
+                src={installation.picture}
+                alt='picture of an installation example'
+              />
 
               <CardH3>{installation.title}</CardH3>
             </CardProper>
           </div>
         ))}
         <CardProper>
-          <CardImage height='70%' src={VentRoof} />
+          <StyledImage width='100%' height='72%' src={VentRoof} />
           <LinkPopup onClick={handleClickHome}>
             {' '}
             Powrót &nbsp;<i className='fas fa-chevron-circle-left'></i>

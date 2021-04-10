@@ -14,9 +14,9 @@ import {
   CardWrapper,
   CardImage,
   StyledImage,
+  DivCardWrap,
 } from '../styles/imageStyles'
 import { installationData } from '../data/installationSolarVent'
-import PipesVent from '../assets/AC/PipesVent.jpg'
 import VentCeiling from '../assets/AC/VentCeiling.jpg'
 
 const InstallationSolarVent = ({ handleClickHome }) => {
@@ -51,12 +51,8 @@ const InstallationSolarVent = ({ handleClickHome }) => {
   return (
     <BigContainerDiv>
       <CardWrapper>
-        <CardProper>
-          <CardImage height='65%' src={PipesVent} />
-          <CardH3>Przykładowe instalacje wykonane w latach 2013-2020</CardH3>
-        </CardProper>
         {installationData.map((installation) => (
-          <div
+          <DivCardWrap
             key={installation.id.toString()}
             onClick={() =>
               setExamples({
@@ -71,13 +67,16 @@ const InstallationSolarVent = ({ handleClickHome }) => {
             }
           >
             <CardProper onClick={showExamplesHandler}>
-              <CardImage src={installation.picture} />
+              <CardImage
+                src={installation.picture}
+                alt='picture of an installation example'
+              />
               <CardH3>{installation.title}</CardH3>
             </CardProper>
-          </div>
+          </DivCardWrap>
         ))}
         <CardProper>
-          <CardImage height='70%' src={VentCeiling} />
+          <StyledImage width='100%' height='70%' src={VentCeiling} />
           <LinkPopup onClick={handleClickHome}>
             {' '}
             Powrót &nbsp;<i className='fas fa-chevron-circle-left'></i>

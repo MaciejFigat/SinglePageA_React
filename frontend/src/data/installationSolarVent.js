@@ -1,10 +1,19 @@
 // import solarSaw1 from '../assets/Installation/solarSaw1.jpg'
 import saw3 from '../assets/Installation/saw3.jpg'
-// import solarSaw3 from '../assets/Installation/solarSaw3.jpg'
+import solarSaw3 from '../assets/Installation/solarSaw3.jpg'
 import ventilationChannel from '../assets/Installation/ventilationChannel.jpg'
 import CentralaVentSaw2 from '../assets/Installation/CentralaVentSaw2.jpg'
-// import ventChannel2 from '../assets/Installation/ventChannel2.jpg'
+
+import PipesVent from '../assets/AC/PipesVent.jpg'
+// import VentCeiling from '../assets/AC/VentCeiling.jpg'
 const installationData = [
+  {
+    id: 0,
+    picture: PipesVent,
+    title: 'Przykładowe instalacje wykonane w latach 2013-2020',
+    description:
+      'Specjalizujemy się w instalacjach wentylacyjnych o różnych zastosowaniach.',
+  },
   {
     id: 1,
     picture: ventilationChannel,
@@ -29,6 +38,12 @@ const installationData = [
     title: 'Instalacja gazowa z urządzeniami grzewczymi',
     description:
       'Budynek biurowo-magazynowy w Piascznie. Uwzględniając: detrafikatory, przyłącze gazu, punkt redukcyjno-pomiarowy, pakietem kominowy do kotłowni.',
+  },
+  {
+    id: 5,
+    picture: solarSaw3,
+    title: 'Instalacja solarna',
+    description: 'Sawice, budynek użytkowy.',
   },
 ]
 

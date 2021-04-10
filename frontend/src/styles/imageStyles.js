@@ -1,5 +1,15 @@
 import styled from 'styled-components'
 
+export const DivCardWrap = styled.div`
+  /* background: ${(props) => props.theme.linearGradientSecondary};
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out; */
+  /* &:hover {
+    transform: scale(1.03);
+    transition: all 0.3s ease-in-out;
+  } */
+`
+
 export const StyledImage = styled.img`
   width: ${(props) => (props.width ? props.width : '80%')};
   height: ${(props) => (props.height ? props.height : '80%')};
@@ -50,15 +60,19 @@ export const CardProper = styled.li`
   border-radius: 0.5rem;
   font-family: 'Roboto Slab', serif;
   transition: all 0.3s ease-in-out;
+  /* below is needed for non blurry transformation in Chrome */
+  will-change: transform;
+  min-height: 100%;
+  /* -webkit-font-smoothing: antialiased; */
+  &:hover {
+    transform: scale(1.03);
+    transition: all 0.3s ease-in-out;
+  }
 
   /* margin-bottom: 2rem; */
   /* &:last-child {
     margin-bottom: 0;
   } */
-  &:hover {
-    transform: scale(1.03);
-    transition: all 0.3s ease-in-out;
-  }
 `
 export const CardProperActive = styled.div`
   display: grid;
@@ -87,6 +101,7 @@ export const CardH3 = styled.p`
 `
 export const CardImage = styled.img`
   border-radius: 0.5rem 0.5rem 0 0;
+  min-height: 100%;
   /* object-fit: cover; */
   /* max-height: 70%; */
   /* object-fit: contain; */

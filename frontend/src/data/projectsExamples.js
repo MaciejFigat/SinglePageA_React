@@ -7,8 +7,18 @@ import DarkTokyo from '../assets/AC/DarkTokyo.jpg'
 // import VentCeiling from '../assets/AC/VentCeiling.jpg'
 // import VentClose from '../assets/AC/VentClose.jpg'
 // import VentRoof from '../assets/AC/VentRoof.jpg'
-
+import rulerBlueprint from '../assets/plans/rulerBlueprint.jpg'
 const data = [
+  {
+    id: 0,
+    picture: rulerBlueprint,
+    title: 'Przykładowe projekty instalacji',
+    description:
+      'Naszą specjalnością są projekty wentylacji, klimatyzacji, przyłącz gazowych i kotłowni.',
+    description2:
+      'Dbamy o jakość i dzięki doświadczeniu w wykonawstwie oferujemy nadzór autorski.',
+  },
+
   {
     id: 1,
     picture: ACBuildingFacade,

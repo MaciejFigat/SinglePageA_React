@@ -8,12 +8,14 @@ export const CardPopupActive = styled.div`
   padding: 1rem;
   padding-bottom: 1rem;
   position: fixed;
+
   left: 30%;
   top: 15%;
   max-width: 40vw;
-  min-width: 300px;
+  min-width: 700px;
   @media (max-width: 680px) {
     z-index: 10;
+    min-width: 300px;
     max-width: 80vw;
     left: 5%;
     top: 10%;
@@ -72,10 +74,10 @@ export const LinkPopup = styled.a`
   border: 1px solid var(--color2-secondary);
   transition: 0.4s;
   background: ${(props) => props.theme.linearGradientSecondary};
-
+  will-change: transform;
   &:hover {
     color: var(--color1-secondary) !important;
-    transition: 0.6s;
-    border: 2px solid var(--color1-secondary);
+    transition: 0.4s;
+    border: 1px solid var(--color1-secondary);
   }
 `
