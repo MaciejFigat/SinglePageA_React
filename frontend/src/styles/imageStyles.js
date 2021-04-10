@@ -71,7 +71,8 @@ export const CardProper = styled.li`
   /* -webkit-font-smoothing: antialiased; */
   &:hover {
     /* transform: scale(1.01) perspective(10px) translateZ(0); */
-    transform: scale(1.03);
+    /* transform: scale(1.03); */
+    transform: translate(10px, -10px);
     /* transform: translateX(10) translateY(10); */
 
     transition: all 0.3s ease-in-out;
