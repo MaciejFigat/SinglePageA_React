@@ -63,16 +63,18 @@ export const CardProper = styled.li`
   /* below is needed for non blurry transformation in Chrome */
   will-change: transform;
   /* -webkit-backface-visibility: hidden;   */
-  /* -ms-transform: translateZ(0); */
-  /* -webkit-transform: translateZ(0); */
-  /* transform: translateZ(0); */
+  -ms-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
   /* backface-visibility: hidden; */
   min-height: 100%;
+  transform: scale(0.98);
   /* -webkit-font-smoothing: antialiased; */
   &:hover {
     /* transform: scale(1.01) perspective(10px) translateZ(0); */
-    /* transform: scale(1.03); */
-    transform: translate(10px, -10px);
+    transform: scale(1);
+
+    /* transform: translate(10px, -10px); */
     /* transform: translateX(10) translateY(10); */
 
     transition: all 0.3s ease-in-out;
@@ -111,8 +113,10 @@ export const CardH3 = styled.p`
 export const CardImage = styled.img`
   border-radius: 0.5rem 0.5rem 0 0;
   min-height: 100%;
+  /* min-height: 240px; */
+  /* max-width: 100%; */
   object-fit: cover;
-  will-change: transform;
+  /* will-change: transform; */
   /* -webkit-backface-visibility: hidden; */
   /* -ms-transform: translateZ(0);  */
   /* -webkit-transform: translateZ(0);  */
