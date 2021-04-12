@@ -1,6 +1,7 @@
 import ACBuildingFacade from '../assets/AC/ACBuildingFacade.jpg'
 // import ACFacade from '../assets/AC/ACFacade.jpg'
-import ACHouseFacade from '../assets/AC/ACHouseFacade.jpg'
+// import ACHouseFacade from '../assets/AC/ACHouseFacade.jpg'
+import ACHouseFacadeCropped from '../assets/AC/ACHouseFacadeCropped.jpg'
 import ACUnitsBottomView from '../assets/AC/ACUnitsBottomView.jpg'
 import DarkTokyo from '../assets/AC/DarkTokyo.jpg'
 // import PipesVent from '../assets/AC/PipesVent.jpg'
@@ -31,7 +32,7 @@ const data = [
 
   {
     id: 2,
-    picture: ACHouseFacade,
+    picture: ACHouseFacadeCropped,
     title:
       'Wentylacja mechaniczna, chłodzenie, instalacje co., wod-kan, wraz z węzłem cieplnym',
     description: 'Zabytkowy budynek Wielkiej Zbrojowni ASP w Gdańsku',

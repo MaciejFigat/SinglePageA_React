@@ -42,12 +42,17 @@ export const CardWrapper = styled.ul`
   padding: 0;
   margin: 1.5rem 1.5rem 0rem 1.5rem;
   display: grid;
+  /* max-width: 100vw; */
 
-  /* grid-template-columns: repeat(5, 1fr) */
-  grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fill, minmax(35ch, 1fr));
+
   grid-gap: 1.5rem;
-  @media (min-width: 1440px) and (max-width: 1679px) {
+  @media (min-width: 1100px) and (max-width: 1439px) {
     max-width: 80vw;
+  }
+  @media (min-width: 1440px) and (max-width: 1679px) {
+    max-width: 70vw;
   }
   @media (min-width: 1680px) {
     max-width: 60vw;
@@ -58,23 +63,24 @@ export const CardProper = styled.li`
   place-items: center;
   background: ${(props) => props.theme.linearGradientSecondary};
   border-radius: 0.5rem;
+  /* max-height: 450px; */
   font-family: 'Roboto Slab', serif;
   transition: all 0.3s ease-in-out;
   /* below is needed for non blurry transformation in Chrome */
-  will-change: transform;
+  /* will-change: transform; */
   /* -webkit-backface-visibility: hidden;   */
-  -ms-transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
+  /* -ms-transform: translateZ(0); */
+  /* -webkit-transform: translateZ(0); */
+  /* transform: translateZ(0); */
   /* backface-visibility: hidden; */
   min-height: 100%;
-  transform: scale(0.98);
+  /* transform: scale(0.98); */
   /* -webkit-font-smoothing: antialiased; */
   &:hover {
     /* transform: scale(1.01) perspective(10px) translateZ(0); */
-    transform: scale(1);
+    /* transform: scale(1); */
 
-    /* transform: translate(10px, -10px); */
+    transform: translate(5px, -5px);
     /* transform: translateX(10) translateY(10); */
 
     transition: all 0.3s ease-in-out;
@@ -113,16 +119,9 @@ export const CardH3 = styled.p`
 export const CardImage = styled.img`
   border-radius: 0.5rem 0.5rem 0 0;
   min-height: 100%;
-  /* min-height: 240px; */
-  /* max-width: 100%; */
+  max-width: 100%;
   object-fit: cover;
-  /* will-change: transform; */
-  /* -webkit-backface-visibility: hidden; */
-  /* -ms-transform: translateZ(0);  */
-  /* -webkit-transform: translateZ(0);  */
-  /* transform: translateZ(0); */
-  /* backface-visibility: hidden; */
-  width: 100%;
+
   & ~ * {
     margin-left: 1rem;
     margin-right: 1rem;
