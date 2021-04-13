@@ -78,7 +78,7 @@ export const CardProper = styled.li`
   /* -webkit-font-smoothing: antialiased; */
   &:hover {
     /* transform: scale(1.01) perspective(10px) translateZ(0); */
-    /* transform: scale(1); */
+    transform: scale(1);
 
     transform: translate(5px, -5px);
     /* transform: translateX(10) translateY(10); */
@@ -121,6 +121,7 @@ export const CardImage = styled.img`
   min-height: 100%;
   max-width: 100%;
   object-fit: cover;
+  /* object-fit: none; */
 
   & ~ * {
     margin-left: 1rem;

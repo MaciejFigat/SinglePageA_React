@@ -16,10 +16,9 @@ import {
   StyledImage,
   DivCardWrap,
 } from '../styles/imageStyles'
-import { installationData } from '../data/installationSolarVent'
 import VentCeiling from '../assets/AC/VentCeiling.jpg'
 
-const InstallationSolarVent = ({ handleClickHome }) => {
+const InstallationSolarVent = ({ handleClickHome, installationData }) => {
   const [showExamples, setShowExamples] = useState(false)
   const [examples, setExamples] = useState({
     exampleTitle: null,
@@ -67,16 +66,23 @@ const InstallationSolarVent = ({ handleClickHome }) => {
             }
           >
             <CardProper onClick={showExamplesHandler}>
-              <CardImage
-                src={installation.picture}
-                alt='picture of an installation example'
-              />
+              {installation.pictureCropped ? (
+                <CardImage
+                  src={installation.pictureCropped}
+                  alt='picture of an installation example'
+                />
+              ) : (
+                <CardImage
+                  src={installation.picture}
+                  alt='picture of an installation example'
+                />
+              )}
               <CardH3>{installation.title}</CardH3>
             </CardProper>
           </DivCardWrap>
         ))}
         <CardProper>
-          <StyledImage width='100%' height='70%' src={VentCeiling} />
+          <StyledImage width='100%' height='72%' src={VentCeiling} />
           <LinkPopup onClick={handleClickHome}>
             {' '}
             Powrót &nbsp;<i className='fas fa-chevron-circle-left'></i>

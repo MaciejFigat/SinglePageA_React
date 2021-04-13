@@ -15,9 +15,9 @@ import {
   StyledImage,
 } from '../styles/imageStyles'
 import AnimationWrapper from '../animations/AnimationWrapper'
-import { data } from '../data/projectsExamples'
+import { projectsData } from '../data/projectsExamples'
 
-import VentRoof from '../assets/AC/VentRoof.jpg'
+import VentRoofCropped from '../assets/AC/VentRoofCropped.jpg'
 
 const Projects = ({ handleClickHome }) => {
   const [showExamples, setShowExamples] = useState(false)
@@ -39,6 +39,7 @@ const Projects = ({ handleClickHome }) => {
     example4,
     example5,
   } = examples
+
   const showExamplesHandler = (e) => {
     e.preventDefault()
     if (showExamples === true) {
@@ -50,7 +51,7 @@ const Projects = ({ handleClickHome }) => {
   return (
     <BigContainerDiv>
       <CardWrapper>
-        {data.map((installation) => (
+        {projectsData.map((installation) => (
           <div
             key={installation.id.toString()}
             onClick={() =>
@@ -66,17 +67,24 @@ const Projects = ({ handleClickHome }) => {
             }
           >
             <CardProper onClick={showExamplesHandler}>
-              <CardImage
-                src={installation.picture}
-                alt='picture of an installation example'
-              />
+              {installation.pictureCropped ? (
+                <CardImage
+                  src={installation.pictureCropped}
+                  alt='picture of an installation example'
+                />
+              ) : (
+                <CardImage
+                  src={installation.picture}
+                  alt='picture of an installation example'
+                />
+              )}
 
               <CardH3>{installation.title}</CardH3>
             </CardProper>
           </div>
         ))}
         <CardProper>
-          <StyledImage width='100%' height='72%' src={VentRoof} />
+          <StyledImage width='100%' height='77%' src={VentRoofCropped} />
           <LinkPopup onClick={handleClickHome}>
             {' '}
             Powrót &nbsp;<i className='fas fa-chevron-circle-left'></i>

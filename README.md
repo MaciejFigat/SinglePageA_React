@@ -130,3 +130,18 @@ fujiElectric - [Image by マサコ アーント from Pixabay ] (https://pixabay.
 LGBuilding - [Image by Pexels from Pixabay] (https://www.pexels.com/@pixabay)
 
 seoulNight - [Ethan BrookeによるPixabayからの画像 ] (https://pixabay.com/ja/users/seoulinspired-12152046/)
+
+water, bubbles, wallMold, carbonFilter, wallMold2 - [PublicDomainPictures from Pixabay](https://pixabay.com/ja/users/publicdomainpictures-14/)
+airParticles - https://pixabay.com/ja/users/arttower-5337/ [ArtTower from Pixabay]
+
+installationDirt - [Joshua Willson from Pixabay] (https://pixabay.com/ja/users/joshua_willson-876211/)
+
+bacteria - [nadya_il from Pixabay] (https://pixabay.com/ja/users/nadya_il-255099/)
+
+orangeLungs - [piyapong89 from Pixabay] (https://pixabay.com/ja/users/piyapong89-7158719/)
+
+airCooling [F.Muhammad from Pixabay](https://pixabay.com/ja/users/artisticoperations-4161274/)
+airDucts - [brooklynjohn from Pixabay](https://pixabay.com/ja/users/brooklynjohn-299106/)
+
+acUnits, acUnits2 - [elasticcomputefarm from Pixabay](https://pixabay.com/ja/users/elasticcomputefarm-1865639/)
+airIn, airIn2 - [stux from Pixabay](https://pixabay.com/ja/users/stux-12364/)

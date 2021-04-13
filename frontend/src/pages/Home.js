@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { Layout } from '../layout'
 import AnimationWrapper from '../animations/AnimationWrapper'
-import { Projects } from '../components/ProjectsExamples'
 import { GridCenter, LinkAboutSubtle } from '../styles/boxColorStyles'
 import { BigContainerDiv } from '../styles/responsiveContainer'
 import InstallationSolarVent from '../components/InstallationSolarVent'
+import { projectsData } from '../data/projectsExamples'
+import { installationData } from '../data/installationSolarVent'
 const Home = () => {
   const [showHomeEl, setShowHomeEl] = useState('showHome')
 
@@ -39,12 +40,18 @@ const Home = () => {
       )}
       {showHomeEl === 'showInstallation' && (
         <AnimationWrapper>
-          <InstallationSolarVent handleClickHome={handleClickHome} />
+          <InstallationSolarVent
+            handleClickHome={handleClickHome}
+            installationData={installationData}
+          />
         </AnimationWrapper>
       )}
       {showHomeEl === 'showProjects' && (
         <AnimationWrapper>
-          <Projects handleClickHome={handleClickHome} />
+          <InstallationSolarVent
+            handleClickHome={handleClickHome}
+            installationData={projectsData}
+          />
         </AnimationWrapper>
       )}
     </Layout>

@@ -1,19 +1,24 @@
-import ACBuildingFacade from '../assets/AC/ACBuildingFacade.jpg'
+// import ACBuildingFacade from '../assets/AC/ACBuildingFacade.jpg'
+// import ACBuildingFacadeCropped from '../assets/AC/ACBuildingFacadeCropped.jpg'
 // import ACFacade from '../assets/AC/ACFacade.jpg'
-// import ACHouseFacade from '../assets/AC/ACHouseFacade.jpg'
+import ACHouseFacade from '../assets/AC/ACHouseFacade.jpg'
 import ACHouseFacadeCropped from '../assets/AC/ACHouseFacadeCropped.jpg'
+import VentRoof from '../assets/AC/VentRoof.jpg'
+import VentRoofCropped from '../assets/AC/VentRoofCropped.jpg'
 import ACUnitsBottomView from '../assets/AC/ACUnitsBottomView.jpg'
 import DarkTokyo from '../assets/AC/DarkTokyo.jpg'
 // import PipesVent from '../assets/AC/PipesVent.jpg'
 // import VentCeiling from '../assets/AC/VentCeiling.jpg'
 // import VentClose from '../assets/AC/VentClose.jpg'
 // import VentRoof from '../assets/AC/VentRoof.jpg'
+import rulerBlueprintCropped from '../assets/plans/rulerBlueprintCropped.jpg'
 import rulerBlueprint from '../assets/plans/rulerBlueprint.jpg'
-const data = [
+const projectsData = [
   {
     id: 0,
     picture: rulerBlueprint,
-    title: 'Przykładowe projekty instalacji',
+    pictureCropped: rulerBlueprintCropped,
+    title: 'Przykładowe projekty instalacji wykonane w latach 2013-2020',
     description:
       'Naszą specjalnością są projekty wentylacji, klimatyzacji, przyłącz gazowych i kotłowni.',
     description2:
@@ -22,7 +27,8 @@ const data = [
 
   {
     id: 1,
-    picture: ACBuildingFacade,
+    picture: VentRoof,
+    pictureCropped: VentRoofCropped,
     title: 'Wentylacja mechaniczna, chłodzenie + nadzór autorski',
     description: 'Hotel przy ul.Piwnej w Gdańsku ',
     description2:
@@ -32,7 +38,8 @@ const data = [
 
   {
     id: 2,
-    picture: ACHouseFacadeCropped,
+    picture: ACHouseFacade,
+    pictureCropped: ACHouseFacadeCropped,
     title:
       'Wentylacja mechaniczna, chłodzenie, instalacje co., wod-kan, wraz z węzłem cieplnym',
     description: 'Zabytkowy budynek Wielkiej Zbrojowni ASP w Gdańsku',
@@ -58,4 +65,4 @@ const data = [
   },
 ]
 
-export { data }
+export { projectsData }
