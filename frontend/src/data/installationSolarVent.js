@@ -3,7 +3,7 @@ import saw3 from '../assets/Installation/saw3.jpg'
 import solarSaw3 from '../assets/Installation/solarSaw3.jpg'
 import ventilationChannel from '../assets/Installation/ventilationChannel.jpg'
 import CentralaVentSaw2 from '../assets/Installation/CentralaVentSaw2.jpg'
-
+import VentCeiling from '../assets/AC/VentCeiling.jpg'
 import PipesVent from '../assets/AC/PipesVent.jpg'
 import PipesVentCropped from '../assets/AC/PipesVentCropped.jpg'
 // import VentCeiling from '../assets/AC/VentCeiling.jpg'
@@ -46,6 +46,13 @@ const installationData = [
     picture: solarSaw3,
     title: 'Instalacja solarna',
     description: 'Sawice, budynek użytkowy.',
+  },
+  {
+    id: 6,
+    picture: VentCeiling,
+    title: '',
+    link: true,
+    description: '',
   },
 ]
 

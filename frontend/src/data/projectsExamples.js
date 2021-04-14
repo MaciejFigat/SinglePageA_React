@@ -8,7 +8,7 @@ import VentRoofCropped from '../assets/AC/VentRoofCropped.jpg'
 import ACUnitsBottomView from '../assets/AC/ACUnitsBottomView.jpg'
 import DarkTokyo from '../assets/AC/DarkTokyo.jpg'
 // import PipesVent from '../assets/AC/PipesVent.jpg'
-// import VentCeiling from '../assets/AC/VentCeiling.jpg'
+import VentCeiling from '../assets/AC/VentCeiling.jpg'
 // import VentClose from '../assets/AC/VentClose.jpg'
 // import VentRoof from '../assets/AC/VentRoof.jpg'
 import rulerBlueprintCropped from '../assets/plans/rulerBlueprintCropped.jpg'
@@ -62,6 +62,13 @@ const projectsData = [
     title: 'Wentylacja i klimatyzacja + nadzór autorski',
     description:
       'Pomieszczenia nastawni kotłów parowych i kotłów wodnych na terenie Ec Siekierki',
+  },
+  {
+    id: 6,
+    picture: VentCeiling,
+    title: '',
+    link: true,
+    description: '',
   },
 ]
 

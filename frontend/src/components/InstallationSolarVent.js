@@ -12,11 +12,10 @@ import {
   CardProper,
   CardH3,
   CardWrapper,
-  CardImage,
+  // CardImage,
   StyledImage,
   DivCardWrap,
 } from '../styles/imageStyles'
-import VentCeiling from '../assets/AC/VentCeiling.jpg'
 
 const InstallationSolarVent = ({ handleClickHome, installationData }) => {
   const [showExamples, setShowExamples] = useState(false)
@@ -65,29 +64,42 @@ const InstallationSolarVent = ({ handleClickHome, installationData }) => {
               })
             }
           >
-            <CardProper onClick={showExamplesHandler}>
-              {installation.pictureCropped ? (
-                <CardImage
-                  src={installation.pictureCropped}
-                  alt='picture of an installation example'
-                />
-              ) : (
-                <CardImage
+            {installation.link === true ? (
+              <CardProper>
+                <StyledImage
+                  width='100%'
+                  height='100%'
                   src={installation.picture}
                   alt='picture of an installation example'
                 />
-              )}
-              <CardH3>{installation.title}</CardH3>
-            </CardProper>
+                <LinkPopup onClick={handleClickHome}>
+                  {' '}
+                  Powrót &nbsp;<i className='fas fa-chevron-circle-left'></i>
+                </LinkPopup>
+              </CardProper>
+            ) : (
+              <CardProper onClick={showExamplesHandler}>
+                {installation.pictureCropped ? (
+                  <StyledImage
+                    width='100%'
+                    height='100%'
+                    src={installation.pictureCropped}
+                    alt='picture of an installation example'
+                  />
+                ) : (
+                  <StyledImage
+                    width='100%'
+                    height='100%'
+                    src={installation.picture}
+                    alt='picture of an installation example'
+                  />
+                )}
+                <CardH3>{installation.title}</CardH3>
+              </CardProper>
+            )}
           </DivCardWrap>
         ))}
-        <CardProper>
-          <StyledImage width='100%' height='72%' src={VentCeiling} />
-          <LinkPopup onClick={handleClickHome}>
-            {' '}
-            Powrót &nbsp;<i className='fas fa-chevron-circle-left'></i>
-          </LinkPopup>
-        </CardProper>
+
         {showExamples === true && (
           <AnimationWrapper>
             <CardPopupActive>
@@ -110,5 +122,3 @@ const InstallationSolarVent = ({ handleClickHome, installationData }) => {
 }
 
 export default InstallationSolarVent
-
-// <CardImage src={installation.picture} />

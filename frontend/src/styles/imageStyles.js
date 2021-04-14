@@ -118,8 +118,8 @@ export const CardH3 = styled.p`
 `
 export const CardImage = styled.img`
   border-radius: 0.5rem 0.5rem 0 0;
-  min-height: 100%;
-  max-width: 100%;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
   /* object-fit: none; */
 

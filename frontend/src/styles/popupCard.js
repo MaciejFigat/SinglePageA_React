@@ -13,11 +13,18 @@ export const CardPopupActive = styled.div`
   top: 15%;
   max-width: 40vw;
   min-width: 700px;
-  @media (max-width: 680px) {
+  @media (min-width: 880px) and (max-width: 1070px) {
+    left: 15%;
+  }
+  @media (min-width: 770px) and (max-width: 880px) {
+    left: 5%;
+  }
+
+  @media (max-width: 770px) {
     z-index: 10;
     min-width: 300px;
     max-width: 80vw;
-    left: 5%;
+    left: 3%;
     top: 10%;
   }
 `
