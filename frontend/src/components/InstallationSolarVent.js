@@ -6,6 +6,8 @@ import {
   CardPopupH3,
   CardPopupActive,
   LinkPopup,
+  StyledImagePopup,
+  CardPopupPWrapper,
 } from '../styles/popupCard'
 import { BigContainerDiv } from '../styles/responsiveContainer'
 import {
@@ -107,12 +109,39 @@ const InstallationSolarVent = ({ handleClickHome, installationData }) => {
                 <i className='fas fa-times'></i>
               </H2Popup>
               <CardPopupH3>{exampleTitle}</CardPopupH3>
-              <StyledImage width='90%' height='70%' src={examplePicture} />
-              {example1 && <CardPopupP>{example1}</CardPopupP>}
-              {example2 && <CardPopupP>{example2}</CardPopupP>}
-              {example3 && <CardPopupP>{example3}</CardPopupP>}
-              {example4 && <CardPopupP>{example4}</CardPopupP>}
-              {example5 && <CardPopupP>{example5}</CardPopupP>}
+              <StyledImagePopup src={examplePicture} />
+              <CardPopupPWrapper>
+                {example1 && (
+                  <CardPopupP>
+                    <i className='fas fa-circle'></i>&nbsp;
+                    {example1}
+                  </CardPopupP>
+                )}
+                {example2 && (
+                  <CardPopupP>
+                    <i className='fas fa-circle'></i>&nbsp;
+                    {example2}
+                  </CardPopupP>
+                )}
+                {example3 && (
+                  <CardPopupP>
+                    <i className='fas fa-circle'></i>&nbsp;
+                    {example3}
+                  </CardPopupP>
+                )}
+                {example4 && (
+                  <CardPopupP>
+                    <i className='fas fa-circle'></i>&nbsp;
+                    {example4}
+                  </CardPopupP>
+                )}
+                {example5 && (
+                  <CardPopupP>
+                    <i className='fas fa-circle'></i>&nbsp;
+                    {example5}
+                  </CardPopupP>
+                )}
+              </CardPopupPWrapper>
             </CardPopupActive>
           </AnimationWrapper>
         )}

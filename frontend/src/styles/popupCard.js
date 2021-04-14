@@ -8,7 +8,6 @@ export const CardPopupActive = styled.div`
   padding: 1rem;
   padding-bottom: 1rem;
   position: fixed;
-
   left: 30%;
   top: 15%;
   max-width: 40vw;
@@ -35,12 +34,15 @@ export const CardPopupH3 = styled.h3`
 
   font-size: 1.55rem;
 `
-
+export const CardPopupPWrapper = styled.div`
+  display: grid;
+  place-items: left;
+`
 export const CardPopupP = styled.p`
   margin-bottom: 1rem;
-  margin-left: 1rem;
+  margin-left: 3rem;
   margin-right: 1rem;
-  min-width: 90%;
+  min-width: fit-content;
 `
 export const H2Popup = styled.h4`
   position: absolute;
@@ -76,15 +78,19 @@ export const LinkPopup = styled.a`
   padding: 10px 20px;
   border-radius: 5px;
   max-width: fit-content;
-  /* max-height: 12rem; */
   text-decoration: none;
   border: 1px solid var(--color2-secondary);
   transition: 0.4s;
   background: ${(props) => props.theme.linearGradientSecondary};
-  /* will-change: transform; */
   &:hover {
     color: var(--color1-secondary) !important;
     transition: 0.4s;
     border: 1px solid var(--color1-secondary);
   }
+`
+export const StyledImagePopup = styled.img`
+  width: ${(props) => (props.width ? props.width : '80%')};
+  height: ${(props) => (props.height ? props.height : '80%')};
+  object-fit: cover;
+  border-radius: 5px;
 `
