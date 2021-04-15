@@ -62,7 +62,7 @@ const lightTheme = {
   linearGradient:
     'linear-gradient(rgba(250, 250, 210, 0.5), rgba(250, 250, 210, 0.5))',
   linearGradientSecondary:
-    'linear-gradient(rgba(250, 250, 210, 0.8), rgba(250, 250, 210, 0.8))',
+    'linear-gradient(rgba(250, 250, 210, 0.85), rgba(250, 250, 210, 0.85))',
   // 'linear-gradient(rgba(207, 216, 220, 0.7), rgba(207, 216, 220, 0.7))',
   linearGradientTertiary:
     'linear-gradient(rgba(250, 250, 210, 0.75), rgba(250, 250, 210, 0.75))',

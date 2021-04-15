@@ -22,7 +22,8 @@
     font-family: 'Roboto Slab', serif;
     color: var(--color2-secondary);
     text-align: center;  
-    background: var(--color1-main);
+    // background: var(--color1-main);
+    background: var(--background4-main);
     border: 1px solid var(--color3-main);
     transition: 0.5s;
     &:hover {
