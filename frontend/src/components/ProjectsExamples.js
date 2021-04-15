@@ -112,29 +112,3 @@ const Projects = ({ handleClickHome }) => {
 }
 
 export { Projects }
-// <StyledImage width='100%' height='75%' src={installation.picture} />
-// <h4>Znaczenie dla zdrowia</h4> <br />
-//         <Paragraph>
-//           Zbyt wysokie stężenie CO2 w powietrzu bezpośrednio wpływa na
-//           pojawienie się uczucia zmęczenia, obniżenie koncentracji oraz
-//           percepcji. Przy wartościach powyżej 2500ppm jest niebezpieczna dla
-//           zdrowia.
-//         </Paragraph>
-//         <Paragraph>
-//           Wentylacja grawitacyjna, w budownictwie mieszkalnym, oraz mechaniczna
-//           np. w biurowcach, ma za zadanie dostarczyć powietrze odpowiedniej
-//           jakości dla użytkowników pomieszczeń.
-//         </Paragraph>
-//         <Paragraph>
-//           Poza profesjonalnym montażem, niezbędne jest dokonywanie okresowych
-//           przeglądów, serwisów i pomiarów systemów wentylacyjnych.
-//         </Paragraph>
-//         <Paragraph>
-//           Dodatkowe zagrożenie stanowią bakterie i grzyby. Mogą one znajdować
-//           się w zabrudzonych przewodach wentylacyjnych. Może to być przyczynkiem
-//           wielu groźnych chorób płuc, skóry, oczu, a nawet sprzyjać powstawaniu
-//           nowotworów.
-//         </Paragraph>
-//         <LinkOne href='#' onClick={handleClickOne}>
-//           Powrót
-//         </LinkOne>

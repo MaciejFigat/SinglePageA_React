@@ -7,7 +7,7 @@ import {
   CardPopupActive,
 } from '../styles/popupCard'
 import { StyledImageAlt, CardProper, StyledImage } from '../styles/imageStyles'
-import { installationData } from '../data/ventilationMeasurement'
+import { installationData } from '../data/installationAC'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 import AnimationWrapper from '../animations/AnimationWrapper'
 

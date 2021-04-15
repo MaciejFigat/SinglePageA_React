@@ -14,7 +14,6 @@ import {
   CardProper,
   CardH3,
   CardWrapper,
-  // CardImage,
   StyledImage,
   DivCardWrap,
 } from '../styles/imageStyles'
@@ -111,36 +110,11 @@ const InstallationSolarVent = ({ handleClickHome, installationData }) => {
               <CardPopupH3>{exampleTitle}</CardPopupH3>
               <StyledImagePopup src={examplePicture} />
               <CardPopupPWrapper>
-                {example1 && (
-                  <CardPopupP>
-                    <i className='fas fa-circle'></i>&nbsp;
-                    {example1}
-                  </CardPopupP>
-                )}
-                {example2 && (
-                  <CardPopupP>
-                    <i className='fas fa-circle'></i>&nbsp;
-                    {example2}
-                  </CardPopupP>
-                )}
-                {example3 && (
-                  <CardPopupP>
-                    <i className='fas fa-circle'></i>&nbsp;
-                    {example3}
-                  </CardPopupP>
-                )}
-                {example4 && (
-                  <CardPopupP>
-                    <i className='fas fa-circle'></i>&nbsp;
-                    {example4}
-                  </CardPopupP>
-                )}
-                {example5 && (
-                  <CardPopupP>
-                    <i className='fas fa-circle'></i>&nbsp;
-                    {example5}
-                  </CardPopupP>
-                )}
+                {example1 && <CardPopupP>{example1}</CardPopupP>}
+                {example2 && <CardPopupP>{example2}</CardPopupP>}
+                {example3 && <CardPopupP>{example3}</CardPopupP>}
+                {example4 && <CardPopupP>{example4}</CardPopupP>}
+                {example5 && <CardPopupP>{example5}</CardPopupP>}
               </CardPopupPWrapper>
             </CardPopupActive>
           </AnimationWrapper>

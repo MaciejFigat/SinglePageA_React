@@ -12,6 +12,8 @@ export const CardPopupActive = styled.div`
   top: 15%;
   max-width: 40vw;
   min-width: 700px;
+  overflow-y: scroll;
+  max-height: 80%;
   @media (min-width: 880px) and (max-width: 1070px) {
     left: 15%;
   }
@@ -22,17 +24,20 @@ export const CardPopupActive = styled.div`
   @media (max-width: 770px) {
     z-index: 10;
     min-width: 300px;
-    max-width: 80vw;
-    left: 3%;
-    top: 10%;
+    max-width: 100vw;
+    left: 1%;
+    top: 7%;
   }
 `
 
 export const CardPopupH3 = styled.h3`
   /* margin: 1.5rem; */
   margin: 2rem 0 1rem 2rem;
-
   font-size: 1.55rem;
+  @media (max-width: 770px) {
+    margin: 0 auto;
+    font-size: 1rem;
+  }
 `
 export const CardPopupPWrapper = styled.div`
   display: grid;
@@ -43,6 +48,11 @@ export const CardPopupP = styled.p`
   margin-left: 3rem;
   margin-right: 1rem;
   min-width: fit-content;
+  border-bottom: solid 1.5px var(--color2-main);
+  @media (max-width: 770px) {
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
 `
 export const H2Popup = styled.h4`
   position: absolute;
@@ -55,7 +65,6 @@ export const H2Popup = styled.h4`
   margin-top: 0.5rem;
   padding: 0;
   font-size: 1.5em;
-
   transition: 0.7s;
   &:hover {
     fill: var(--color3-secondary);
@@ -68,7 +77,7 @@ export const H2Popup = styled.h4`
     height: 33px important!;
     width: 33px important!;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 668px) {
     height: 22px important!;
     width: 22px important!;
   }

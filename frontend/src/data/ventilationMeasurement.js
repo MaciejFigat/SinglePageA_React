@@ -1,51 +1,66 @@
-// import solarSaw1 from '../assets/Installation/solarSaw1.jpg'
-import saw3 from '../assets/Installation/saw3.jpg'
-import solarSaw3 from '../assets/Installation/solarSaw3.jpg'
-import ventilationChannel from '../assets/Installation/ventilationChannel.jpg'
-import CentralaVentSaw2 from '../assets/Installation/CentralaVentSaw2.jpg'
+import bacteria from '../assets/AirSound/bacteria.jpg'
+import carbonFilter from '../assets/AirSound/carbonFilter.jpg'
+import bubbles from '../assets/AirSound/bubbles.jpg'
+// import installationDirt from '../assets/AirSound/installationDirt.jpg'
+import orangeLungs from '../assets/AirSound/orangeLungs.jpg'
+import particlesAir from '../assets/AirSound/particlesAir.jpg'
+// import water from '../assets/AirSound/water.jpg'
+import airIn from '../assets/AC/airIn.jpg'
 
-import PipesVent from '../assets/AC/PipesVent.jpg'
-import PipesVentCropped from '../assets/AC/PipesVentCropped.jpg'
-// import VentCeiling from '../assets/AC/VentCeiling.jpg'
 const installationData = [
   {
     id: 0,
-    picture: PipesVent,
-    pictureCropped: PipesVentCropped,
-    title: 'Przykładowe instalacje wykonane w latach 2013-2020',
-    description:
-      'Specjalizujemy się w instalacjach wentylacyjnych o różnych zastosowaniach.',
+    picture: orangeLungs,
+
+    title: 'Pomiary i regulacje',
+    description: 'Wpływ na zdrowie i komfort użytkowników',
   },
   {
     id: 1,
-    picture: ventilationChannel,
-    title: 'Wentylacja mechaniczna wraz z oddymianiem',
-    description: 'Budynek Hipoteki przy Al. Solidarności 58 w Warszawie.',
-    description2: 'Budynek usługowy przy ul. Kasprowicza w Warszawie.',
+    picture: airIn,
+    title: 'Wentylacja grawitacyjna',
+    description:
+      'Wentylacja grawitacyjna, w budownictwie mieszkalnym, oraz mechaniczna np. w biurowcach, ma za zadanie dostarczyć powietrze odpowiedniej jakości dla użytkowników pomieszczeń.',
+    description2:
+      'Poza profesjonalnym montażem, niezbędne jest dokonywanie okresowych przeglądów, serwisów i pomiarów systemów wentylacyjnych.',
   },
 
   {
     id: 3,
-    picture: CentralaVentSaw2,
-    title: 'Wentylacja mechaniczna i chłodzenie',
-    description: 'Pomieszczenia budynku w Sądu Okręgowego w Warszawie',
-    description2: 'Budynek biurowo-magazynowy w Piasecznie',
-    description3: 'Pomieszczenia strefy ochronnej w kancelarii sejmu',
-    description4:
-      'Sale zabiegowe jednodniowej chirurgii plastycznej, Klinika przy ulicy Abrahama w Warszawie',
+    picture: particlesAir,
+
+    title: 'Stężenie CO2',
+    description:
+      'Zbyt wysokie stężenie CO2 w powietrzu bezpośrednio wpływa na pojawienie się uczucia zmęczenia, obniżenie koncentracji oraz percepcji.',
+    description2:
+      'Przy wartościach powyżej 2500ppm jest to sytuacja niebezpieczna dla zdrowia.',
+    description3:
+      'Zaleca się okresowe przeglądy instalacji wentylacyjnych oraz pomiary przepływu powietrza. Odpowiednio wyregulowana instalacja, zgodnie z potrzebami i wartościami obliczonymi przez projektanta, zapewni użytkownikom komfort i zdrowie.',
   },
   {
     id: 4,
-    picture: saw3,
-    title: 'Instalacja gazowa z urządzeniami grzewczymi',
+    picture: bacteria,
+    title: 'Higiena wentylacji',
     description:
-      'Budynek biurowo-magazynowy w Piascznie. Uwzględniając: detrafikatory, przyłącze gazu, punkt redukcyjno-pomiarowy, pakietem kominowy do kotłowni.',
+      'Zagrożenie stanowią bakterie i grzyby. Mogą się one znajdować w zabrudzonych przewodach wentylacyjnych. Ich powstawaniu sprzyja, źle odprowadzona wilgoć i odkładające się cząsteczki kurzu i brudu. Obecność takich patogenów we wdychanym powietrzu jest przyczynkiem wielu groźnych chorób płuc, skóry, oczu, a może nawet sprzyjać powstawaniu nowotworów.',
   },
   {
     id: 5,
-    picture: solarSaw3,
-    title: 'Instalacja solarna',
-    description: 'Sawice, budynek użytkowy.',
+    picture: bubbles,
+    title: 'Zdrowe i bezpieczne powietrze',
+    description:
+      'Regulacja temperatury i komfort użytkownika nie jest jedyną funkcją klimatyzacji. Prawidłowo zadbane urządzania sprzyjają utrzymaniu zdrowia.',
+    description2:
+      'Zaletą klimatyzatorów oprócz np. kontroli temperatury w upalne dni jest filtrowanie powietrza. Jest to korzystne w przypadku klimatyzacji przeznaczonej dla alergików, dzieci, czy też osób chorych na astmę. W obecnych czasach jest to również przydatne dla osób zdrowych, z racji rosnącego zanieczyszczenia powietrza.',
+  },
+  {
+    id: 6,
+    picture: carbonFilter,
+    title: 'Utrzymanie czystości filtrów',
+    description:
+      'Filtry w klimatyzatorach należy regularnie czyścić i wymieniać. Nawet najbardziej zaawansowane technologie nie zastąpią czujności odpowiedzialnego administratora.',
+    description2:
+      'Filtr mechaniczny siatkowy, zatrzymujący cząsteczki kurzu i pyłu należy czyścić nie rzadziej niż co 2-3 tygodnie. Dalej umieszczone delikatniejsze filtry oczyszczające i np. filtry HEPA również wymagają uwagi i troski.',
   },
 ]
 
