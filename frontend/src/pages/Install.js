@@ -1,12 +1,13 @@
 import React from 'react'
 import { Layout } from '../layout'
 import AnimationWrapper from '../animations/AnimationWrapper'
-import InstallationAC from '../components/InstallationAC'
+import { installationData } from '../data/installationAC'
+import InstallationSolarVent from '../components/InstallationSolarVent'
 const Install = () => {
   return (
     <Layout>
       <AnimationWrapper>
-        <InstallationAC />
+        <InstallationSolarVent installationData={installationData} />
       </AnimationWrapper>
     </Layout>
   )

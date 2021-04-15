@@ -67,7 +67,7 @@ const lightTheme = {
   linearGradientTertiary:
     'linear-gradient(rgba(250, 250, 210, 0.75), rgba(250, 250, 210, 0.75))',
   linearGradientQuaternary:
-    'linear-gradient(rgba(250, 250, 210, 0.95), rgba(250, 250, 210, 0.95))',
+    'linear-gradient(rgba(250, 250, 210, 0.98), rgba(250, 250, 210, 0.98))',
   // 'linear-gradient(rgba(207, 216, 220, 0.85), rgba(207, 216, 220, 0.85))',
 }
 
