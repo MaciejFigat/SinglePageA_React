@@ -18,9 +18,10 @@ export const StyledImage = styled.img`
   border-radius: 5px;
 `
 export const StyledImageAlt = styled.img`
-  width: ${(props) => (props.width ? props.width : '80%')};
-  height: ${(props) => (props.height ? props.height : '80%')};
+  /* width: ${(props) => (props.width ? props.width : '80%')}; */
+  /* height: ${(props) => (props.height ? props.height : '80%')}; */
   object-fit: cover;
+  max-height: 400px;
   /* border: var(--color3-main); */
 `
 // Card with a picture
@@ -90,6 +91,21 @@ export const CardProper = styled.li`
   /* &:last-child {
     margin-bottom: 0;
   } */
+`
+export const CardProperAlt = styled.li`
+  display: grid;
+  place-items: center;
+  /* background: ${(props) => props.theme.linearGradientSecondary}; */
+  /* border-radius: 0.5rem; */
+  max-height: 400px;
+  font-family: 'Roboto Slab', serif;
+  transition: all 0.3s ease-in-out;
+  /* min-height: 100%; */
+  &:hover {
+    transform: scale(1);
+    transform: translate(5px, -5px);
+    transition: all 0.3s ease-in-out;
+  }
 `
 export const CardProperActive = styled.div`
   display: grid;

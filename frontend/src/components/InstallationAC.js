@@ -6,7 +6,11 @@ import {
   CardPopupH3,
   CardPopupActive,
 } from '../styles/popupCard'
-import { StyledImageAlt, CardProper, StyledImage } from '../styles/imageStyles'
+import {
+  StyledImageAlt,
+  CardProperAlt,
+  StyledImage,
+} from '../styles/imageStyles'
 import { installationData } from '../data/installationAC'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 import AnimationWrapper from '../animations/AnimationWrapper'
@@ -60,13 +64,9 @@ const InstallationAC = () => {
                   })
                 }
               >
-                <CardProper onClick={showExamplesHandler}>
-                  <StyledImageAlt
-                    width='100%'
-                    height='100%'
-                    src={installation.picture}
-                  />
-                </CardProper>
+                <CardProperAlt onClick={showExamplesHandler}>
+                  <StyledImageAlt width='100%' src={installation.picture} />
+                </CardProperAlt>
               </div>
             ))}
           </Masonry>
