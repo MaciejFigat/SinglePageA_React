@@ -9,7 +9,10 @@ import {
   StyledImagePopup,
   CardPopupPWrapper,
 } from '../styles/popupCard'
-import { BigContainerDiv } from '../styles/responsiveContainer'
+import {
+  BigContainerDiv,
+  BigContainerDivActivePopup,
+} from '../styles/responsiveContainer'
 import {
   CardProper,
   CardH3,
@@ -49,6 +52,11 @@ const InstallationSolarVent = ({ handleClickHome, installationData }) => {
 
   return (
     <BigContainerDiv>
+      {showExamples === true && (
+        <BigContainerDivActivePopup
+          onClick={showExamplesHandler}
+        ></BigContainerDivActivePopup>
+      )}
       <CardWrapper>
         {installationData.map((installation) => (
           <DivCardWrap

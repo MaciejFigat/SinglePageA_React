@@ -32,6 +32,8 @@ const darkTheme = {
     'linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))',
   linearGradientQuaternary:
     'linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88))',
+  linearGradientOverlay:
+    'linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))',
 }
 // dark blue theme
 
@@ -69,6 +71,8 @@ const lightTheme = {
   linearGradientQuaternary:
     'linear-gradient(rgba(250, 250, 210, 0.98), rgba(250, 250, 210, 0.98))',
   // 'linear-gradient(rgba(207, 216, 220, 0.85), rgba(207, 216, 220, 0.85))',
+  linearGradientOverlay:
+    'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))',
 }
 
 const GlobalStyle = createGlobalStyle`
@@ -123,6 +127,7 @@ h5 {font-size: 1.25em;}
   --background2-main: ${(props) => props.theme.linearGradientSecondary};
   --background3-main: ${(props) => props.theme.linearGradientTertiary};
   --background4-main: ${(props) => props.theme.linearGradientQuaternary};
+  --background-overlay: ${(props) => props.theme.linearGradientOverlay};
   a, a:link, a:visited{
     text-decoration: none;
     color: ${(props) => props.theme.text};

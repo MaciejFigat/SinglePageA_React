@@ -5,6 +5,21 @@ export const BigContainerDiv = styled.div`
   place-items: center;
   margin-bottom: 60px;
 `
+export const BigContainerDivActivePopup = styled.div`
+  display: grid;
+  place-items: center;
+
+  &:after {
+    position: fixed;
+    top: 0;
+    left: 0;
+    content: '';
+    /* z-index: 9; */
+    width: 100vw;
+    height: 100%;
+    background: var(--background-overlay);
+  }
+`
 export const ContainerDiv = styled.div`
   display: grid;
   place-items: center;

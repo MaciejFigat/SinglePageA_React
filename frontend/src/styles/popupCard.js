@@ -5,6 +5,7 @@ export const CardPopupActive = styled.div`
   place-items: center;
   background: var(--background4-main);
   border-radius: 0.5rem;
+  border: solid 1.5px var(--color2-main);
   padding: 1rem;
   padding-bottom: 1rem;
   position: fixed;
@@ -14,6 +15,8 @@ export const CardPopupActive = styled.div`
   min-width: 700px;
   overflow-y: scroll;
   max-height: 80%;
+  min-height: 60%;
+  z-index: 10;
   @media (min-width: 880px) and (max-width: 1070px) {
     left: 15%;
   }
@@ -36,7 +39,7 @@ export const CardPopupH3 = styled.h3`
   font-size: 1.55rem;
   @media (max-width: 770px) {
     margin: 0 auto;
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 `
 export const CardPopupPWrapper = styled.div`
