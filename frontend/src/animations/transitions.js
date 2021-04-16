@@ -25,7 +25,7 @@ const pageTransition = {
 const pageTransitionLogo = {
   type: 'tween',
   ease: 'anticipate',
-  duration: 0.7,
+  duration: 0.9,
 }
 
 export { pageTransitionLogo, pageTransition, pageVariantsLogo, pageVariants }

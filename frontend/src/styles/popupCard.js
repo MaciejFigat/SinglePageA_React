@@ -10,7 +10,7 @@ export const CardPopupActive = styled.div`
   padding-bottom: 1rem;
   position: fixed;
   left: 30%;
-  top: 15%;
+  top: 5%;
   max-width: 40vw;
   min-width: 700px;
   overflow-y: scroll;
@@ -117,13 +117,12 @@ export const StyledImagePopup = styled.img`
 export const PopupOverlay = styled.div`
   /* display: grid;
   place-items: center; */
-  &:after {
-    position: fixed;
-    top: 0;
-    left: 0;
-    content: '';
-    width: 100vw;
-    height: 100vh;
-    background: var(--background-overlay);
-  }
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  background: var(--background-overlay);
 `

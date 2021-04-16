@@ -61,12 +61,12 @@ export const CardProper = styled.li`
   /* -webkit-font-smoothing: antialiased; */
   &:hover {
     /* transform: scale(1.01) perspective(10px) translateZ(0); */
-    transform: scale(1);
+    /* transform: scale(1); */
+    @media (min-width: 740px) {
+      transform: translate(5px, -5px);
+    }
 
-    transform: translate(5px, -5px);
-    /* transform: translateX(10) translateY(10); */
-
-    transition: all 0.3s ease-in-out;
+    /* transition: all 0.3s ease-in-out; */
   }
 
   /* margin-bottom: 2rem; */
@@ -81,7 +81,6 @@ export const CardProperAlt = styled.li`
   font-family: 'Roboto Slab', serif;
   transition: all 0.3s ease-in-out;
   &:hover {
-    transform: scale(1);
     transform: translate(5px, -5px);
     transition: all 0.3s ease-in-out;
   }

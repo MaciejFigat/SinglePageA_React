@@ -69,7 +69,7 @@ const lightTheme = {
   linearGradientTertiary:
     'linear-gradient(rgba(250, 250, 210, 0.75), rgba(250, 250, 210, 0.75))',
   linearGradientQuaternary:
-    'linear-gradient(rgba(250, 250, 210, 0.98), rgba(250, 250, 210, 0.98))',
+    'linear-gradient(rgba(250, 250, 210, 0.9), rgba(250, 250, 210, 0.9))',
   // 'linear-gradient(rgba(207, 216, 220, 0.85), rgba(207, 216, 220, 0.85))',
   linearGradientOverlay:
     'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))',
@@ -168,6 +168,20 @@ body {
   props.theme.background});
   
 }
+.overlayDiv {
+  transition: background 0.9s ease;
+  background: var(--color2-secondary);
+  &.true {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--background-overlay);
+   
+}}
+
 `
 // background-image: url( ${(props) => props.theme.background});
 
