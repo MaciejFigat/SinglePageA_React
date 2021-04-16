@@ -48,6 +48,7 @@ export const CardProper = styled.li`
   background: ${(props) => props.theme.linearGradientSecondary};
   border-radius: 0.5rem;
   font-family: 'Roboto Slab', serif;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease-in-out;
   /* below is needed for non blurry transformation in Chrome */
   /* will-change: transform; */
@@ -63,7 +64,9 @@ export const CardProper = styled.li`
     /* transform: scale(1.01) perspective(10px) translateZ(0); */
     /* transform: scale(1); */
     @media (min-width: 740px) {
-      transform: translate(5px, -5px);
+      box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem var(--color4-shadow);
+
+      /* transform: translate(5px, -5px); */
     }
 
     /* transition: all 0.3s ease-in-out; */
