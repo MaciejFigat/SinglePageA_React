@@ -14,9 +14,9 @@ export const CardPopupActive = styled.div`
   max-width: 40vw;
   min-width: 700px;
   overflow-y: scroll;
-  max-height: 80%;
+  max-height: 85%;
   min-height: 60%;
-  z-index: 10;
+  /* z-index: 10; */
   @media (min-width: 880px) and (max-width: 1070px) {
     left: 15%;
   }
@@ -25,7 +25,7 @@ export const CardPopupActive = styled.div`
   }
 
   @media (max-width: 770px) {
-    z-index: 10;
+    /* z-index: 10; */
     min-width: 300px;
     max-width: 100vw;
     left: 1%;
@@ -35,10 +35,10 @@ export const CardPopupActive = styled.div`
 
 export const CardPopupH3 = styled.h3`
   /* margin: 1.5rem; */
-  margin: 2rem 0 1rem 2rem;
+  margin: 1rem 1rem 1rem 2rem;
   font-size: 1.55rem;
   @media (max-width: 770px) {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     font-size: 1.25rem;
   }
 `
@@ -52,6 +52,14 @@ export const CardPopupP = styled.p`
   margin-right: 1rem;
   min-width: fit-content;
   border-bottom: solid 1.5px var(--color2-main);
+  @media (max-width: 770px) {
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+`
+export const CardPopupPNoBorder = styled.p`
+  margin: 1rem 1rem 1rem 3rem;
+  min-width: fit-content;
   @media (max-width: 770px) {
     margin-left: 0.5rem;
     margin-bottom: 0.5rem;
@@ -105,4 +113,17 @@ export const StyledImagePopup = styled.img`
   height: ${(props) => (props.height ? props.height : '80%')};
   object-fit: cover;
   border-radius: 5px;
+`
+export const PopupOverlay = styled.div`
+  /* display: grid;
+  place-items: center; */
+  &:after {
+    position: fixed;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    background: var(--background-overlay);
+  }
 `

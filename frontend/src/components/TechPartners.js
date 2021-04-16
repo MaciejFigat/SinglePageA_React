@@ -3,7 +3,6 @@ import { LinkPartners } from '../styles/boxColorStyles'
 import {
   CardWrapper,
   CardProper,
-  // CardImage,
   WrapperCentringDiv,
   StyledImage,
 } from '../styles/imageStyles'
@@ -12,8 +11,9 @@ import {
   CardPopupP,
   CardPopupH3,
   CardPopupActive,
+  CardPopupPNoBorder,
+  PopupOverlay,
 } from '../styles/popupCard'
-
 import AnimationWrapper from '../animations/AnimationWrapper'
 import { techData } from '../data/techPartnersData'
 
@@ -40,6 +40,9 @@ const AllTech = () => {
   return (
     <AnimationWrapper>
       <WrapperCentringDiv>
+        {showDetails === true && (
+          <PopupOverlay onClick={showDetailsHandler}></PopupOverlay>
+        )}
         <CardWrapper>
           {techData.map((partner) => (
             <div
@@ -66,6 +69,7 @@ const AllTech = () => {
                 <H2Popup onClick={showDetailsHandler}>
                   <i className='fas fa-times'></i>
                 </H2Popup>
+                <CardPopupH3>{motto}</CardPopupH3>
                 <StyledImage
                   width='90%'
                   height='100%'
@@ -73,8 +77,7 @@ const AllTech = () => {
                   alt='logo picture'
                 />
 
-                <CardPopupH3>{motto}</CardPopupH3>
-                <CardPopupP>{description}</CardPopupP>
+                <CardPopupPNoBorder>{description}</CardPopupPNoBorder>
                 <CardPopupP>
                   <LinkPartners href={link}>
                     <i className='fas fa-link'></i>

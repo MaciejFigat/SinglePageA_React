@@ -86,7 +86,7 @@ const techData = [
     logo: <Panasonic />,
     motto: 'Wydajność i oszczędności.',
     description:
-      'Oddany idei ochrony środowiska oraz oszczędności energii, Panasonic Heating and Cooling Solutions oferuje najlepszą wydajność i pracę jednostek, tym samym prowadząc do znacznie niższych rachunków za energię. Dzięki doświadczeniu gromadzonemu od ponad 30 lat oraz sprzedaży produktów do ponad 120 krajów, firma Panasonic niezaprzeczalnie zajmuje czołową pozycję w sektorze ogrzewania i chłodzneia.',
+      'Oddany idei ochrony środowiska oraz oszczędności energii, Panasonic Heating and Cooling Solutions oferuje najlepszą wydajność i pracę jednostek, tym samym prowadząc do znacznie niższych rachunków za energię. Dzięki doświadczeniu gromadzonemu od ponad 30 lat oraz sprzedaży produktów do ponad 120 krajów, firma Panasonic niezaprzeczalnie zajmuje czołową pozycję w sektorze ogrzewania i chłodzenia.',
     link: 'https://www.aircon.panasonic.eu/PL_pl/',
   },
 ]

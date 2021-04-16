@@ -5,21 +5,7 @@ export const BigContainerDiv = styled.div`
   place-items: center;
   margin-bottom: 60px;
 `
-export const BigContainerDivActivePopup = styled.div`
-  display: grid;
-  place-items: center;
 
-  &:after {
-    position: fixed;
-    top: 0;
-    left: 0;
-    content: '';
-    /* z-index: 9; */
-    width: 100vw;
-    height: 100%;
-    background: var(--background-overlay);
-  }
-`
 export const ContainerDiv = styled.div`
   display: grid;
   place-items: center;
@@ -79,15 +65,11 @@ export const LinkOne = styled.a`
   min-width: fit-content;
   text-decoration: none;
   border: 1px solid var(--color2-secondary);
-  /* display: inline-block; */
   transition: 0.5s;
   transform: translateY(-5px);
-  /* opacity: 0.9; */
-  /* background: var(--color1-main); */
   background: ${(props) => props.theme.linearGradientSecondary};
   ${ResponsiveDiv}:hover & {
     transform: translateY(0px);
-    /* opacity: 1; */
     transition: 0.5s;
   }
   &:hover {
@@ -100,12 +82,9 @@ export const H2 = styled.h4`
   display: flex;
   justify-content: flex-end;
   margin: 0.5rem;
-
-  /* margin-bottom: 0.5rem; */
   padding: 0;
   fill: var(--color2-secondary);
   font-size: 1.5em;
-
   transition: 0.7s;
   &:hover {
     fill: var(--color1-secondary);

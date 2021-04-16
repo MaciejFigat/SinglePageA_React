@@ -8,17 +8,14 @@ import {
   LinkPopup,
   StyledImagePopup,
   CardPopupPWrapper,
+  PopupOverlay,
 } from '../styles/popupCard'
-import {
-  BigContainerDiv,
-  BigContainerDivActivePopup,
-} from '../styles/responsiveContainer'
+import { BigContainerDiv } from '../styles/responsiveContainer'
 import {
   CardProper,
   CardH3,
   CardWrapper,
   StyledImage,
-  DivCardWrap,
 } from '../styles/imageStyles'
 
 const InstallationSolarVent = ({ handleClickHome, installationData }) => {
@@ -53,13 +50,12 @@ const InstallationSolarVent = ({ handleClickHome, installationData }) => {
   return (
     <BigContainerDiv>
       {showExamples === true && (
-        <BigContainerDivActivePopup
-          onClick={showExamplesHandler}
-        ></BigContainerDivActivePopup>
+        <PopupOverlay onClick={showExamplesHandler}></PopupOverlay>
       )}
       <CardWrapper>
+        {' '}
         {installationData.map((installation) => (
-          <DivCardWrap
+          <div
             key={installation.id.toString()}
             onClick={() =>
               setExamples({
@@ -106,9 +102,8 @@ const InstallationSolarVent = ({ handleClickHome, installationData }) => {
                 <CardH3>{installation.title}</CardH3>
               </CardProper>
             )}
-          </DivCardWrap>
+          </div>
         ))}
-
         {showExamples === true && (
           <AnimationWrapper>
             <CardPopupActive>

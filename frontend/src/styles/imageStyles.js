@@ -1,15 +1,5 @@
 import styled from 'styled-components'
 
-export const DivCardWrap = styled.div`
-  /* background: ${(props) => props.theme.linearGradientSecondary};
-  border-radius: 0.5rem;
-  transition: all 0.3s ease-in-out; */
-  /* &:hover {
-    transform: scale(1.03);
-    transition: all 0.3s ease-in-out;
-  } */
-`
-
 export const StyledImage = styled.img`
   width: ${(props) => (props.width ? props.width : '80%')};
   height: ${(props) => (props.height ? props.height : '80%')};
@@ -18,11 +8,8 @@ export const StyledImage = styled.img`
   border-radius: 5px;
 `
 export const StyledImageAlt = styled.img`
-  /* width: ${(props) => (props.width ? props.width : '80%')}; */
-  /* height: ${(props) => (props.height ? props.height : '80%')}; */
   object-fit: cover;
   max-height: 400px;
-  /* border: var(--color3-main); */
 `
 // Card with a picture
 // <CardWrapper>
@@ -43,11 +30,7 @@ export const CardWrapper = styled.ul`
   padding: 0;
   margin: 1.5rem 1.5rem 0rem 1.5rem;
   display: grid;
-  /* max-width: 100vw; */
-
-  /* grid-template-columns: repeat(3, 1fr); */
   grid-template-columns: repeat(auto-fill, minmax(35ch, 1fr));
-
   grid-gap: 1.5rem;
   @media (min-width: 1100px) and (max-width: 1439px) {
     max-width: 80vw;
@@ -64,7 +47,6 @@ export const CardProper = styled.li`
   place-items: center;
   background: ${(props) => props.theme.linearGradientSecondary};
   border-radius: 0.5rem;
-  /* max-height: 450px; */
   font-family: 'Roboto Slab', serif;
   transition: all 0.3s ease-in-out;
   /* below is needed for non blurry transformation in Chrome */
@@ -95,12 +77,9 @@ export const CardProper = styled.li`
 export const CardProperAlt = styled.li`
   display: grid;
   place-items: center;
-  /* background: ${(props) => props.theme.linearGradientSecondary}; */
-  /* border-radius: 0.5rem; */
   max-height: 400px;
   font-family: 'Roboto Slab', serif;
   transition: all 0.3s ease-in-out;
-  /* min-height: 100%; */
   &:hover {
     transform: scale(1);
     transform: translate(5px, -5px);
@@ -137,8 +116,6 @@ export const CardImage = styled.img`
   height: 100%;
   width: 100%;
   object-fit: cover;
-  /* object-fit: none; */
-
   & ~ * {
     margin-left: 1rem;
     margin-right: 1rem;
