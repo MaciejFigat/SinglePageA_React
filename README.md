@@ -1,4 +1,4 @@
-## SPA - presentational page for a company
+## SPA - presentational page for an installation & projects company
 It is a lightweight SPA meant to feature basic data about the company. It all started because I wanted to have NIP (tax identyfication number) at hand during relevant activities. So I made an app.
 ## Installation
 1. cd frontend
