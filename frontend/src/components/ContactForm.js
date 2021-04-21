@@ -55,14 +55,12 @@ const ContactForm = () => {
     dispatch(messageChange({ name, email, message: formMessage }))
     setSpinnerVisible(true)
     emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, EMAILJS_ID).then(
-      function (response) {
-        console.log('SUCCESS!', response.status, response.text)
+      function () {
         setToastVersion('success')
         setSpinnerVisible(false)
         setToastMessage('Wiadomość wysłana!')
       },
-      function (error) {
-        console.log('FAILED...', error)
+      function () {
         setToastVersion('failure')
         setSpinnerVisible(false)
         setToastMessage('Nie udało się wysłać wiadomości')
