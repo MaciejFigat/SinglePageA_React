@@ -101,7 +101,6 @@ const ContactForm = () => {
             height={20}
             width={60}
             visible={spinnerVisible}
-            // visible={true}
           />
           <form className='contact_form'>
             <div className='contact_field'>

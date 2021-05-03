@@ -6,6 +6,12 @@ export const StyledImage = styled.img`
   object-fit: cover;
   border: var(--color3-main);
   border-radius: 5px;
+
+  transition: transform 0.5s ease;
+
+  &:hover {
+    transform: scale(1.04);
+  }
 `
 export const StyledImageAlt = styled.img`
   object-fit: cover;
@@ -30,7 +36,7 @@ export const CardWrapper = styled.ul`
   padding: 0;
   margin: 1.5rem 1.5rem 0rem 1.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(35ch, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(25ch, 1fr));
   grid-gap: 1.5rem;
   @media (min-width: 1100px) and (max-width: 1439px) {
     max-width: 80vw;
@@ -44,12 +50,16 @@ export const CardWrapper = styled.ul`
 `
 export const CardProper = styled.li`
   display: grid;
+
+  overflow: hidden;
+
   place-items: center;
   background: ${(props) => props.theme.linearGradientSecondary};
   border-radius: 0.5rem;
   font-family: 'Roboto Slab', serif;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease-in-out;
+  /* transition: transform 0.5s ease; */
   /* below is needed for non blurry transformation in Chrome */
   /* will-change: transform; */
   /* -webkit-backface-visibility: hidden;   */
@@ -62,7 +72,7 @@ export const CardProper = styled.li`
   /* -webkit-font-smoothing: antialiased; */
   &:hover {
     /* transform: scale(1.01) perspective(10px) translateZ(0); */
-    /* transform: scale(1); */
+    /* transform: scale(1.05); */
     @media (min-width: 740px) {
       box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem var(--color4-shadow);
 
@@ -118,10 +128,14 @@ export const CardImage = styled.img`
   height: 100%;
   width: 100%;
   object-fit: cover;
+  /* transition: transform 0.5s ease; */
   & ~ * {
     margin-left: 1rem;
     margin-right: 1rem;
   }
+  /* &:hover {
+    transform: scale(1.5);
+  } */
 `
 export const CardP = styled.p`
   margin-bottom: 1rem;

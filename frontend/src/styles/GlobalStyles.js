@@ -80,11 +80,6 @@ html {
   font-size: 100%;
   font-family: 'Roboto Slab', serif;
   } 
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
 
 h1, h2, h3, h4, h5 {
   margin: 2.75rem 0 1.05rem;
@@ -149,7 +144,8 @@ h5 {font-size: 1.25em;}
 
 body {
 
-   
+  margin: 0;
+  padding: 0;
   font-family: 'Roboto Slab', serif;
   
   font-weight: 400;
