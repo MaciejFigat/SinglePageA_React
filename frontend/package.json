@@ -28,7 +28,8 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
     "rxjs": "^6.6.2",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "ws": "^7.4.6"
   },
   "scripts": {
     "start": "react-scripts start",
