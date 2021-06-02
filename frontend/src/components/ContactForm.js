@@ -52,20 +52,34 @@ const ContactForm = () => {
 
   const emailJSSendHandler = (e) => {
     e.preventDefault()
-    dispatch(messageChange({ name, email, message: formMessage }))
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
     setSpinnerVisible(true)
-    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, EMAILJS_ID).then(
-      function () {
-        setToastVersion('success')
-        setSpinnerVisible(false)
-        setToastMessage('Wiadomość wysłana!')
-      },
-      function () {
-        setToastVersion('failure')
-        setSpinnerVisible(false)
-        setToastMessage('Nie udało się wysłać wiadomości')
-      }
-    )
+    if (name.length < 1) {
+      setToastVersion('failure')
+      setSpinnerVisible(false)
+      setToastMessage('Podaj imię')
+    } else if (!regex.test(email)) {
+      setToastVersion('failure')
+      setSpinnerVisible(false)
+      setToastMessage('Wpisz prawidłowy email')
+    } else if (formMessage.length < 3) {
+      setToastVersion('failure')
+      setSpinnerVisible(false)
+      setToastMessage('Wpisz wiadomość')
+    } else {
+      emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, EMAILJS_ID).then(
+        function () {
+          setToastVersion('success')
+          setSpinnerVisible(false)
+          setToastMessage('Wiadomość wysłana!')
+        },
+        function () {
+          setToastVersion('failure')
+          setSpinnerVisible(false)
+          setToastMessage('Nie udało się wysłać wiadomości')
+        }
+      )
+    }
   }
 
   //toast
