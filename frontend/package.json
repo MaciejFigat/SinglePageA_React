@@ -30,6 +30,7 @@
     "redux-thunk": "^2.3.0",
     "rxjs": "^6.6.2",
     "styled-components": "^5.1.1",
+    "trim-newlines": "^4.0.1",
     "ws": "^7.4.6"
   },
   "scripts": {
